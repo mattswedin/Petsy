@@ -6,6 +6,7 @@ export default class SessionForm extends React.Component {
         super(props);
         this.state = this.props.user
         this.handleSubmit = this.handleSubmit.bind(this)
+        this.renderErrors = this.renderErrors.bind(this)
     }
 
     handleSubmit(e){
@@ -13,10 +14,25 @@ export default class SessionForm extends React.Component {
         this.props.action(this.state)
     }
 
+    
+    
+
     update(field){
         return e => {
             this.setState({[field]: e.currentTarget.value})
         }
+    }
+
+    renderErrors() {
+        return (
+            <ul>
+                {this.props.errors.map((error, i) => (
+                    <li key={`error-${i}`}>
+                        {error}
+                    </li>
+                ))}
+            </ul>
+        );
     }
 
     render(){
@@ -25,7 +41,7 @@ export default class SessionForm extends React.Component {
             return(
             <form onSubmit={this.handleSubmit}>
                 <h1>{this.props.formType}</h1>
-
+                
                 <label>E-mail:
                 <input type="text" value={this.state.email} onChange={this.update('email')}/>
                 </label>
@@ -39,14 +55,19 @@ export default class SessionForm extends React.Component {
                 </label>
 
                 <input type="submit" value={this.props.formType}/>
+
+               
             </form>
             )
         } else {
 
+
+            
+
             return (
                 <form onSubmit={this.handleSubmit}>
                     <h1>{this.props.formType}</h1>
-
+                    <h6>{this.renderErrors()}</h6>
                     <label>E-mail:
                         <input type="text" value={this.state.email} onChange={this.update('email')}/>
                     </label>
@@ -56,6 +77,7 @@ export default class SessionForm extends React.Component {
                     </label>
 
                     <input type="submit" value={this.props.formType} />
+                    <button onClick={() => this.props.action(this.props.demo.user)}>Login as Guest</button>
                 </form>
             )
         }
