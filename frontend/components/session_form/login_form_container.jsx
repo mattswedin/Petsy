@@ -8,6 +8,13 @@ const mapS = ({ errors }) => ({
         email: "",
         password: ""
     },
+    demo: {
+        user: {
+        email: "demo@aol.com",
+        password: "password"
+    }
+        
+    },
     formType: "Login!",
     errors: errors.session
 })
