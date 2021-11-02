@@ -15,7 +15,7 @@ const mapS = ({ errors }) => ({
     }
         
     },
-    formType: "Login!",
+    formType: "Sign in",
     errors: errors.session
 })
 

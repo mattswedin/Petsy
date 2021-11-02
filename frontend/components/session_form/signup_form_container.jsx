@@ -9,7 +9,7 @@ const mapS = ({ errors }) => ({
         username: "",
         password: ""
     },
-    formType: "Sign Up!",
+    formType: "Register",
     errors: errors.session
 })
 

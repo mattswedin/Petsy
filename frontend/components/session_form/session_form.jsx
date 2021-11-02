@@ -6,7 +6,6 @@ export default class SessionForm extends React.Component {
         super(props);
         this.state = this.props.user
         this.handleSubmit = this.handleSubmit.bind(this)
-        this.renderErrors = this.renderErrors.bind(this)
     }
 
     handleSubmit(e){
@@ -24,6 +23,7 @@ export default class SessionForm extends React.Component {
     }
 
     renderErrors() {
+        console.log(this.props.errors)
         return (
             <ul>
                 {this.props.errors.map((error, i) => (
@@ -36,11 +36,11 @@ export default class SessionForm extends React.Component {
     }
 
     render(){
-        if (this.props.formType == "Sign Up!") {
+        if (this.props.formType == "Register") {
 
             return(
-            <form onSubmit={this.handleSubmit}>
-                <h1>{this.props.formType}</h1>
+                <form onSubmit={this.handleSubmit}>
+                    {this.renderErrors()}
                 
                 <label>E-mail:
                 <input type="text" value={this.state.email} onChange={this.update('email')}/>
@@ -66,8 +66,8 @@ export default class SessionForm extends React.Component {
 
             return (
                 <form onSubmit={this.handleSubmit}>
-                    <h1>{this.props.formType}</h1>
-                    <h6>{this.renderErrors()}</h6>
+                    {this.renderErrors()}
+
                     <label>E-mail:
                         <input type="text" value={this.state.email} onChange={this.update('email')}/>
                     </label>
