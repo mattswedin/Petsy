@@ -1,7 +1,8 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { login } from '../../actions/session_actions';
+import { clearErrors, login } from '../../actions/session_actions';
 import SessionForm from './session_form';
+import { openModal, closeModal } from '../../actions/modal_actions';
 
 const mapS = ({ errors }) => ({
     user: {
@@ -20,7 +21,15 @@ const mapS = ({ errors }) => ({
 })
 
 const mapD = (dispatch) => ({
-    action: user => dispatch(login(user))
+    action: user => dispatch(login(user)),
+    clearErrors: () => dispatch(clearErrors()),
+    otherForm: (
+        <button onClick={() => dispatch(openModal('login'))}>
+            Login
+        </button>
+    ),
+    closeModal: () => dispatch(closeModal()),
+    openModal: () => dispatch(openModal('signup'))
 })
 
 export default connect(mapS, mapD)(SessionForm);
