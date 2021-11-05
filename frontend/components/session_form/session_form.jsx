@@ -12,14 +12,6 @@ export default class SessionForm extends React.Component {
         this.props.clearErrors()
     }
 
-    switchForms(){
-        if (register === true){
-            register = false
-        } else {
-            register = true
-        }
-    }
-
     handleSubmit(e) {
         e.preventDefault();
         const user = Object.assign({}, this.state);

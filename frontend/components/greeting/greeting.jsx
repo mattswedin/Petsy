@@ -11,7 +11,7 @@ const Greeting = ({ currentUser, logout, openModal }) => {
         // </div>
 
          <nav className="sign-reg-modal">
-            <button onClick={() => openModal('login')}>Login</button>
+            <input type="submit" onClick={() => openModal('login')} value="Sign In"/>
         </nav>
     );
     const personalGreeting = () => (
