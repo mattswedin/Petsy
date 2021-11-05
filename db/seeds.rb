@@ -14,13 +14,12 @@ Pet.delete_all
 julian = User.create!(
   username: 'Julian',
   email: 'demo@aol.com',
-  password: 'password',
-  id: 1
+  password: 'password'
 )
 
 samuel = Pet.create!(
   name: "Samuel",
   color: "Black",
   species: "Goat",
-  owner_id: 1
+  owner_id: julian.id
 )

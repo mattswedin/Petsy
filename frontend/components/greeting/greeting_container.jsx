@@ -1,7 +1,7 @@
 import { connect } from 'react-redux';
 
 import { logout } from '../../actions/session_actions';
-import { openModal } from '../../actions/modal_actions';
+import { closeModal, openModal } from '../../actions/modal_actions';
 import Greeting from './greeting';
 
 const mapS = ({ session, entities: { users } }) => {
@@ -12,7 +12,9 @@ const mapS = ({ session, entities: { users } }) => {
 
 const mapD = dispatch => ({
     logout: () => dispatch(logout()),
-    openModal: modal => dispatch(openModal(modal))
+    login: user => dispatch(login(user)),
+    openModal: modal => dispatch(openModal(modal)),
+    closeModal: modal => dispatch(closeModal())
 });
 
 export default connect(mapS, mapD)(Greeting);

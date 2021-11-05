@@ -6,4 +6,16 @@ class Pet < ApplicationRecord
     belongs_to :user,
     foreign_key: :owner_id,
     class_name: :User
-end
+end# == Schema Information
+#
+# Table name: pets
+#
+#  id         :integer(8)      not null, primary key
+#  name       :string          not null
+#  color      :string          not null
+#  species    :string          not null
+#  owner_id   :integer(4)      not null
+#  created_at :datetime        not null
+#  updated_at :datetime        not null
+#
+

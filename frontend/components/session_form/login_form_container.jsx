@@ -9,19 +9,13 @@ const mapS = ({ errors }) => ({
         email: "",
         password: ""
     },
-    demo: {
-        user: {
-        email: "demo@aol.com",
-        password: "password"
-    }
-        
-    },
     formType: "Sign in",
     errors: errors.session
 })
 
 const mapD = (dispatch) => ({
     action: user => dispatch(login(user)),
+    login: user => dispatch(login(user)),
     clearErrors: () => dispatch(clearErrors()),
     otherForm: (
         <button onClick={() => dispatch(openModal('login'))}>

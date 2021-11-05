@@ -3,7 +3,8 @@ import { Link } from 'react-router-dom';
 
 
 
-const Greeting = ({ currentUser, logout, openModal }) => {
+const Greeting = ({ currentUser, logout, login, openModal, closeModal }) => {
+    
     const sessionLinks = () => (
         // <div>
         //     <Link to="/login">Sign in</Link>
@@ -15,9 +16,11 @@ const Greeting = ({ currentUser, logout, openModal }) => {
         </nav>
     );
     const personalGreeting = () => (
+        closeModal(),
         <div>
-            <h2>Hello {currentUser.username}! Let's get petting!</h2>
+            
             <button onClick={logout}>Log Out</button>
+            
         </div>
     );
 
