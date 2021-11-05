@@ -6,10 +6,20 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-User.delete_all
+require 'open-uri'
 
-demouser = User.create!(
+User.delete_all
+Pet.delete_all
+
+julian = User.create!(
   username: 'Julian',
   email: 'demo@aol.com',
   password: 'password'
+)
+
+samuel = Pet.create!(
+  name: "Samuel",
+  color: "Black",
+  species: "Goat",
+  owner_id: julian.id
 )
