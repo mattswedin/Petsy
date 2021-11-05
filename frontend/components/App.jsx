@@ -1,14 +1,10 @@
 import React from "react";
 import { Route } from "react-router";
 import GreetingContainer from "./greeting/greeting_container";
-import SessionForm from "./session_form/session_form";
-import LoginFormContainer from "./session_form/login_form_container";
-import SignupFormContainer from "./session_form/signup_form_container";
-import { AuthRoute } from "../util/route_util";
 import Modal from "./modal/modal";
 import CategoriesIndexContainer from "./categories/categories_index_container"
 import { Switch } from "react-router";
-import { mapS } from "./greeting/greeting_container";
+
 
 const App = () => (
     <div>
