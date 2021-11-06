@@ -6,7 +6,6 @@ export default class SessionForm extends React.Component {
         super(props);
         this.state = this.props.user
         this.handleSubmit = this.handleSubmit.bind(this)
-        this.closeModal = this.closeModal.bind(this)
         this.handleDemo = this.handleDemo.bind(this)
     }
 
@@ -25,12 +24,8 @@ export default class SessionForm extends React.Component {
 
         const julian = { email: "demo@aol.com", password: "password" }
 
-        this.props.login(julian)
+        this.props.login(julian).then(this.props.closeModal);
 
-    }
-
-    closeModal(){
-        this.props.closeModal()
     }
     
     
@@ -74,8 +69,6 @@ export default class SessionForm extends React.Component {
               
 
                         <input className="signin-button-register" type="submit" value={this.props.formType}/>
-
-                        {/* <button onClick={() => this.props.openModal('login')}>Sign In</button> */}
 
                
             </form>
