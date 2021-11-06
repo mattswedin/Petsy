@@ -1,4 +1,5 @@
 const path = require('path');
+const mode = 'development'
 
 module.exports = {
     context: __dirname,
