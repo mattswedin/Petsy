@@ -9,6 +9,6 @@ export const createCategory = (category) => {
     return $.ajax({
         url: "/api/categories",
         method: "POST",
-        date: { category }
+        data: { category }
     });
 };
