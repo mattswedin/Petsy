@@ -6,7 +6,10 @@ class Pet < ApplicationRecord
     belongs_to :user,
     foreign_key: :owner_id,
     class_name: :User
-end# == Schema Information
+end
+
+
+# == Schema Information
 #
 # Table name: pets
 #

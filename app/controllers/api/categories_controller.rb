@@ -16,6 +16,6 @@ class Api::CategoriesController < ApplicationController
     private
 
     def category_params
-        params.require(:category).permit(:goats, :sheep, :cows, :lizards, :turtles, :snakes, :dogs, :birds, :fish, :rabbits, :rats)
+        params.require(:category).permit(:title, :body)
     end
 end
