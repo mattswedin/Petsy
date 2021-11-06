@@ -11,16 +11,13 @@ const App = () => (
         <Modal />
         <header className="top-nav" >
             <h2 className="logo" >Petsy</h2>
-            <input className="search-bar"type="text" />
+            <input className="search-bar" type="text" />
             <GreetingContainer className="modal-signin" />
         </header>
         <Switch>
             <Route exact path="/" component={CategoriesIndexContainer} />
         </Switch>
         
-
-        {/* <AuthRoute exact path="/login" component={LoginFormContainer} />
-        <AuthRoute exact path="/signup" component={SignupFormContainer} /> */}
     </div>
 );
 
