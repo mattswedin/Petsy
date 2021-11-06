@@ -6,19 +6,25 @@ import CategoriesIndexContainer from "./categories/categories_index_container"
 import { Switch } from "react-router";
 
 
-const App = () => (
-    <div>
-        <Modal />
-        <header className="top-nav" >
-            <h2 className="logo" >Petsy</h2>
-            <input className="search-bar" type="text" />
-            <GreetingContainer />
-        </header>
-        <Switch>
-            <Route exact path="/" component={CategoriesIndexContainer} />
-        </Switch>
-        
-    </div>
-);
+class App extends React.Component{
+
+    render(){
+        return(
+        <div>
+            <Modal />
+            <header className="top-nav" >
+                <h2 className="logo" >Petsy</h2>
+                <input className="search-bar" type="text" />
+                <GreetingContainer />
+            </header>
+            <Switch>
+                <Route exact path="/" component={CategoriesIndexContainer} />
+            </Switch>
+            
+        </div>
+        )
+    
+}
+};
 
 export default App
