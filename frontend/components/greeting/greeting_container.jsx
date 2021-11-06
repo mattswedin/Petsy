@@ -14,7 +14,7 @@ const mapD = dispatch => ({
     logout: () => dispatch(logout()),
     login: user => dispatch(login(user)),
     openModal: modal => dispatch(openModal(modal)),
-    closeModal: modal => dispatch(closeModal())
+    closeModal: modal => dispatch(closeModal(modal))
 });
 
 export default connect(mapS, mapD)(Greeting);

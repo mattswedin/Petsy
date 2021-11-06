@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 
 
 
@@ -13,11 +12,8 @@ const Greeting = ({ currentUser, logout, login, openModal, closeModal }) => {
         </nav>
     );
     const personalGreeting = () => (
-        // closeModal(),
         <div>
-            
-            <button onClick={logout}>Log Out</button>
-            
+             <button onClick={logout}>Log Out</button>
         </div>
     );
 

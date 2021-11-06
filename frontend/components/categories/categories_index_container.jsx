@@ -1,7 +1,6 @@
 import { connect } from 'react-redux';
 import CategoryIndex from './category_index';
 import { fetchCategories } from '../../actions/category_actions';
-import Greeting from '../greeting/greeting';
 
 
 

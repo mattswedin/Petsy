@@ -12,7 +12,7 @@ const App = () => (
         <header className="top-nav" >
             <h2 className="logo" >Petsy</h2>
             <input className="search-bar" type="text" />
-            <GreetingContainer className="modal-signin" />
+            <GreetingContainer />
         </header>
         <Switch>
             <Route exact path="/" component={CategoriesIndexContainer} />
