@@ -19,15 +19,30 @@
     
 }
 
-.cat {
+.cat-photos-titles {
+    display: flex;
+    flex-direction: row;
+}
+
+.cat-photo {
     
     height: 110px;
     width: 110px;
     border-radius: 50%;
     background-color:gray;
-    border-style: solid;
+}
+
+.cat-titles {
+    display: flex;
+    flex-direction: row;
+
+}
+
+.cat-title {
+
+    
     text-align: center;
-    line-height: 270px;
+    // line-height: 270px;
     font-weight: 450;
     font-size: 15px;
     font-family: "Graphik Webfont",-apple-system,"Helvetica Neue","Droid Sans",Arial,sans-serif;

@@ -4,15 +4,18 @@ import { fetchCategories } from '../../actions/category_actions';
 
 
 
-const mapStateToProps = ({ session, entities: { users } }) => ({
-    categories: {
-        title: "Goats",
-        body: "",
-    },
-    currentUser: users[session.id]
-    
+const mapStateToProps = (state) => {
 
-});
+    const { session, entities: { users } } = state
+
+    return {
+        
+        currentUser: users[session.id],
+        categories: state.entities.category
+    
+    }
+
+};
 
 const mapDispatchToProps = dispatch => ({
     fetchCategories: () => dispatch(fetchCategories())
