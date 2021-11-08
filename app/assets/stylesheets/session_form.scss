@@ -294,18 +294,22 @@
 //top bar
 
 .top-nav {
+    margin-left: auto;
+    margin-right: auto;
+    width: 1200px;
     margin-top: 20px;
    display: flex;
    flex-direction: row;
+   justify-content: center;
 }
 
 .logo {
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: 35px;
     font-weight: 400;
+    margin-top: 8px;
+    margin-right: 20px;
     color: rgb(255, 123, 0);
-    margin-left: 0; 
-    margin-right: auto;
 }
 
 
@@ -313,15 +317,23 @@
     width: 800px;
     height: 47px;
     align-items: center;
-    margin-left: auto;
-    margin-right: auto;
     border-radius: 40px;
     background-color: rgb(230, 230, 230);
+}
+
+.sign-in-sign-put-top-nav {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 10px;
+    font-weight: 400;
+    margin-top: 18px;
+    margin-left: 20px;
 }
 
 //greeting
 
 .welcome {
+    margin-right: auto;
+    margin-right: left;
     text-align: center;
     line-height: -20px;
 }

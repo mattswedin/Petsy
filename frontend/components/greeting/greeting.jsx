@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 
 
@@ -8,12 +9,13 @@ const Greeting = ({ currentUser, logout, login, openModal, closeModal }) => {
         
 
          <nav className="sign-reg-modal">
-            <input type="submit" onClick={() => openModal('login')} value="Sign In"/>
+            <input className="sign-in-sign-put-top-nav" type="submit" onClick={() => openModal('login')} value="Sign In"/>
         </nav>
     );
     const personalGreeting = () => (
         <div>
-             <button onClick={logout}>Log Out</button>
+            <Link to={`/users/${currentUser.id}`}>Profile</Link>
+            <Link to="/" className="sign-in-sign-put-top-nav" onClick={logout} >Sign out</Link>
         </div>
     );
 

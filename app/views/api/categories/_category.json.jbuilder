@@ -1,4 +1,4 @@
-json.extract! category, :id, :title
+json.extract! category, :id, :title, :photo
 
 if category.photo.attached? 
     json.photo url_for(category.photo)
