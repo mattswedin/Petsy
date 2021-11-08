@@ -1,5 +1,5 @@
 class Pet < ApplicationRecord
-    validates :name, :color, :species, presence: true
+    validates :name, :color, :type, :size, presence: true
 
     has_one_attached :photo
 

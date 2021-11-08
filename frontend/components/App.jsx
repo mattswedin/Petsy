@@ -1,5 +1,5 @@
 import React from "react";
-import { Route } from "react-router";
+import { Redirect, Route } from "react-router";
 import GreetingContainer from "./greeting/greeting_container";
 import Modal from "./modal/modal";
 import CategoriesIndexContainer from "./categories/categories_index_container"
@@ -23,6 +23,7 @@ class App extends React.Component{
             <Switch>
                 <Route exact path="/" component={CategoriesIndexContainer} />
                 <Route exact path="/users/:userId" component={ProfileShowContainer} />
+                <Redirect to="/" />
             </Switch>
             
         </div>

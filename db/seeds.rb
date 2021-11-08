@@ -10,6 +10,7 @@ require 'open-uri'
 
 User.delete_all
 Category.delete_all
+Pet.delete_all
 
 # Demo User
 
@@ -18,6 +19,18 @@ julian = User.create!(
   email: 'demo@aol.com',
   password: 'password'
 )
+
+# Pets
+
+billy = Pet.create!(
+  name: "Billy",
+  color: "Black",
+  type: "Goat",
+  size: "Medium",
+  owner_id: julian.id
+
+)
+
 
 # Categories
 
