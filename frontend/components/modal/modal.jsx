@@ -10,11 +10,14 @@ import PetEditFormContainer from '../pets/pet_edit_form_container';
 
 
 function Modal({modal, closeModal}) {
+  console.log(modal)
+  // const {petId} = modal
+
   if (!modal) {
     return null;
   }
   let component;
-  switch (modal) {
+  switch (modal.type) {
     case 'login':
       component = <LoginFormContainer />;
       break;

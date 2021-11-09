@@ -10,7 +10,7 @@ class EditPetForm extends React.Component {
     }
 
     componentDidMount() {
-        this.props.fetchPet(this.props.match.params.petId)
+        this.props.fetchPet(this.props.pet.id)
     }
 
 
@@ -21,16 +21,12 @@ class EditPetForm extends React.Component {
     }
 
     handleSubmit() {
-        this.props.action(this.state)
+        this.props.action(this.state).then(this.props.closeModal);
     }
 
     render() {
 
-        if (!this.state)
-        return null;
-
-
-        return (
+        return this.state ? (
 
             <form className="pet-form" onSubmit={this.handleSubmit}>
                 <h1>Update Pet</h1>
@@ -64,7 +60,7 @@ class EditPetForm extends React.Component {
 
 
             </form>
-        );
+        ) : null
     }
 }
 

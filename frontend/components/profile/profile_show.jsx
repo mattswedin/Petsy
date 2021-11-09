@@ -20,7 +20,7 @@ export default class ProfileShow extends React.Component{
         return (
             <div className="profile-show">
                 <h1 className="profile-name">{this.props.user.username}</h1>
-                <input className="profile-form-button" type="submit" onClick={() => this.props.openModal('createPet')} value="Create New Pet" />
+                <input className="profile-form-button" type="submit" onClick={() => this.props.openModal({type: 'createPet'})} value="Create New Pet" />
                 
                 
                     
@@ -33,7 +33,7 @@ export default class ProfileShow extends React.Component{
                                     <ul>Type: {pet.kind}</ul>
                                     <ul>Color: {pet.color}</ul>
                                     <ul>Size: {pet.size}</ul>
-                                <input className="profile-form-button" type="submit" onClick={() => this.props.openModal('updatePet')} value="Edit Pet" />
+                                <input className="profile-form-button" type="submit" onClick={() => this.props.openModal({type: 'updatePet', pet: pet })} value="Edit Pet" />
                                 <input className="profile-form-button" type="submit" onClick={() => this.props.deletePet(pet.id)} value="Delete Pet" />
                                 </div>
                                 )

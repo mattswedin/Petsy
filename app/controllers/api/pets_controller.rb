@@ -21,12 +21,12 @@ class Api::PetsController < ApplicationController
     end
 
     def update
-        @pet = Pet.find(params[:id])
+        @pet = Pet.find_by(id: params[:id])
 
         if @pet.update(pet_params)
-        render :show
+            render :show
         else
-        render json: @pet.errors.full_messages, status: 422
+            render json: @pet.errors.full_messages, status: 422
         end
 
     end
@@ -35,7 +35,7 @@ class Api::PetsController < ApplicationController
     def destroy
         @pet = Pet.find_by(id: params[:id])
         if @pet.destroy
-            render :index
+            render :show
         else
             render json: @pet.errors.full_messages, status: 422
         end

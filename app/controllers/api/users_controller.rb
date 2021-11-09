@@ -1,4 +1,5 @@
 class Api::UsersController < ApplicationController
+  
   def create
     @user = User.new(user_params)
 
@@ -12,7 +13,6 @@ class Api::UsersController < ApplicationController
 
   def show
     @user = User.find_by(id: params[:id])
-    @pet = Pet.find_by(owner_id: params[:id])
     render :show
   end
 

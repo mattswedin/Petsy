@@ -1,20 +1,20 @@
 export const fetchPets = () => {
     return $.ajax({
-        url: "api/pets",
+        url: "/api/pets",
         method: "GET"
     });
 };
 
 export const fetchPet = petId => {
     return $.ajax({
-        url: `api/pets/${petId}`,
+        url: `/api/pets/${petId}`,
         method: "GET"
     });
 };
 
 export const createPet = pet => {
     return $.ajax({
-        url: "api/pets",
+        url: "/api/pets",
         method: "POST",
         data: { pet }
     });
@@ -22,7 +22,7 @@ export const createPet = pet => {
 
 export const updatePet = pet => {
     return $.ajax({
-        url: `api/pets/${pet.id}`,
+        url: `/api/pets/${pet.id}`,
         method: "PATCH",
         data: { pet }
     });
@@ -30,7 +30,7 @@ export const updatePet = pet => {
 
 export const deletePet = petId => {
     return $.ajax({
-        url: `api/pets/${petId}`,
+        url: `/api/pets/${petId}`,
         method: "DELETE",
     });
 };

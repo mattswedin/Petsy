@@ -1,11 +1,14 @@
+import React from 'react';
 import { connect } from 'react-redux';
 import { fetchPet, updatePet } from '../../actions/pet_actions';
 import { openModal, closeModal } from '../../actions/modal_actions';
 import EditPetForm from './pet_form_edit';
+import { withRouter } from 'react-router';
 
-const mapStateToProps = (state, ownProps) => ({
-    pet: state.entities.pets[ownProps.match.params.petId]
-});
+const mapStateToProps = (state) => {
+    return{
+    pet: state.ui.modal.pet}
+};
 
 const mapDispatchToProps = dispatch => ({
     action: pet => dispatch(updatePet(pet)),
@@ -14,4 +17,4 @@ const mapDispatchToProps = dispatch => ({
     openModal: () => dispatch(openModal('updatePet'))
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(EditPetForm)
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(EditPetForm))

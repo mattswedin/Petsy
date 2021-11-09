@@ -9,7 +9,7 @@ const Greeting = ({ currentUser, logout, login, openModal, closeModal }) => {
         
 
          <nav className="sign-reg-modal">
-            <input className="sign-in-sign-put-top-nav" type="submit" onClick={() => openModal('login')} value="Sign In"/>
+            <input className="sign-in-sign-put-top-nav" type="submit" onClick={() => openModal({ type: 'login'})} value="Sign In"/>
         </nav>
     );
     const personalGreeting = () => (
