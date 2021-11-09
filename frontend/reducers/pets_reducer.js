@@ -3,7 +3,6 @@ import {
     RECEIVE_PET,
     REMOVE_PET,
 } from '../actions/pet_actions';
-import merge from 'lodash/merge';
 
 
 const PetsReducer = (oldstate = {}, action) => {

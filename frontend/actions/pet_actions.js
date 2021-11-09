@@ -3,14 +3,14 @@ export const RECEIVE_ALL_PETS = "RECEIVE_ALL_PETS"
 export const RECEIVE_PET = "RECEIVE_PET"
 export const REMOVE_PET = "REMOVE_PET"
 
-const recievePets = pets => {
+const receivePets = pets => {
     return {
         type: RECEIVE_ALL_PETS,
         pets
     }
 }
 
-const recievePet = pet => {
+const receivePet = pet => {
     return {
         type: RECEIVE_PET,
         pet
@@ -26,23 +26,23 @@ const removePet = petId => {
 
 export const fetchPets = () => dispatch => {
     return PetApiUtil.fetchPets()
-        .then(pets => dispatch(recievePets(pets)))
+        .then(pets => dispatch(receivePets(pets)))
 }
 
 export const fetchPet = petId => dispatch => {
     return PetApiUtil.fetchPet(petId)
-        .then(petId => dispatch(recievePet(petId)))
+        .then(petId => dispatch(receivePet(petId)))
 }
 
 export const createPet = pet => dispatch => {
     return PetApiUtil.createPet(pet)
-        .then(pet => dispatch(recievePet(pet))
+        .then(pet => dispatch(receivePet(pet))
         )
 }
 
 export const updatePet = pet => dispatch => {
     return PetApiUtil.updatePet(pet)
-        .then(pet => dispatch(recievePet(pet))
+        .then(pet => dispatch(receivePet(pet))
         )
 }
 

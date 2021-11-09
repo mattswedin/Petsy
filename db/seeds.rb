@@ -20,15 +20,70 @@ julian = User.create!(
   password: 'password'
 )
 
+# Users
+
+charlie = User.create!(
+  username: 'Charlie',
+  email: 'charlie@aol.com',
+  password: 'password'
+)
+
+kitty = User.create!(
+  username: 'Kitty',
+  email: 'kitty@aol.com',
+  password: 'password'
+)
+
 # Pets
 
 billy = Pet.create!(
   name: "Billy",
   color: "Black",
-  type: "Goat",
+  kind: "Goat",
   size: "Medium",
   owner_id: julian.id
 
+)
+
+cassie = Pet.create!(
+  name: "Cassie",
+  color: "Brown",
+  kind: "Cow",
+  size: "Large",
+  owner_id: julian.id
+
+)
+
+grandma = Pet.create!(
+  name: "Grandma",
+  color: "White",
+  kind: "Sheep",
+  size: "Medium",
+  owner_id: charlie.id
+)
+
+kim = Pet.create!(
+  name: "Kim",
+  color: "White & Gold",
+  kind: "Cat",
+  size: "Small",
+  owner_id: kitty.id
+)
+
+jacques = Pet.create!(
+  name: "Jacques",
+  color: "Pink",
+  kind: "Cat",
+  size: "Medium",
+  owner_id: kitty.id
+)
+
+eloise = Pet.create!(
+  name: "Eloise",
+  color: "Black",
+  kind: "Cat",
+  size: "Small",
+  owner_id: kitty.id
 )
 
 
@@ -67,20 +122,27 @@ lizards.photo.attach(io: lizards_photo, filename: 'lizards.jpeg')
 turtles_photo = open('https://petsy-categories.s3.amazonaws.com/turtle.jpeg')
 turtles.photo.attach(io: turtles_photo, filename: 'turtle.jpeg')
 
-# snakes_photo = open('https://petsy-categories.s3.amazonaws.com/goat-asset-min.jpeg')
-# snakes.photo.attach(io: snakes_photo, filename: 'goat-asset-min.jpeg')
+# Pets - Aws
 
-# dogs_photo = open('https://petsy-categories.s3.amazonaws.com/goat-asset-min.jpeg')
-# dogs.photo.attach(io: dogs_photo, filename: 'goat-asset-min.jpeg')
+billy_photo = open('https://petsy-pets.s3.amazonaws.com/julian-goat.jpeg')
+billy.photo.attach(io: billy_photo, filename:'julian-goat.jpeg')
 
-# fish_photo = open('https://petsy-categories.s3.amazonaws.com/goat-asset-min.jpeg')
-# fish.photo.attach(io: fish_photo, filename: 'goat-asset-min.jpeg')
+cassie_photo = open('https://petsy-pets.s3.amazonaws.com/julian-cow.jpeg')
+cassie.photo.attach(io: cassie_photo, filename:'julian-cow.jpeg')
 
-# birds_photo = open('https://petsy-categories.s3.amazonaws.com/goat-asset-min.jpeg')
-# birds.photo.attach(io: birds_photo, filename: 'goat-asset-min.jpeg')
+grandma_photo = open('https://petsy-pets.s3.amazonaws.com/charlie-sheep.jpeg')
+grandma.photo.attach(io: grandma_photo, filename:'charlie-sheep.jpeg')
 
-# rabbits_photo = open('https://petsy-categories.s3.amazonaws.com/goat-asset-min.jpeg')
-# rabbits.photo.attach(io: rabbits_photo, filename: 'goat-asset-min.jpeg')
+kim_photo = open('https://petsy-pets.s3.amazonaws.com/kim-pet.jpg')
+kim.photo.attach(io: kim_photo, filename:'charlie-sheep.jpeg')
 
-# rats_photo = open('https://petsy-categories.s3.amazonaws.com/goat-asset-min.jpeg')
-# rats.photo.attach(io: rats_photo, filename: 'goat-asset-min.jpeg')
+jacques_photo = open('https://petsy-pets.s3.amazonaws.com/jacques.jpeg')
+jacques.photo.attach(io: jacques_photo, filename:'jacques.jpeg')
+
+eloise_photo = open('https://petsy-pets.s3.amazonaws.com/eloise.jpeg')
+eloise.photo.attach(io: eloise_photo, filename:'eloise.jpeg')
+
+
+
+
+puts "I HAVE SEEDED"

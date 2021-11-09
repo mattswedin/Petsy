@@ -5,7 +5,7 @@ class Api::PetsController < ApplicationController
         @pet = Pet.new(pet_params)
         @pet.owner_id = current_user.id
         if @pet.save
-            render `users/pets/#{@pet}`
+            render :show
         else
             render json: @pet.errors.full_messages, status: 422
         end
@@ -23,17 +23,17 @@ class Api::PetsController < ApplicationController
     def update
         @pet = Pet.find_by(id: params[:id])
 
-    if @pet.update(pet_params)
-      render :show
-    else
-      render json: @pet.errors.full_messages, status: 422
-    end
+        if @pet.update(pet_params)
+        render :show
+        else
+        render json: @pet.errors.full_messages, status: 422
+        end
 
-  end
+    end
 
 
     def destroy
-    @pet = Pet.find_by(id: params[:id])
+        @pet = Pet.find_by(id: params[:id])
         if @pet.destroy
             render :index
         else
@@ -44,7 +44,7 @@ class Api::PetsController < ApplicationController
     private
 
     def pet_params
-        params.require(:pet).permit(:name, :color, :type, :size)
+        params.require(:pet).permit(:name, :color, :kind, :size)
     end
 
 end

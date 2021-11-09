@@ -1,0 +1,32 @@
+.profile-show{
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 75px;
+}
+
+
+.userPet-Pos {
+    display: flex;
+    flex-direction: row;
+    
+}
+
+.userPet {
+    padding: 1%;
+}
+
+.pet-profile-pic {
+    height: 200px;
+    width: 200px;
+}
+
+.profile-name {
+    padding: 1%;
+    font-size: 50px;
+    font-family: "Graphik Webfont",-apple-system,"Helvetica Neue","Droid Sans",Arial,sans-serif;
+}
+
+.profile-form-button {
+    margin-left: 1%;
+    
+}
