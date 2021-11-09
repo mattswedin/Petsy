@@ -1,5 +1,4 @@
 import React from "react";
-import { recieveUser } from "../../actions/session_actions";
 
 
 export default class ProfileShow extends React.Component{
@@ -21,7 +20,8 @@ export default class ProfileShow extends React.Component{
         return (
             <div className="profile-show">
                 <h1 className="profile-name">{this.props.user.username}</h1>
-                <button className="profile-form-button">Create new Pet!</button>
+                <input className="profile-form-button" type="submit" onClick={() => this.props.openModal('createPet')} value="Create New Pet" />
+                
                 
                     
                     <div className="userPet-Pos">
@@ -33,6 +33,7 @@ export default class ProfileShow extends React.Component{
                                     <ul>Type: {pet.kind}</ul>
                                     <ul>Color: {pet.color}</ul>
                                     <ul>Size: {pet.size}</ul>
+                                <input className="profile-form-button" type="submit" onClick={() => this.props.openModal('updatePet')} value="Edit Pet" />
                                 </div>
                                 )
                         }

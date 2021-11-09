@@ -3,6 +3,10 @@ import { closeModal } from '../../actions/modal_actions';
 import { connect } from 'react-redux';
 import LoginFormContainer from '../session_form/login_form_container';
 import SignupFormContainer from '../session_form/signup_form_container';
+import PetCreateFormContainer from '../pets/pet_create_form_container';
+import PetEditFormContainer from '../pets/pet_edit_form_container';
+
+
 
 function Modal({modal, closeModal}) {
   if (!modal) {
@@ -15,6 +19,12 @@ function Modal({modal, closeModal}) {
       break;
     case 'signup':
       component = <SignupFormContainer />;
+      break;
+    case 'createPet':
+      component = <PetCreateFormContainer />;
+      break;
+    case 'updatePet':
+      component = <PetEditFormContainer />;
       break;
     default:
       return null;

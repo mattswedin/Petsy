@@ -23,7 +23,6 @@ export default class SessionForm extends React.Component {
         e.preventDefault();
 
         const julian = { email: "demo@aol.com", password: "password" }
-
         this.props.login(julian).then(this.props.closeModal);
 
     }
