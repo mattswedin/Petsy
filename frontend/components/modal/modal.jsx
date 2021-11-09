@@ -8,6 +8,7 @@ import PetEditFormContainer from '../pets/pet_edit_form_container';
 
 
 
+
 function Modal({modal, closeModal}) {
   if (!modal) {
     return null;

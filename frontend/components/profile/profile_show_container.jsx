@@ -1,6 +1,6 @@
 import React from "react";
 import { receiveUser } from "../../actions/session_actions";
-import { fetchPets } from "../../actions/pet_actions";
+import { deletePet, fetchPets } from "../../actions/pet_actions";
 import { connect } from "react-redux";
 import ProfileShow from "./profile_show";
 import { openModal, closeModal } from "../../actions/modal_actions";
@@ -13,6 +13,7 @@ const mapStateToProps = (state, ownProps) => ({
 const mapDispatchToProps = dispatch => ({
     recieveUser: userId => dispatch(receiveUser(userId)),
     fetchPets: () => dispatch(fetchPets()),
+    deletePet: (pet) => dispatch(deletePet(pet)),
     openModal: modal => dispatch(openModal(modal)),
     closeModal: modal => dispatch(closeModal(modal))
      

@@ -34,6 +34,7 @@ export default class ProfileShow extends React.Component{
                                     <ul>Color: {pet.color}</ul>
                                     <ul>Size: {pet.size}</ul>
                                 <input className="profile-form-button" type="submit" onClick={() => this.props.openModal('updatePet')} value="Edit Pet" />
+                                <input className="profile-form-button" type="submit" onClick={() => this.props.deletePet(pet.id)} value="Delete Pet" />
                                 </div>
                                 )
                         }

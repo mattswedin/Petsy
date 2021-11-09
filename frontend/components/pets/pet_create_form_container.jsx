@@ -11,8 +11,7 @@ const mapStateToProps = state => ({
         color: '',
         kind: '',
         size: '',
-    },
-    formType: 'Create Pet'
+    }
 });
 
 const mapDispatchToProps = dispatch => ({
