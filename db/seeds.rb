@@ -104,42 +104,42 @@ turtles = Category.create!(title: 'Turtles')
 
 # Categories - Aws
 
-goats_photo = open('https://petsy-categories.s3.amazonaws.com/goat.jpeg')
+goats_photo = open('https://petsy-seeds.s3.amazonaws.com/petsy-categories/goat.jpeg')
 goats.photo.attach(io: goats_photo, filename:'goat.jpeg')
 
-sheep_photo = open('https://petsy-categories.s3.amazonaws.com/Bitsy-sheep.jpeg')
+sheep_photo = open('https://petsy-seeds.s3.amazonaws.com/petsy-categories/Bitsy-sheep.jpeg')
 sheep.photo.attach(io: sheep_photo, filename: 'Bitsy-sheep.jpeg')
 
-cows_photo = open('https://petsy-categories.s3.amazonaws.com/cow.jpeg')
+cows_photo = open('https://petsy-seeds.s3.amazonaws.com/petsy-categories/cow.jpeg')
 cows.photo.attach(io: cows_photo, filename: 'cow.jpeg')
 
-cats_photo = open('https://petsy-categories.s3.amazonaws.com/kim.jpg')
+cats_photo = open('https://petsy-seeds.s3.amazonaws.com/petsy-categories/kim.jpg')
 cats.photo.attach(io: cats_photo, filename: 'kim.jpg')
 
-lizards_photo = open('https://petsy-categories.s3.amazonaws.com/lizards.jpeg')
+lizards_photo = open('https://petsy-seeds.s3.amazonaws.com/petsy-categories/lizards.jpeg')
 lizards.photo.attach(io: lizards_photo, filename: 'lizards.jpeg')
 
-turtles_photo = open('https://petsy-categories.s3.amazonaws.com/turtle.jpeg')
+turtles_photo = open('https://petsy-seeds.s3.amazonaws.com/petsy-categories/turtle.jpeg')
 turtles.photo.attach(io: turtles_photo, filename: 'turtle.jpeg')
 
 # Pets - Aws
 
-billy_photo = open('https://petsy-pets.s3.amazonaws.com/julian-goat.jpeg')
+billy_photo = open('https://petsy-seeds.s3.amazonaws.com/petsy-pets/julian-goat.jpeg')
 billy.photo.attach(io: billy_photo, filename:'julian-goat.jpeg')
 
-cassie_photo = open('https://petsy-pets.s3.amazonaws.com/julian-cow.jpeg')
+cassie_photo = open('https://petsy-seeds.s3.amazonaws.com/petsy-pets/julian-cow.jpeg')
 cassie.photo.attach(io: cassie_photo, filename:'julian-cow.jpeg')
 
-grandma_photo = open('https://petsy-pets.s3.amazonaws.com/charlie-sheep.jpeg')
+grandma_photo = open('https://petsy-seeds.s3.amazonaws.com/petsy-pets/charlie-sheep.jpeg')
 grandma.photo.attach(io: grandma_photo, filename:'charlie-sheep.jpeg')
 
-kim_photo = open('https://petsy-pets.s3.amazonaws.com/kim-pet.jpg')
+kim_photo = open('https://petsy-seeds.s3.amazonaws.com/petsy-pets/kim-pet.jpg')
 kim.photo.attach(io: kim_photo, filename:'charlie-sheep.jpeg')
 
-jacques_photo = open('https://petsy-pets.s3.amazonaws.com/jacques.jpeg')
+jacques_photo = open('https://petsy-seeds.s3.amazonaws.com/petsy-pets/jacques.jpeg')
 jacques.photo.attach(io: jacques_photo, filename:'jacques.jpeg')
 
-eloise_photo = open('https://petsy-pets.s3.amazonaws.com/eloise.jpeg')
+eloise_photo = open('https://petsy-seeds.s3.amazonaws.com/petsy-pets/eloise.jpeg')
 eloise.photo.attach(io: eloise_photo, filename:'eloise.jpeg')
 
 
