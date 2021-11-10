@@ -1,3 +1,55 @@
 // Place all the styles related to the Pets controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+// pet form
+
+ * {
+  margin: 0;
+  padding: 0;
+ }
+
+.pet-form {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.pet-form > .pet-label {
+    font-weight: normal;
+    font-size: 13px;
+    font-family: "Graphik Webfont",-apple-system,"Helvetica Neue","Droid Sans",Arial,sans-serif;
+    position: fixed;
+    bottom: 81%;
+    width: 380px;
+    text-align: left;
+    text-indent: 30px;
+    bottom: 67%;
+}
+
+.pet-label > .pet-input {
+    
+    height: 47px;
+    width: 320px;
+    border-radius: 6px;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+
+.userPet {
+    padding: 1%;
+}
+
+
+.userPetindex-Pos {
+    margin-right: auto;
+    margin-left: auto;
+    
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-top: 50px;
+    
+}

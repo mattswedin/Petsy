@@ -22,6 +22,8 @@ julian = User.create!(
 
 # Users
 
+
+
 charlie = User.create!(
   username: 'Charlie',
   email: 'charlie@aol.com',
@@ -33,6 +35,38 @@ kitty = User.create!(
   email: 'kitty@aol.com',
   password: 'password'
 )
+
+kirsten = User.create!(
+  username: 'Kirsten',
+  email: 'kirsten@aol.com',
+  password: 'password'
+)
+
+jackie = User.create!(
+  username: 'Jackie',
+  email: 'jackie@aol.com',
+  password: 'password'
+)
+
+camel = User.create!(
+  username: 'Camel',
+  email: 'camel@aol.com',
+  password: 'password'
+)
+
+maxwell = User.create!(
+  username: 'Maxwell',
+  email: 'maxwell@aol.com',
+  password: 'password'
+)
+
+stella = User.create!(
+  username: 'Stella',
+  email: 'stella@aol.com',
+  password: 'password'
+)
+
+
 
 # Pets
 
@@ -85,6 +119,170 @@ eloise = Pet.create!(
   size: "Small",
   owner_id: kitty.id
 )
+
+limburger = Pet.create!(
+  name: "Limburger",
+  color: "Black",
+  kind: "Turtle",
+  size: "Small",
+  owner_id: kirsten.id
+)
+
+queen = Pet.create!(
+  name: "Queen",
+  color: "Green",
+  kind: "Snake",
+  size: "small",
+  owner_id: kirsten.id
+)
+
+phillip = Pet.create!(
+  name: "Phillip",
+  color: "Grey",
+  kind: "Rat",
+  size: "small",
+  owner_id: jackie.id
+)
+
+dabi = Pet.create!(
+  name: "Dabi",
+  color: "White",
+  kind: "Dog",
+  size: "large",
+  owner_id: stella.id
+)
+
+big_blue = Pet.create!(
+  name: "Big Blue",
+  color: "Blue",
+  kind: "Snake",
+  size: "Medium",
+  owner_id: jackie.id
+)
+
+carl = Pet.create!(
+  name: "Carl",
+  color: "Brown",
+  kind: "Turtle",
+  size: "Small",
+  owner_id: jackie.id
+)
+
+child = Pet.create!(
+  name: "Thumper",
+  color: "Brown",
+  kind: "Rabbit",
+  size: "Small",
+  owner_id: jackie.id
+)
+
+goldy = Pet.create!(
+  name: "Goldie",
+  color: "Orange",
+  kind: "Fish",
+  size: "Tiny",
+  owner_id: camel.id
+)
+
+ grace = Pet.create!(
+  name: "Grace",
+  color: "Blue",
+  kind: "Fish",
+  size: "Tiny",
+  owner_id: charlie.id
+)
+
+ gregory = Pet.create!(
+  name: "Greg",
+  color: "Green",
+  kind: "Lizard",
+  size: "Medium",
+  owner_id: maxwell.id
+)
+
+ gretchen = Pet.create!(
+  name: "Gretchen",
+  color: "White",
+  kind: "Cow",
+  size: "Medium",
+  owner_id: camel.id
+)
+
+jeffery = Pet.create!(
+  name: "Jeff",
+  color: "Orange",
+  kind: "Lizard",
+  size: "Small",
+  owner_id: maxwell.id
+)
+
+kent = Pet.create!(
+  name: "Kent",
+  color: "Brown",
+  kind: "Rabbit",
+  size: "Medium",
+  owner_id: maxwell.id
+)
+
+lester = Pet.create!(
+  name: "Lester",
+  color: "Black",
+  kind: "Turtle",
+  size: "Small",
+  owner_id: camel.id
+)
+
+nephew = Pet.create!(
+  name: "Nephew",
+  color: "Speckly",
+  kind: "Lizard",
+  size: "Small",
+  owner_id: charlie.id
+)
+
+sheepster = Pet.create!(
+  name: "Sheepster",
+  color: "Black",
+  kind: "Sheep",
+  size: "Large",
+  owner_id: julian.id
+)
+
+marco = Pet.create!(
+  name: "Marco",
+  color: "Brown",
+  kind: "Lizard",
+  size: "Large",
+  owner_id: julian.id
+)
+
+snake = Pet.create!(
+  name: "Snake",
+  color: "Yellow",
+  kind: "Snake",
+  size: "Small",
+  owner_id: jackie.id
+)
+
+squire = Pet.create!(
+  name: "Squire",
+  color: "Brown",
+  kind: "Rabbit",
+  size: "Small",
+  owner_id: kirsten.id
+)
+
+woolie = Pet.create!(
+  name: "Woolie",
+  color: "White",
+  kind: "Sheeo",
+  size: "Large",
+  owner_id: kirsten.id
+)
+
+
+
+
 
 
 # Categories
@@ -142,7 +340,68 @@ jacques.photo.attach(io: jacques_photo, filename:'jacques.jpeg')
 eloise_photo = open('https://petsy-seeds.s3.amazonaws.com/petsy-pets/eloise.jpeg')
 eloise.photo.attach(io: eloise_photo, filename:'eloise.jpeg')
 
+big_blue_photo = open('https://petsy-seeds.s3.amazonaws.com/petsy-pets/Big+Blue.jpg')
+big_blue.photo.attach(io: big_blue_photo, filename:'Big+Blue.jpg')
 
+carl_photo = open('https://petsy-seeds.s3.amazonaws.com/petsy-pets/Carl.jpg')
+carl.photo.attach(io: carl_photo, filename:'Carl.jpg')
+
+child_photo = open('https://petsy-seeds.s3.amazonaws.com/petsy-pets/Child.jpeg')
+child.photo.attach(io: child_photo, filename:'Child.jpeg')
+
+dabi_photo = open('https://petsy-seeds.s3.amazonaws.com/petsy-pets/dabi.jpg')
+dabi.photo.attach(io: dabi_photo, filename:'dabi.jpg')
+
+goldy_photo = open('https://petsy-seeds.s3.amazonaws.com/petsy-pets/Goldy.jpeg')
+goldy.photo.attach(io: goldy_photo, filename:'Goldy.jpeg')
+
+grace_photo = open('https://petsy-seeds.s3.amazonaws.com/petsy-pets/Grace.jpeg')
+grace.photo.attach(io: grace_photo, filename:'Grace.jpeg')
+
+gregory_photo = open('https://petsy-seeds.s3.amazonaws.com/petsy-pets/Gregory.jpeg')
+gregory.photo.attach(io: gregory_photo, filename:'Gregory.jpeg')
+
+gretchen_photo = open('https://petsy-seeds.s3.amazonaws.com/petsy-pets/gretchen.jpeg')
+gretchen.photo.attach(io: gretchen_photo, filename:'gretchen.jpeg')
+
+jeffery_photo = open('https://petsy-seeds.s3.amazonaws.com/petsy-pets/Jeffery.jpeg')
+jeffery.photo.attach(io: jeffery_photo, filename:'Jeffery.jpeg')
+
+kent_photo = open('https://petsy-seeds.s3.amazonaws.com/petsy-pets/Kent.jpeg')
+kent.photo.attach(io: kent_photo, filename:'Kent.jpeg')
+
+lester_photo = open('https://petsy-seeds.s3.amazonaws.com/petsy-pets/lester.jpeg')
+lester.photo.attach(io: lester_photo, filename:'lester.jpeg')
+
+limburger_photo = open('https://petsy-seeds.s3.amazonaws.com/petsy-pets/limburger.jpeg')
+limburger.photo.attach(io: limburger_photo, filename:'limburger.jpeg')
+
+limburger_photo = open('https://petsy-seeds.s3.amazonaws.com/petsy-pets/maxine.jpeg')
+limburger.photo.attach(io: limburger_photo, filename:'limburger.jpeg')
+
+nephew_photo = open('https://petsy-seeds.s3.amazonaws.com/petsy-pets/Nephew.jpeg')
+nephew.photo.attach(io: nephew_photo, filename:'Nephew.jpeg')
+
+phillip_photo = open('https://petsy-seeds.s3.amazonaws.com/petsy-pets/phillip.jpeg')
+phillip.photo.attach(io: phillip_photo, filename:'phillip.jpeg')
+
+queen_photo = open('https://petsy-seeds.s3.amazonaws.com/petsy-pets/queen.jpeg')
+queen.photo.attach(io: queen_photo, filename:'queen.jpeg')
+
+sheepster_photo = open('https://petsy-seeds.s3.amazonaws.com/petsy-pets/Sheepster.jpeg')
+sheepster.photo.attach(io: sheepster_photo, filename:'Sheepster.jpeg')
+
+marco_photo = open('https://petsy-seeds.s3.amazonaws.com/petsy-pets/Shnouser.jpeg')
+marco.photo.attach(io: marco_photo, filename:'Shnouser.jpeg')
+
+snake_photo = open('https://petsy-seeds.s3.amazonaws.com/petsy-pets/Snake.jpeg')
+snake.photo.attach(io: snake_photo, filename:'Snake.jpeg')
+
+squire_photo = open('https://petsy-seeds.s3.amazonaws.com/petsy-pets/Squire.jpeg')
+squire.photo.attach(io: squire_photo, filename:'Squire.jpeg')
+
+woolie_photo = open('https://petsy-seeds.s3.amazonaws.com/petsy-pets/Woolie.jpeg')
+woolie.photo.attach(io: woolie_photo, filename:'Woolie.jpeg')
 
 
 puts "I HAVE SEEDED"

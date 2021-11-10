@@ -1,22 +1,31 @@
 import React from 'react';
-import PetIndexItem from './post_index_item';
+import { Link } from 'react-router-dom';
 
 class PetIndex extends React.Component {
+    constructor(props){
+        super(props)
+    }
 
     componentDidMount() {
         this.props.fetchPets();
     }
 
     render() {
-        const { pets, deletePet } = this.props;
         return (
-            <div>
-                <ul>
+            <div className="userPetindex-Pos">
                     {
-                        pets.map(pet => <PetIndexItem pet={pet} deletePet={deletePet} />)
-                    }
-                </ul>
-            </div>
+                    Object.values(this.props.pets).map(pet =>
+                    <div className="userPet" key={pet.id}>
+                        <img className="pet-profile-pic" src={pet.photo} />
+                        <ul>Name: {pet.name}</ul>
+                        <ul>Type: {pet.kind}</ul>
+                        <ul>Color: {pet.color}</ul>
+                        <ul>Size: {pet.size}</ul>
+                        <Link to={`/api/users/${pet.owner_id}`}>Owner</Link>
+                    </div>
+                    )}
+                </div>
+                
         );
     }
 }

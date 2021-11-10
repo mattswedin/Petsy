@@ -21,38 +21,59 @@ class PetForm extends React.Component {
     render() {
         return (
 
-            <form className="pet-form" onSubmit={this.handleSubmit}>
-                <h1>Create Pet!</h1>
+            <div >
+                {/* <ul className="errors-reg">
+                    {this.props.errors.map((error, i) => (
+                        <li key={`error-${i}`}>
+                            {error}
+                        </li>
+                    ))}
+                </ul> */}
 
-                <label>Name
-                    <input type="text"
-                        value={this.state.name}
-                        onChange={this.update('name')}/>
-                </label>
+                {/* className="pet-form"
+                className="create-header-register"
+                className="pet-label"
+                className="pet-input" */}
+
+                <form  onSubmit={this.handleSubmit}>
+
+                    <div >
+
+                    <h1 >Create Pet!</h1>
+
+                    <label  >Name
+                        <input type="text"
+                            value={this.state.name}
+                            onChange={this.update('name')}/>
+                    </label>
 
 
-                <label>Kind
-                    <input type="text"
-                        value={this.state.kind}
-                        onChange={this.update('kind')}/>
-                </label>
+                    <label className="pet-label" >Kind
+                        <input className="pet-input" type="text"
+                            value={this.state.kind}
+                            onChange={this.update('kind')}/>
+                    </label>
 
-                <label>Color
-                    <input type="text"
-                        value={this.state.color}
-                        onChange={this.update('color')}/>
-                </label>
+                    <label className="pet-label" >Color
+                        <input className="pet-input" type="text"
+                            value={this.state.color}
+                            onChange={this.update('color')}/>
+                    </label>
 
-                <label>Size
-                    <input type="text"
-                        value={this.state.size}
-                        onChange={this.update('size')}/>
-                </label>
+                    <label className="pet-label" >Size
+                        <input className="pet-input" type="text"
+                            value={this.state.size}
+                            onChange={this.update('size')}/>
+                    </label>
 
-                <button>Create!</button>
+                    <button>Create!</button>
 
-            
-            </form>
+                    </div>
+
+                
+                </form>
+            </div>
+
         )
     }
 }

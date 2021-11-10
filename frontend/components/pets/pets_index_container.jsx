@@ -1,10 +1,11 @@
 import { connect } from 'react-redux';
-import PetIndex from './post_index';
+import PetIndex from './pets_index';
 import { fetchPets, deletePet } from '../../actions/pet_actions';
 
-const mapStateToProps = state => ({
-    pets: Object.values(state.entities.pets)
-});
+const mapStateToProps = state => {
+    return{
+    pets: state.entities.pets}
+};
 
 const mapDispatchToProps = dispatch => ({
     fetchPets: () => dispatch(fetchPets()),

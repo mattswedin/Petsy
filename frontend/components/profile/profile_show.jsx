@@ -16,6 +16,7 @@ export default class ProfileShow extends React.Component{
         const that = this
         const userPets = Object.values(this.props.pets).filter(pet =>
             pet.owner_id === that.props.user.id)
+            
 
         return (
             <div className="profile-show">

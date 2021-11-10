@@ -10,7 +10,6 @@ import PetEditFormContainer from '../pets/pet_edit_form_container';
 
 
 function Modal({modal, closeModal}) {
-  console.log(modal)
   // const {petId} = modal
 
   if (!modal) {

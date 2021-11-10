@@ -19,8 +19,8 @@ class App extends React.Component{
                 <Link to="/" className="logo" >Petsy</Link>
                 <input className="search-bar" type="text" />
                 <GreetingContainer />
-
             </header>
+            
             <Switch>
                 <Route exact path="/" component={CategoriesIndexContainer} />
                 <Route exact path="/users/:userId" component={ProfileShowContainer} />
