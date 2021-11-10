@@ -21,7 +21,7 @@ class PetIndex extends React.Component {
                         <ul>Type: {pet.kind}</ul>
                         <ul>Color: {pet.color}</ul>
                         <ul>Size: {pet.size}</ul>
-                        <Link to={`/api/users/${pet.owner_id}`}>Owner</Link>
+                        {/* <Link to={`/api/users/${pet.owner_id}`}>Owner</Link> */}
                     </div>
                     )}
                 </div>
