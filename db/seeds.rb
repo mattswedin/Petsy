@@ -301,12 +301,7 @@ cows = Category.create!(title: 'Cows')
 cats = Category.create!(title: 'Cats')
 lizards = Category.create!(title: 'Lizards')
 turtles = Category.create!(title: 'Turtles')
-# snakes = Category.create!(title: 'Snakes')
-# dogs = Category.create!(title: 'Dogs')
-# fish = Category.create!(title: 'Fish')
-# birds = Category.create!(title: 'Birds')
-# rabbits = Category.create!(title: 'Rabbits')
-# rats = Category.create!(title: 'Rats')
+
 
 # Categories - Aws
 
@@ -384,8 +379,8 @@ lester.photo.attach(io: lester_photo, filename:'lester.jpeg')
 limburger_photo = open('https://petsy-seeds.s3.amazonaws.com/petsy-pets/limburger.jpeg')
 limburger.photo.attach(io: limburger_photo, filename:'limburger.jpeg')
 
-maxine_photo = open('https://petsy-seeds.s3.amazonaws.com/petsy-pets/maxine.jpeg')
-maxine.photo.attach(io: maxine_photo, filename:'maxine.jpeg')
+# maxine_photo = open('https://petsy-seeds.s3.amazonaws.com/petsy-pets/maxine.jpeg')
+# maxine.photo.attach(io: maxine_photo, filename:'maxine.jpeg')
 
 nephew_photo = open('https://petsy-seeds.s3.amazonaws.com/petsy-pets/Nephew.jpeg')
 nephew.photo.attach(io: nephew_photo, filename:'Nephew.jpeg')
