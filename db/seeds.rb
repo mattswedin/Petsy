@@ -193,7 +193,7 @@ goldy = Pet.create!(
 )
 
  gregory = Pet.create!(
-  name: "Greg",
+  name: "Mr. Fantastic",
   color: "Green",
   kind: "Lizard",
   size: "Medium",
@@ -275,9 +275,17 @@ squire = Pet.create!(
 woolie = Pet.create!(
   name: "Woolie",
   color: "White",
-  kind: "Sheeo",
+  kind: "Sheep",
   size: "Large",
   owner_id: kirsten.id
+)
+
+maxine = Pet.create!(
+  name: "Maxine",
+  color: "Black",
+  kind: "Sheep",
+  size: "Large",
+  owner_id: camel.id
 )
 
 
@@ -376,8 +384,8 @@ lester.photo.attach(io: lester_photo, filename:'lester.jpeg')
 limburger_photo = open('https://petsy-seeds.s3.amazonaws.com/petsy-pets/limburger.jpeg')
 limburger.photo.attach(io: limburger_photo, filename:'limburger.jpeg')
 
-limburger_photo = open('https://petsy-seeds.s3.amazonaws.com/petsy-pets/maxine.jpeg')
-limburger.photo.attach(io: limburger_photo, filename:'limburger.jpeg')
+maxine_photo = open('https://petsy-seeds.s3.amazonaws.com/petsy-pets/maxine.jpeg')
+maxine.photo.attach(io: maxine_photo, filename:'maxine.jpeg')
 
 nephew_photo = open('https://petsy-seeds.s3.amazonaws.com/petsy-pets/Nephew.jpeg')
 nephew.photo.attach(io: nephew_photo, filename:'Nephew.jpeg')
