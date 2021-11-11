@@ -91,11 +91,7 @@
     text-indent: 30px;
 }
 
-.fas{
-    margin-top: 15px;
-    margin-right: 50px;
-    font-size: 20px;
-}
+
 
 
 .password-signin > .password-input-signin {
@@ -340,9 +336,35 @@
     color: rgb(255, 102, 0);
 }
 
-.fas fa-shopping-cart {
-    margin-right: 30px;
 
+
+#shopping-cart {
+    
+     margin-top: 15px;
+    margin-right: 50px;
+    font-size: 20px;
+
+}
+
+#link-sign-out{
+    font-size: 15px;
+    margin-top: 16px;
+    margin-right: 40px;
+    margin-left: 20px;
+    text-align: center;
+    width: 50px;
+}
+
+.links-nav{
+    display: flex;
+    flex-direction: row;
+}
+
+#profile-icon{
+    font-size: 25px;
+    margin-top: 12px;
+    margin-left: 20px;
+    margin-right: 15px;
 }
 
 
@@ -355,6 +377,17 @@
 }
 
 .sign-in-sign-put-top-nav {
+    border: 0px;
+    background-color: white;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 13px;
+    font-weight: 400;
+    margin-top: 18px;
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+.link-sign-in-sign-put-top-nav {
     border: 0px;
     background-color: white;
     font-family: Georgia, 'Times New Roman', Times, serif;

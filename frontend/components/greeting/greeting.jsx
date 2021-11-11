@@ -13,9 +13,9 @@ const Greeting = ({ currentUser, logout, login, openModal, closeModal }) => {
         </nav>
     );
     const personalGreeting = () => (
-        <div>
-            <Link to={`/users/${currentUser.id}`}>Profile</Link>
-            <Link to="/" className="sign-in-sign-put-top-nav" onClick={logout} >Sign out</Link>
+        <div className="links-nav">
+            <Link to={`/users/${currentUser.id}`}><i id="profile-icon" className="fas fa-user-circle"></i></Link>
+            <Link to="/" id="link-sign-out" onClick={logout}>Sign out</Link>
         </div>
     );
 

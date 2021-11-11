@@ -21,7 +21,7 @@ class App extends React.Component{
                  <Link to="/" className="logo" >Petsy</Link>
                  <input className="search-bar" type="text" />
                  <GreetingContainer />
-                        <i className="fas fa-shopping-cart"></i>
+                        <i id="shopping-cart" className="fas fa-shopping-cart"></i>
 
                 </div>
                 <div className="top-nav-cats" >
