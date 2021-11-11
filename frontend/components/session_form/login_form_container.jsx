@@ -23,7 +23,7 @@ const mapD = (dispatch) => ({
         </button>
     ),
     closeModal: () => dispatch(closeModal()),
-    openModal: () => dispatch(openModal('signup'))
+    openModal: () => dispatch(openModal({type: 'signup'}))
 })
 
 export default connect(mapS, mapD)(SessionForm);

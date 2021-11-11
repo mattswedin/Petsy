@@ -37,34 +37,34 @@ class PetForm extends React.Component {
 
                 <form  onSubmit={this.handleSubmit}>
 
-                    <div >
+                    <div className="pet-form">
 
-                    <h1 >Create Pet!</h1>
+                        <h1 className="signin-header" >Create Pet!</h1>
 
-                    <label  >Name
-                        <input type="text"
+                        <h1 className="pet-label" >Name</h1>
+                            <input className="pet-input" type="text"
                             value={this.state.name}
                             onChange={this.update('name')}/>
-                    </label>
+                    
 
 
-                    <label className="pet-label" >Kind
+                        <h1 className="pet-label">Kind</h1>
                         <input className="pet-input" type="text"
                             value={this.state.kind}
                             onChange={this.update('kind')}/>
-                    </label>
+                    
 
-                    <label className="pet-label" >Color
+                        <h1 className="pet-label" >Color</h1>
                         <input className="pet-input" type="text"
                             value={this.state.color}
                             onChange={this.update('color')}/>
-                    </label>
+                    
 
-                    <label className="pet-label" >Size
+                        <h1 className="pet-label" >Size</h1>
                         <input className="pet-input" type="text"
                             value={this.state.size}
                             onChange={this.update('size')}/>
-                    </label>
+                    
 
                     <button>Create!</button>
 

@@ -18,12 +18,12 @@ const mapD = (dispatch) => ({
     action: user => dispatch(signup(user)),
     clearErrors: () => dispatch(clearErrors()),
     otherForm: (
-        <button onClick={() => dispatch(openModal('signup'))}>
+        <button onClick={() => dispatch(openModal({ type: 'signup'}))}>
             Signup
         </button>
     ),
     closeModal: () => dispatch(closeModal()),
-    openModal: () => dispatch(openModal('login'))
+    openModal: () => dispatch(openModal({type: 'login'}))
 
 })
 

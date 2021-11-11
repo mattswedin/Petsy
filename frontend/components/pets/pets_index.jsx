@@ -8,6 +8,7 @@ class PetIndex extends React.Component {
 
     componentDidMount() {
         this.props.fetchPets();
+        this.props.fetchUsers();
     }
 
     render() {
@@ -17,11 +18,12 @@ class PetIndex extends React.Component {
                     Object.values(this.props.pets).map(pet =>
                     <div className="userPet" key={pet.id}>
                         <img className="pet-profile-pic" src={pet.photo} />
-                        <ul>Name: {pet.name}</ul>
-                        <ul>Type: {pet.kind}</ul>
-                        <ul>Color: {pet.color}</ul>
-                        <ul>Size: {pet.size}</ul>
-                        {/* <Link to={`/api/users/${pet.owner_id}`}>Owner</Link> */}
+                        <ul className="pet-ele-list" >Name: {pet.name}</ul>
+                        <ul className="pet-ele-list" >Type: {pet.kind}</ul>
+                        <ul className="pet-ele-list" >Color: {pet.color}</ul>
+                        <ul className="pet-ele-list" >Size: {pet.size}</ul>
+                            <ul className="pet-ele-list" >Owner: </ul>
+                            <Link className="pet-ele-list" to={`/users/${pet.owner_id}`}>{this.props.users[pet.owner_id].username}</Link>
                     </div>
                     )}
                 </div>

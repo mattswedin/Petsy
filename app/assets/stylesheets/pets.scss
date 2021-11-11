@@ -10,16 +10,15 @@
  }
 
 .pet-form {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+   flex: display;
+   justify-content: center;
 }
 
-.pet-form > .pet-label {
+.pet-label {
     font-weight: normal;
     font-size: 13px;
     font-family: "Graphik Webfont",-apple-system,"Helvetica Neue","Droid Sans",Arial,sans-serif;
-    position: fixed;
+    margin-top: 10px;
     bottom: 81%;
     width: 380px;
     text-align: left;
@@ -27,11 +26,12 @@
     bottom: 67%;
 }
 
-.pet-label > .pet-input {
+.pet-input {
     
     height: 47px;
     width: 320px;
     border-radius: 6px;
+    margin-top: 10px;
     margin-left: auto;
     margin-right: auto;
     
@@ -45,7 +45,7 @@
 .userPetindex-Pos {
     margin-right: auto;
     margin-left: auto;
-    
+    justify-content: center;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;

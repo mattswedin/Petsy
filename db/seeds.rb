@@ -66,6 +66,23 @@ stella = User.create!(
   password: 'password'
 )
 
+subin = User.create!(
+  username: 'Subin',
+  email: 'subin@aol.com',
+  password: 'password'
+)
+
+alberto = User.create!(
+  username: 'Alberto',
+  email: 'alberto@aol.com',
+  password: 'password'
+)
+
+maddie = User.create!(
+  username: 'Maddie',
+  email: 'maddie@aol.com',
+  password: 'password'
+)
 
 
 # Pets
@@ -87,6 +104,24 @@ cassie = Pet.create!(
   owner_id: julian.id
 
 )
+
+mickey = Pet.create!(
+  name: "Mickey",
+  color: "White",
+  kind: "Dog",
+  size: "Small",
+  owner_id: subin.id
+
+) 
+
+leo = Pet.create!(
+  name: "Leo",
+  color: "Brown",
+  kind: "Dog",
+  size: "Large",
+  owner_id: alberto.id
+
+) 
 
 grandma = Pet.create!(
   name: "Grandma",
@@ -128,12 +163,35 @@ limburger = Pet.create!(
   owner_id: kirsten.id
 )
 
+igor = Pet.create!(
+  name: "Igor",
+  color: "Brown",
+  kind: "Cat",
+  size: "Small",
+  owner_id: maddie.id
+)
+
+juno = Pet.create!(
+  name: "Juno",
+  color: "Brown",
+  kind: "Dog",
+  size: "Medium",
+  owner_id: maddie.id
+)
+
 queen = Pet.create!(
   name: "Queen",
   color: "Green",
   kind: "Snake",
   size: "small",
   owner_id: kirsten.id
+)
+dabi = Pet.create!(
+  name: "Dabi",
+  color: "White",
+  kind: "Dog",
+  size: "large",
+  owner_id: stella.id
 )
 
 phillip = Pet.create!(
@@ -142,14 +200,6 @@ phillip = Pet.create!(
   kind: "Rat",
   size: "small",
   owner_id: jackie.id
-)
-
-dabi = Pet.create!(
-  name: "Dabi",
-  color: "White",
-  kind: "Dog",
-  size: "large",
-  owner_id: stella.id
 )
 
 big_blue = Pet.create!(
@@ -166,6 +216,22 @@ carl = Pet.create!(
   kind: "Turtle",
   size: "Small",
   owner_id: jackie.id
+)
+
+lucy = Pet.create!(
+  name: "Lucy",
+  color: "White",
+  kind: "Dog",
+  size: "Small",
+  owner_id: maddie.id
+)
+
+diamond = Pet.create!(
+  name: "Diamond",
+  color: "White",
+  kind: "Dog",
+  size: "Small",
+  owner_id: maddie.id
 )
 
 child = Pet.create!(
@@ -405,6 +471,24 @@ squire.photo.attach(io: squire_photo, filename:'Squire.jpeg')
 
 woolie_photo = open('https://petsy-seeds.s3.amazonaws.com/petsy-pets/Woolie.jpeg')
 woolie.photo.attach(io: woolie_photo, filename:'Woolie.jpeg')
+
+igor_photo = open('https://petsy-seeds.s3.amazonaws.com/petsy-pets/igor.jpeg')
+igor.photo.attach(io: igor_photo, filename:'igor.jpeg')
+
+leo_photo = open('https://petsy-seeds.s3.amazonaws.com/petsy-pets/leo.jpeg')
+leo.photo.attach(io: leo_photo, filename:'leo.jpeg')
+
+mickey_photo = open('https://petsy-seeds.s3.amazonaws.com/petsy-pets/mickey.jpeg')
+mickey.photo.attach(io: mickey_photo, filename:'mickey.jpeg')
+
+lucy_photo = open('https://petsy-seeds.s3.amazonaws.com/petsy-pets/lucy.jpeg')
+lucy.photo.attach(io: lucy_photo, filename:'lucy.jpeg')
+
+juno_photo = open('https://petsy-seeds.s3.amazonaws.com/petsy-pets/juno.jpeg')
+juno.photo.attach(io: juno_photo, filename:'juno.jpeg')
+
+diamond_photo = open('https://petsy-seeds.s3.amazonaws.com/petsy-pets/diamond.jpeg')
+diamond.photo.attach(io: diamond_photo, filename:'diamond.jpeg')
 
 
 puts "I HAVE SEEDED"

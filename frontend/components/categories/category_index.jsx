@@ -14,11 +14,12 @@ export default class CategoryIndex extends React.Component{
 
                 if (this.props.currentUser){
                 return(
-                    
-                    <div>
-                        <h2 className="color" >Welcome Back, {this.props.currentUser.username}! </h2>
+
+                        <div className="color" >
+                        <h2  className="color-title" >Welcome Back, <u className="underline-user">{this.props.currentUser.username}</u>!</h2>
 
                         <div className="cat-photos-titles">
+                            
                                 {
                                     Object.values(this.props.categories).map
                                     (category => 
@@ -33,6 +34,7 @@ export default class CategoryIndex extends React.Component{
                                     )
                                     
                                 }
+                            
                         </div>
 
                         <PetIndexContainer />
@@ -44,8 +46,8 @@ export default class CategoryIndex extends React.Component{
 
                 return( 
 
-                <div>
-                    <h2 className="color" >Lets Get Petting with Petsy!</h2>
+                    <div className="color">
+                    <h2 className="color-title" >Lets Get Petting with Petsy!</h2>
                         <div className="cat-photos-titles">
                             {
                                 Object.values(this.props.categories).map

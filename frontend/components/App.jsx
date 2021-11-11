@@ -15,10 +15,34 @@ class App extends React.Component{
         return(
         <div>
             <Modal />
-            <header className="top-nav" >
-                <Link to="/" className="logo" >Petsy</Link>
-                <input className="search-bar" type="text" />
-                <GreetingContainer />
+            <header >
+                
+                <div className="top-nav">
+                 <Link to="/" className="logo" >Petsy</Link>
+                 <input className="search-bar" type="text" />
+                 <GreetingContainer />
+                        <i className="fas fa-shopping-cart"></i>
+
+                </div>
+                <div className="top-nav-cats" >
+                    <h1 className="first" >Snakes</h1>
+                    <h1>Dogs</h1>
+                    <h1>Rats</h1>
+                    <h1>Rabbits</h1>
+                    <h1>Fish</h1>
+                    <h1>Birds</h1>
+                    <h1>Gerbils</h1>
+                    <h1>Hamsters</h1>
+                    <h1>Monkeys</h1>
+                    <h1>Ferrets</h1>
+                    <h1>Rocks</h1>
+                    <h1>Pigs</h1>
+                    <h1>Guinea Pigs</h1>
+                    <h1>Horses</h1>
+                    <h1>Plants</h1>
+                    <h1 className="last" >Deer</h1>
+                </div>
+                <div className="line" ></div>
             </header>
             
             <Switch>

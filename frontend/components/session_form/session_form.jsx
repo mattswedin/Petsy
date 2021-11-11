@@ -96,7 +96,7 @@ export default class SessionForm extends React.Component {
 
                         <input className="signin-button" type="submit" value={this.props.formType} />
 
-                        <button className="register-button-sigin"onClick={() => this.props.openModal({ type: 'signup'})}>Register</button>
+                        <button className="register-button-sigin" onClick={() => this.props.openModal({ type: 'signup' })}>Register</button>
 
                         <div >
                             <label className="email-signin">Email Address
