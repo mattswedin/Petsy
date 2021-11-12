@@ -10,6 +10,8 @@ Petsy is a social media/shop site for pets and their owners. You can "pet" other
 
 - React-Redux for frontend
 - Ruby on Rails for backend
+- PostgreSQL 13 server
+- AWS for images
 
 # Features
 
@@ -17,6 +19,8 @@ Petsy is a social media/shop site for pets and their owners. You can "pet" other
 - Can filter through an index of all pets. Can click on pet to see the owner's show page including all the pets they own.
 
 # Code Snippet
+
+- The below code is what I used as a quick fix to sort pets by category. It is matching the category the user selected with the pet's category, only showing those specific pets with the category they've been assigned upon creation.
 
 ```render() {
 
