@@ -84,13 +84,72 @@ maddie = User.create!(
   password: 'password'
 )
 
+rebecca = User.create!(
+  username: 'Rebecca',
+  email: 'rebecca@aol.com',
+  password: 'password'
+)
+
+taylor = User.create!(
+  username: 'Taylor',
+  email: 'taylor@aol.com',
+  password: 'password'
+)
+
+mansoo = User.create!(
+  username: 'Mansoo',
+  email: 'mansoo@aol.com',
+  password: 'password'
+)
+
+maria = User.create!(
+  username: 'Maria',
+  email: 'maria@aol.com',
+  password: 'password'
+)
+
+
+
 
 # Pets
+
+kim = Pet.create!(
+  name: "Kim",
+  color: "White & Gold",
+  category: "Cats",
+  size: "Small",
+  owner_id: kitty.id
+)
+
+leoo = Pet.create!(
+  name: "Leo",
+  color: "Brown",
+  category: "Dogs",
+  size: "Large",
+  owner_id: taylor.id
+)
+
+skywalker = Pet.create!(
+  name: "Skywalker",
+  color: "Brown",
+  category: "Cats",
+  size: "Small",
+  owner_id: maria.id
+)
+
+minnie = Pet.create!(
+  name: "Minnie",
+  color: "Brown",
+  category: "Cats",
+  size: "Small",
+  owner_id: mansoo.id
+)
+
 
 billy = Pet.create!(
   name: "Billy",
   color: "Black",
-  kind: "Goat",
+  category: "Goats",
   size: "Medium",
   owner_id: julian.id
 
@@ -99,7 +158,7 @@ billy = Pet.create!(
 cassie = Pet.create!(
   name: "Cassie",
   color: "Brown",
-  kind: "Cow",
+  category: "Cows",
   size: "Large",
   owner_id: julian.id
 
@@ -108,7 +167,7 @@ cassie = Pet.create!(
 mickey = Pet.create!(
   name: "Mickey",
   color: "White",
-  kind: "Dog",
+  category: "Dogs",
   size: "Small",
   owner_id: subin.id
 
@@ -117,7 +176,7 @@ mickey = Pet.create!(
 leo = Pet.create!(
   name: "Leo",
   color: "Brown",
-  kind: "Dog",
+  category: "Dogs",
   size: "Large",
   owner_id: alberto.id
 
@@ -126,23 +185,24 @@ leo = Pet.create!(
 grandma = Pet.create!(
   name: "Grandma",
   color: "White",
-  kind: "Sheep",
+  category: "Sheep",
   size: "Medium",
   owner_id: charlie.id
 )
 
-kim = Pet.create!(
-  name: "Kim",
-  color: "White & Gold",
-  kind: "Cat",
+igor = Pet.create!(
+  name: "Igor",
+  color: "Brown",
+  category: "Cats",
   size: "Small",
-  owner_id: kitty.id
+  owner_id: maddie.id
 )
+
 
 jacques = Pet.create!(
   name: "Jacques",
   color: "Pink",
-  kind: "Cat",
+  category: "Cats",
   size: "Medium",
   owner_id: kitty.id
 )
@@ -150,31 +210,49 @@ jacques = Pet.create!(
 eloise = Pet.create!(
   name: "Eloise",
   color: "Black",
-  kind: "Cat",
+  category: "Cats",
   size: "Small",
   owner_id: kitty.id
+)
+
+noelle = Pet.create!(
+  name: "Noella",
+  color: "Orange",
+  category: "Dogs",
+  size: "Medium",
+  owner_id: rebecca.id
+)
+
+orylie = Pet.create!(
+  name: "O’Rylie",
+  color: "Black",
+  category: "Dogs",
+  size: "Medium",
+  owner_id: rebecca.id
+)
+
+kiwi = Pet.create!(
+  name: "Kiwi",
+  color: "Brown",
+  category: "Dogs",
+  size: "Small",
+  owner_id: rebecca.id
 )
 
 limburger = Pet.create!(
   name: "Limburger",
   color: "Black",
-  kind: "Turtle",
+  category: "Turtles",
   size: "Small",
   owner_id: kirsten.id
 )
 
-igor = Pet.create!(
-  name: "Igor",
-  color: "Brown",
-  kind: "Cat",
-  size: "Small",
-  owner_id: maddie.id
-)
+
 
 juno = Pet.create!(
   name: "Juno",
   color: "Brown",
-  kind: "Dog",
+  category: "Dogs",
   size: "Medium",
   owner_id: maddie.id
 )
@@ -182,14 +260,14 @@ juno = Pet.create!(
 queen = Pet.create!(
   name: "Queen",
   color: "Green",
-  kind: "Snake",
+  category: "Snakes",
   size: "small",
   owner_id: kirsten.id
 )
 dabi = Pet.create!(
   name: "Dabi",
   color: "White",
-  kind: "Dog",
+  category: "Dogs",
   size: "large",
   owner_id: stella.id
 )
@@ -197,7 +275,7 @@ dabi = Pet.create!(
 phillip = Pet.create!(
   name: "Phillip",
   color: "Grey",
-  kind: "Rat",
+  category: "Rats",
   size: "small",
   owner_id: jackie.id
 )
@@ -205,7 +283,7 @@ phillip = Pet.create!(
 big_blue = Pet.create!(
   name: "Big Blue",
   color: "Blue",
-  kind: "Snake",
+  category: "Snakes",
   size: "Medium",
   owner_id: jackie.id
 )
@@ -213,7 +291,7 @@ big_blue = Pet.create!(
 carl = Pet.create!(
   name: "Carl",
   color: "Brown",
-  kind: "Turtle",
+  category: "Turtles",
   size: "Small",
   owner_id: jackie.id
 )
@@ -221,7 +299,7 @@ carl = Pet.create!(
 lucy = Pet.create!(
   name: "Lucy",
   color: "White",
-  kind: "Dog",
+  category: "Dogs",
   size: "Small",
   owner_id: maddie.id
 )
@@ -229,7 +307,7 @@ lucy = Pet.create!(
 diamond = Pet.create!(
   name: "Diamond",
   color: "White",
-  kind: "Dog",
+  category: "Dogs",
   size: "Small",
   owner_id: maddie.id
 )
@@ -237,7 +315,7 @@ diamond = Pet.create!(
 child = Pet.create!(
   name: "Thumper",
   color: "Brown",
-  kind: "Rabbit",
+  category: "Rabbits",
   size: "Small",
   owner_id: jackie.id
 )
@@ -245,7 +323,7 @@ child = Pet.create!(
 goldy = Pet.create!(
   name: "Goldie",
   color: "Orange",
-  kind: "Fish",
+  category: "Fish",
   size: "Tiny",
   owner_id: camel.id
 )
@@ -253,7 +331,7 @@ goldy = Pet.create!(
  grace = Pet.create!(
   name: "Grace",
   color: "Blue",
-  kind: "Fish",
+  category: "Fish",
   size: "Tiny",
   owner_id: charlie.id
 )
@@ -261,7 +339,7 @@ goldy = Pet.create!(
  gregory = Pet.create!(
   name: "Mr. Fantastic",
   color: "Green",
-  kind: "Lizard",
+  category: "Lizards",
   size: "Medium",
   owner_id: maxwell.id
 )
@@ -269,7 +347,7 @@ goldy = Pet.create!(
  gretchen = Pet.create!(
   name: "Gretchen",
   color: "White",
-  kind: "Cow",
+  category: "Cows",
   size: "Medium",
   owner_id: camel.id
 )
@@ -277,7 +355,7 @@ goldy = Pet.create!(
 jeffery = Pet.create!(
   name: "Jeff",
   color: "Orange",
-  kind: "Lizard",
+  category: "Lizards",
   size: "Small",
   owner_id: maxwell.id
 )
@@ -285,7 +363,7 @@ jeffery = Pet.create!(
 kent = Pet.create!(
   name: "Kent",
   color: "Brown",
-  kind: "Rabbit",
+  category: "Rabbits",
   size: "Medium",
   owner_id: maxwell.id
 )
@@ -293,7 +371,7 @@ kent = Pet.create!(
 lester = Pet.create!(
   name: "Lester",
   color: "Black",
-  kind: "Turtle",
+  category: "Turtles",
   size: "Small",
   owner_id: camel.id
 )
@@ -301,7 +379,7 @@ lester = Pet.create!(
 nephew = Pet.create!(
   name: "Nephew",
   color: "Speckly",
-  kind: "Lizard",
+  category: "Lizards",
   size: "Small",
   owner_id: charlie.id
 )
@@ -309,7 +387,7 @@ nephew = Pet.create!(
 sheepster = Pet.create!(
   name: "Sheepster",
   color: "Black",
-  kind: "Sheep",
+  category: "Sheep",
   size: "Large",
   owner_id: julian.id
 )
@@ -317,7 +395,7 @@ sheepster = Pet.create!(
 marco = Pet.create!(
   name: "Marco",
   color: "Brown",
-  kind: "Lizard",
+  category: "Lizards",
   size: "Large",
   owner_id: julian.id
 )
@@ -325,7 +403,7 @@ marco = Pet.create!(
 snake = Pet.create!(
   name: "Snake",
   color: "Yellow",
-  kind: "Snake",
+  category: "Snakes",
   size: "Small",
   owner_id: jackie.id
 )
@@ -333,7 +411,7 @@ snake = Pet.create!(
 squire = Pet.create!(
   name: "Squire",
   color: "Brown",
-  kind: "Rabbit",
+  category: "Rabbits",
   size: "Small",
   owner_id: kirsten.id
 )
@@ -341,7 +419,7 @@ squire = Pet.create!(
 woolie = Pet.create!(
   name: "Woolie",
   color: "White",
-  kind: "Sheep",
+  category: "Sheep",
   size: "Large",
   owner_id: kirsten.id
 )
@@ -349,7 +427,7 @@ woolie = Pet.create!(
 maxine = Pet.create!(
   name: "Maxine",
   color: "Black",
-  kind: "Sheep",
+  category: "Sheep",
   size: "Large",
   owner_id: camel.id
 )
@@ -361,7 +439,7 @@ maxine = Pet.create!(
 
 # Categories
 
-goats = Category.create!(title: 'Goats')
+dogs = Category.create!(title: 'Dogs')
 sheep = Category.create!(title: 'Sheep')
 cows = Category.create!(title: 'Cows')
 cats = Category.create!(title: 'Cats')
@@ -371,8 +449,8 @@ turtles = Category.create!(title: 'Turtles')
 
 # Categories - Aws
 
-goats_photo = open('https://petsy-seeds.s3.amazonaws.com/petsy-categories/goat.jpeg')
-goats.photo.attach(io: goats_photo, filename:'goat.jpeg')
+dogs_photo = open('https://petsy-seeds.s3.amazonaws.com/petsy-categories/dogs.jpeg')
+dogs.photo.attach(io: dogs_photo, filename:'dogs.jpeg')
 
 sheep_photo = open('https://petsy-seeds.s3.amazonaws.com/petsy-categories/Bitsy-sheep.jpeg')
 sheep.photo.attach(io: sheep_photo, filename: 'Bitsy-sheep.jpeg')
@@ -490,5 +568,22 @@ juno.photo.attach(io: juno_photo, filename:'juno.jpeg')
 diamond_photo = open('https://petsy-seeds.s3.amazonaws.com/petsy-pets/diamond.jpeg')
 diamond.photo.attach(io: diamond_photo, filename:'diamond.jpeg')
 
+minnie_photo = open('https://petsy-seeds.s3.amazonaws.com/petsy-pets/minnie.jpeg')
+minnie.photo.attach(io: minnie_photo, filename:'minnie.jpeg')
+
+skywalker_photo = open('https://petsy-seeds.s3.amazonaws.com/petsy-pets/skywalker.jpeg')
+skywalker.photo.attach(io: skywalker_photo, filename:'skywalker.jpeg')
+
+leoo_photo = open('https://petsy-seeds.s3.amazonaws.com/petsy-pets/leoo.jpeg')
+leoo.photo.attach(io: leoo_photo, filename:'leoo.jpeg')
+
+noelle_photo = open('https://petsy-seeds.s3.amazonaws.com/petsy-pets/noelle.jpeg')
+noelle.photo.attach(io: noelle_photo, filename:'noelle.jpeg')
+
+orylie_photo = open('https://petsy-seeds.s3.amazonaws.com/petsy-pets/orylie.jpeg')
+orylie.photo.attach(io: orylie_photo, filename:'orylie.jpeg')
+
+kiwi_photo = open('https://petsy-seeds.s3.amazonaws.com/petsy-pets/kiwi.jpeg')
+kiwi.photo.attach(io: kiwi_photo, filename:'kiwi.jpeg')
 
 puts "I HAVE SEEDED"

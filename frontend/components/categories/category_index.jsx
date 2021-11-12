@@ -1,13 +1,22 @@
 import React from "react"
 import PetIndexContainer from "../pets/pets_index_container"
+import pet_create_form_container from "../pets/pet_create_form_container"
 
 export default class CategoryIndex extends React.Component{
     constructor(props){
         super(props)
+        this.changeCat = this.changeCat.bind(this)
+        this.state = { category: 'All'}
     }
 
     componentDidMount(){
         this.props.fetchCategories()
+    }
+
+    changeCat(cat){
+        
+        this.setState({category: cat})
+        
     }
 
     render(){
@@ -25,7 +34,7 @@ export default class CategoryIndex extends React.Component{
                                     (category => 
                                     <div key={category.id}>
                                             <div>
-                                                <img className="cat-photo" src={category.photo} />
+                                                <img className="cat-photo" src={category.photo} onClick={() => this.changeCat(category.title)} />
                                             </div>
                                             <div>
                                                 <h1 className="cat-title">{category.title}</h1>
@@ -37,7 +46,7 @@ export default class CategoryIndex extends React.Component{
                             
                         </div>
 
-                        <PetIndexContainer />
+                        <PetIndexContainer category={this.state.category}/>
                     
                         
                         
@@ -49,12 +58,13 @@ export default class CategoryIndex extends React.Component{
                     <div className="color">
                     <h2 className="color-title" >Lets Get Petting with Petsy!</h2>
                         <div className="cat-photos-titles">
+
                             {
                                 Object.values(this.props.categories).map
                                     (category =>
                                         <div key={category.id}>
                                             <div>
-                                                <img className="cat-photo" src={category.photo} />
+                                                <img className="cat-photo" src={category.photo} onClick={() => this.changeCat(category.title)} />
                                             </div>
                                             <div>
                                                 <h1 className="cat-title">{category.title}</h1>
@@ -63,8 +73,11 @@ export default class CategoryIndex extends React.Component{
                                     )
 
                             }
+
                         </div>
-                        <PetIndexContainer />
+
+                        <PetIndexContainer category={this.state.category} />
+
                 </div>
 
             )

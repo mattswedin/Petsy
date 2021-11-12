@@ -28,38 +28,41 @@ class EditPetForm extends React.Component {
 
         return this.state ? (
 
+            
+            <div className="modal-form-container">
             <form className="pet-form" onSubmit={this.handleSubmit}>
-                <h1>Update Pet</h1>
+                
+                <h1 className="create-update-header" >Update Pet</h1>
 
-                <label>Name
-                    <input type="text"
+                <h1 className="pet-label" >Name</h1>
+                <input className="pet-input" type="text"
                         value={this.state.name}
                         onChange={this.update('name')} />
-                </label>
 
 
-                <label>Kind
-                    <input type="text"
-                        value={this.state.kind}
-                        onChange={this.update('kind')} />
-                </label>
+                <h1 className="pet-label" >Category</h1>
+                <input className="pet-input" type="text"
+                        value={this.state.category}
+                        onChange={this.update('category')} />
 
-                <label>Color
-                    <input type="text"
+                <h1 className="pet-label" >Color</h1>
+                <input className="pet-input" type="text"
                         value={this.state.color}
                         onChange={this.update('color')} />
-                </label>
+               
 
-                <label>Size
-                    <input type="text"
+                <h1 className="pet-label" >Size</h1>
+                <input className="pet-input" type="text"
                         value={this.state.size}
                         onChange={this.update('size')} />
-                </label>
-
-                <button>Update!</button>
 
 
+                <button className="create-update-button" >Update!</button>
+
+                
             </form>
+            </div>
+            
         ) : null
     }
 }

@@ -21,7 +21,7 @@ class PetForm extends React.Component {
     render() {
         return (
 
-            <div >
+            <div className="modal-form-container">
                 {/* <ul className="errors-reg">
                     {this.props.errors.map((error, i) => (
                         <li key={`error-${i}`}>
@@ -39,7 +39,7 @@ class PetForm extends React.Component {
 
                     <div className="pet-form">
 
-                        <h1 className="signin-header" >Create Pet!</h1>
+                        <h1 className="create-update-header">Create Pet!</h1>
 
                         <h1 className="pet-label" >Name</h1>
                             <input className="pet-input" type="text"
@@ -48,10 +48,10 @@ class PetForm extends React.Component {
                     
 
 
-                        <h1 className="pet-label">Kind</h1>
+                        <h1 className="pet-label">Category</h1>
                         <input className="pet-input" type="text"
-                            value={this.state.kind}
-                            onChange={this.update('kind')}/>
+                            value={this.state.category}
+                            onChange={this.update('category')}/>
                     
 
                         <h1 className="pet-label" >Color</h1>
@@ -66,7 +66,7 @@ class PetForm extends React.Component {
                             onChange={this.update('size')}/>
                     
 
-                    <button>Create!</button>
+                        <button className="create-update-button" >Create!</button>
 
                     </div>
 

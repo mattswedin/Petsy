@@ -37,11 +37,11 @@ export default class ProfileShow extends React.Component{
                             <div className="userPet" key={pet.id}>
                                 <img className="pet-profile-pic" src={pet.photo}/>
                                 <ul className="pet-ele-list" >Name: {pet.name}</ul>
-                                <ul className="pet-ele-list" >Type: {pet.kind}</ul>
+                                <ul className="pet-ele-list" >Type: {pet.category}</ul>
                                 <ul className="pet-ele-list" >Color: {pet.color}</ul>
                                 <ul className="pet-ele-list" >Size: {pet.size}</ul>
                                 <input className="profile-form-button-two" type="submit" onClick={() => this.props.openModal({type: 'updatePet', pet: pet })} value="Edit Pet" />
-                                <input className="profile-form-button-two" type="submit" onClick={() => this.props.deletePet(pet.id)} value="Delete Pet" />
+                                <input className="profile-form-button-two" type="submit" onClick={() => this.props.deletePet(pet.id)} value="Put Up for Adoption" />
                                 </div>
                                 )
                         }
@@ -62,7 +62,7 @@ export default class ProfileShow extends React.Component{
                                 <div className="userPet" key={pet.id}>
                                     <img className="pet-profile-pic" src={pet.photo} />
                                     <ul className="pet-ele-list" >Name: {pet.name}</ul>
-                                    <ul className="pet-ele-list" >Type: {pet.kind}</ul>
+                                    <ul className="pet-ele-list" >Type: {pet.category}</ul>
                                     <ul className="pet-ele-list" >Color: {pet.color}</ul>
                                     <ul className="pet-ele-list" >Size: {pet.size}</ul>
                                 </div>

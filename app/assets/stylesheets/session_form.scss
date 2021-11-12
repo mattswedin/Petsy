@@ -22,7 +22,7 @@
  }
 
  .modelbg{
-    
+
     position: fixed;
     top: 0;
     bottom: 0;
@@ -37,7 +37,7 @@
     flex-direction: column;
     justify-content: space-around;
     background-color: white;
-    height: 770px;
+    height: 500px;
     width: 380px;
     position: absolute;
     top: 50%;
@@ -104,6 +104,11 @@
     
 }
 
+.row {
+    display: flex;
+    flex-direction: row;
+}
+
 .signin-button {
     font-size: 16px;
     font-family: "Graphik Webfont",-apple-system,"Helvetica Neue","Droid Sans",Arial,sans-serif;
@@ -119,14 +124,27 @@
     
 }
 
+.modal-form-container-sess{
+    display: flex;
+    margin-top: -80px;
+}
+
+.space-1{
+    margin-top: 25px;
+}
+
+.space-between{
+    
+    margin-bottom: 30px;
+}
+
 .guest-button {
+
+    margin-top: 20px;
     font-size: 16px;
     font-family: "Graphik Webfont",-apple-system,"Helvetica Neue","Droid Sans",Arial,sans-serif;
     background-color: black;
     color: white;
-    position: fixed;
-    left: 29px;
-    bottom: 47%;
     text-align: center;
     height: 47px;
     width: 320px;
@@ -138,6 +156,7 @@
     font-family: "Graphik Webfont",-apple-system,"Helvetica Neue","Droid Sans",Arial,sans-serif;
     background-color: white;
     position: fixed;
+    top: 22px;
     left: 250px;
     bottom: 91%;
     text-align: center;
@@ -162,9 +181,8 @@
 
 .errors {
     text-align: center;
-    position: fixed;
-    bottom: 65%;
     left: 70px;
+    bottom: 1px;
     
 }
 
@@ -174,7 +192,6 @@
     font-weight: normal;
     font-size: 13px;
     font-family: "Graphik Webfont",-apple-system,"Helvetica Neue","Droid Sans",Arial,sans-serif;
-    position: fixed;
     bottom: 78%;
     width: 380px;
     display: flex;
@@ -197,7 +214,6 @@
     font-weight: normal;
     font-size: 13px;
     font-family: "Graphik Webfont",-apple-system,"Helvetica Neue","Droid Sans",Arial,sans-serif;
-    position: fixed;
     bottom: 67%;
     width: 380px;
     display: flex;
@@ -222,7 +238,6 @@
     font-weight: normal;
     font-size: 13px;
     font-family: "Graphik Webfont",-apple-system,"Helvetica Neue","Droid Sans",Arial,sans-serif;
-    position: fixed;
     bottom: 56%;
     width: 380px;
     display: flex;
@@ -249,30 +264,28 @@
     font-family: "Graphik Webfont",-apple-system,"Helvetica Neue","Droid Sans",Arial,sans-serif;
     background-color: black;
     color: white;
-    position: fixed;
-    left: 29px;
     bottom: 45%;
     text-align: center;
     height: 49px;
     width: 320px;
     border-radius: 25px;
+    margin-left: 30px;
+    margin-top: 30px;
 }
 
 
 .errors-reg {
     text-align: center;
-    position: fixed;
     bottom: 30%;
     left: 35px;
     
 }
 
 .create-header-register {
-      font-weight: 500;
+    font-weight: 500;
     font-size: 20px;
     font-family: "Graphik Webfont",-apple-system,"Helvetica Neue","Droid Sans",Arial,sans-serif;
      background-color: white;
-    position: fixed;
     left: 27px;
     bottom: 94%;
     text-align: center;
@@ -285,7 +298,6 @@
     font-size: 18px;
     font-family: "Graphik Webfont",-apple-system,"Helvetica Neue","Droid Sans",Arial,sans-serif;
      background-color: white;
-    position: fixed;
     left: 27px;
     bottom: 90%;
     text-align: center;
@@ -293,6 +305,8 @@
     
 
 }
+
+
 
 //top bar
 

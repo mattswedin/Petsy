@@ -9,7 +9,7 @@ const mapStateToProps = state => ({
     pet: {
         name: '',
         color: '',
-        kind: '',
+        category: '',
         size: '',
     }
 });

@@ -10,8 +10,17 @@
  }
 
 .pet-form {
-   flex: display;
-   justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.session-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 130px;
 }
 
 .pet-label {
@@ -52,4 +61,35 @@
     align-items: center;
     margin-top: 50px;
     
+}
+
+.create-update-button {
+
+    font-size: 16px;
+    font-family: "Graphik Webfont",-apple-system,"Helvetica Neue","Droid Sans",Arial,sans-serif;
+    background-color: black;
+    color: white;
+    margin-top: 30px;
+    text-align: center;
+    height: 47px;
+    width: 320px;
+    border-radius: 25px;
+}
+
+.create-update-header {
+    margin-bottom: 11px;
+    margin-left: 15px;
+    font-weight: 500;
+    font-size: 18px;
+    font-family: "Graphik Webfont",-apple-system,"Helvetica Neue","Droid Sans",Arial,sans-serif;
+    background-color: white;
+    margin-right: 242px;
+}
+
+.modal-form-container{
+    height: 600px;
+}
+
+.signin-register-head{
+
 }
