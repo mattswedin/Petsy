@@ -8,9 +8,9 @@ import React from 'react';
 const mapStateToProps = state => ({
     pet: {
         name: '',
-        color: '',
-        category: '',
-        size: '',
+        color: 'Brown',
+        category: 'Dogs',
+        size: 'Tiny',
     }
 });
 

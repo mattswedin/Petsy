@@ -4,6 +4,7 @@ import React from "react";
 export default class ProfileShow extends React.Component{
     constructor(props){
         super(props)
+        this.handleAdopt = this.handleAdopt.bind(this)
     }
 
     componentDidMount() {
@@ -12,8 +13,14 @@ export default class ProfileShow extends React.Component{
         this.props.fetchUser(this.props.match.params.userId)
     }
 
+    handleAdopt(pet) {
+        console.log(pet)
+        this.props.openModal({type: 'areYouSure', pet: pet})
+    }
+
 
     render(){
+        console.log(this.props.pets)
         if (!this.props.user) return null;
 
         const userPets = Object.values(this.props.pets).filter(pet =>
@@ -41,8 +48,10 @@ export default class ProfileShow extends React.Component{
                                 <ul className="pet-ele-list" >Color: {pet.color}</ul>
                                 <ul className="pet-ele-list" >Size: {pet.size}</ul>
                                 <input className="profile-form-button-two" type="submit" onClick={() => this.props.openModal({type: 'updatePet', pet: pet })} value="Edit Pet" />
-                                <input className="profile-form-button-two" type="submit" onClick={() => this.props.deletePet(pet.id)} value="Put Up for Adoption" />
+                                <input className="profile-form-button-two" type="submit" onClick={() => this.handleAdopt(pet)} value="Put Up for Adoption" />
+                                
                                 </div>
+
                                 )
                         }
                     </div>
