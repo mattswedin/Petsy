@@ -44,7 +44,7 @@ class Api::PetsController < ApplicationController
     private
 
     def pet_params
-        params.require(:pet).permit(:name, :color, :category, :size)
+        params.require(:pet).permit(:name, :color, :category, :size, :adoptable)
     end
 
 end

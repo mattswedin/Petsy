@@ -20,11 +20,13 @@ export default class ProfileShow extends React.Component{
 
 
     render(){
-        console.log(this.props.pets)
         if (!this.props.user) return null;
+        
 
-        const userPets = Object.values(this.props.pets).filter(pet =>
+        const userPets = Object.values(this.props.pets).filter(pet => !pet.adoptable && 
             pet.owner_id === parseInt(this.props.match.params.userId))
+
+            console.log(userPets)
         
         return this.props.currentUserId === parseInt(this.props.match.params.userId) ?
             (
