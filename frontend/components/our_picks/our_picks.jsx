@@ -1,4 +1,5 @@
 import React from "react"
+import { Link } from "react-router-dom";
 
 const OurPick = ({ pets }) => {
 
@@ -31,7 +32,7 @@ const OurPick = ({ pets }) => {
                     shufflePets(petsArr).map((pet, i) =>
                         (i > 3 ? null : (
                         <div className="userPet" key={i}>
-                            <img className="pet-profile-pic-ourpicks" src={pet.photo} />
+                            <Link to={`/pets/${pet.id}`}><img className="pet-profile-pic-ourpicks" src={pet.photo} /></Link>
                         </div>
                         ))
                     )

@@ -15,7 +15,7 @@ const PetShowPage = ({ pet, fetchPet, match }) => {
                 <img className="pet-profile-pic-show" src={pet.photo} />
             </div>
             <div className="pet-show-info-container">
-                <h1 className="title">{pet.name}, the { pet.category === "Sheep" ? pet.category : pet.category.slice(0, -1)}</h1>
+                <h1 className="title">{pet.name}, the { pet.category === "Sheep" || pet.category === "Fish" ? pet.category : pet.category.slice(0, -1)}</h1>
                 <h1 className="price" >{pet.adoptable ?  "Available to Adopt!" : "Not up for Adoption"}</h1>
                 <h1>{pet.color}</h1>
                 <h1>{pet.size}</h1>

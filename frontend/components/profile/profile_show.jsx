@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 
 export default class ProfileShow extends React.Component{
@@ -47,7 +48,7 @@ export default class ProfileShow extends React.Component{
                             
                         userPets.map(pet =>
                             <div className="userPet" key={pet.id}>
-                                <img className="pet-profile-pic" src={pet.photo}/>
+                                <Link to={`/pets/${pet.id}`}><img className="pet-profile-pic" src={pet.photo} /></Link>
                                 <ul className="pet-ele-list" >Name: {pet.name}</ul>
                                 <ul className="pet-ele-list" >Type: {pet.category}</ul>
                                 <ul className="pet-ele-list" >Color: {pet.color}</ul>
@@ -72,7 +73,7 @@ export default class ProfileShow extends React.Component{
                          userAdoptablePets.length > 0 ? userAdoptablePets.map(pet =>
                                 
                                     <div className="userPet" key={pet.id}>
-                                    <img className="pet-profile-pic" src={pet.photo}/>
+                                    <Link to={`/pets/${pet.id}`}><img className="pet-profile-pic" src={pet.photo} /></Link>
                                     <ul className="pet-ele-list" >Name: {pet.name}</ul>
                                     <ul className="pet-ele-list" >Type: {pet.category}</ul>
                                     <ul className="pet-ele-list" >Color: {pet.color}</ul>
@@ -98,7 +99,7 @@ export default class ProfileShow extends React.Component{
                         {
                             userPets.map(pet =>
                                 <div className="userPet" key={pet.id}>
-                                    <img className="pet-profile-pic" src={pet.photo} />
+                                    <Link to={`/pets/${pet.id}`}><img className="pet-profile-pic" src={pet.photo} /></Link>
                                     <ul className="pet-ele-list" >Name: {pet.name}</ul>
                                     <ul className="pet-ele-list" >Type: {pet.category}</ul>
                                     <ul className="pet-ele-list" >Color: {pet.color}</ul>
