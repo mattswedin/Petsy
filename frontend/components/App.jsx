@@ -7,6 +7,7 @@ import { Switch } from "react-router";
 import ProfileShowContainer from "./profile/profile_show_container"
 import { Link } from "react-router-dom";
 import PetEditFormContainer from "./pets/pet_edit_form_container"
+import PetShowPageContainer from "./pets/pet_show_page_container"
 
 
 class App extends React.Component{
@@ -47,6 +48,7 @@ class App extends React.Component{
             
             <Switch>
                 <Route exact path="/" component={CategoriesIndexContainer} />
+                <Route exact path="/pets/:petId" component={PetShowPageContainer} />
                 <Route exact path="/users/:userId" component={ProfileShowContainer} />
                 <Redirect to="/" />
             </Switch>

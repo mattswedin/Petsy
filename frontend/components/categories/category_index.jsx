@@ -1,6 +1,7 @@
 import React from "react"
 import PetIndexContainer from "../pets/pets_index_container"
 import pet_create_form_container from "../pets/pet_create_form_container"
+import OurPicksContainer from '../our_picks/our_picks_container'
 
 export default class CategoryIndex extends React.Component{
     constructor(props){
@@ -45,6 +46,8 @@ export default class CategoryIndex extends React.Component{
                                 }
                             
                         </div>
+
+                        <OurPicksContainer />
 
                         <PetIndexContainer category={this.state.category}/>
                     

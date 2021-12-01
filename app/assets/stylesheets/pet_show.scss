@@ -1,0 +1,33 @@
+.pet-profile-pic-show {
+    border-radius: 10px;
+    height: 700px;
+    width: 700px;
+    border: .1px solid rgb(0, 0, 0);
+}
+
+.pet-show-entire-container {
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+}
+
+.pet-show-info-container {
+    margin-left: 50px;
+
+    .title {
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        font-size: 40px;
+        font-weight: lighter;
+    }
+
+    .price {
+        margin-top: 10px;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        font-size: 30px;
+        font-weight: bolder;
+    }
+}

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Redirect, Router } from 'react-router';
 import { Link } from 'react-router-dom';
 
 class PetIndex extends React.Component {
@@ -13,7 +14,6 @@ class PetIndex extends React.Component {
 
     render() {
 
-        
 
         let filteredCat;
 
@@ -25,13 +25,23 @@ class PetIndex extends React.Component {
             )
         }
 
+        const shufflePets = (array) => {
+        for (let i = array.length - 1; i > 0; i--) {
+            let j = Math.floor(Math.random() * (i + 1));
+            let pet = array[i];
+            array[i] = array[j];
+            array[j] = pet;
+        }
+        return array
+        }
+
         return (
             <div className="userPetindex-Pos">
                     {
                     
-                    filteredCat.map(pet =>
-                    <div className="userPet" key={pet.id}>
-                        <img className="pet-profile-pic" src={pet.photo} />
+                    shufflePets(filteredCat).map((pet, i) =>
+                    <div className="userPet" key={i}>
+                        <Link to={`/pets/${pet.id}`}><img className="pet-profile-pic" src={pet.photo} /></Link>
                         <ul className="pet-ele-list" >Name: {pet.name}</ul>
                         <ul className="pet-ele-list" >Type: {pet.category}</ul>
                         <ul className="pet-ele-list" >Color: {pet.color}</ul>

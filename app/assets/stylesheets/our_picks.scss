@@ -1,0 +1,31 @@
+.pet-profile-pic-ourpicks {
+    border-radius: 10px;
+    height: 150px;
+    width: 150px;
+    border: .1px solid rgb(0, 0, 0);
+}
+
+.ourpicks{
+    letter-spacing: 3px;
+    font-weight: 100;
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 40px;
+    margin-top: 37px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.ourpicks-pets {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.adopt-pets-message{
+    margin-top: 10px;
+    margin-right: 10px;
+    font-family: "Graphik Webfont",-apple-system,"Helvetica Neue","Droid Sans",Arial,sans-serif;
+    font-size: 20px;
+}
+

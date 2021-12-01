@@ -26,6 +26,9 @@ export default class ProfileShow extends React.Component{
         const userPets = Object.values(this.props.pets).filter(pet => !pet.adoptable && 
             pet.owner_id === parseInt(this.props.match.params.userId))
 
+        const userAdoptablePets = Object.values(this.props.pets).filter(pet => pet.adoptable && 
+            pet.owner_id === parseInt(this.props.match.params.userId))
+
             console.log(userPets)
         
         return this.props.currentUserId === parseInt(this.props.match.params.userId) ?
@@ -55,7 +58,32 @@ export default class ProfileShow extends React.Component{
                                 </div>
 
                                 )
+                        
                         }
+                      
+                    </div>
+                    
+                    <h1 className="profile-name-adoptable" >{this.props.user.username}'s Adoptable Pets</h1>
+
+                    <div className="userPet-Pos">
+
+                      {
+                          
+                         userAdoptablePets.length > 0 ? userAdoptablePets.map(pet =>
+                                
+                                    <div className="userPet" key={pet.id}>
+                                    <img className="pet-profile-pic" src={pet.photo}/>
+                                    <ul className="pet-ele-list" >Name: {pet.name}</ul>
+                                    <ul className="pet-ele-list" >Type: {pet.category}</ul>
+                                    <ul className="pet-ele-list" >Color: {pet.color}</ul>
+                                    <ul className="pet-ele-list" >Size: {pet.size}</ul>
+                                    
+                                    </div>
+                                
+
+                            ) : <h1>No Pets up for Adoption!</h1>
+                        }
+
                     </div>
                 
                 </div>
@@ -68,7 +96,6 @@ export default class ProfileShow extends React.Component{
                 
                     <div className="userPet-Pos">
                         {
-
                             userPets.map(pet =>
                                 <div className="userPet" key={pet.id}>
                                     <img className="pet-profile-pic" src={pet.photo} />
