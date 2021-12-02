@@ -6,7 +6,6 @@ import CategoriesIndexContainer from "./categories/categories_index_container"
 import { Switch } from "react-router";
 import ProfileShowContainer from "./profile/profile_show_container"
 import { Link } from "react-router-dom";
-import PetEditFormContainer from "./pets/pet_edit_form_container"
 import PetShowPageContainer from "./pets/pet_show_page_container"
 
 

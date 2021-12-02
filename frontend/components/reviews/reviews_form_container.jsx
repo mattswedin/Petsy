@@ -4,6 +4,8 @@ import { createReview } from "../../actions/review_actions"
 import ReviewsForm from "./reviews_form"
 
 const mapS = state => ({
+
+    pet: state.ui.modal.pet
     
 })
 

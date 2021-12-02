@@ -1,22 +1,32 @@
 import React, { useState } from 'react'
 
-const ReviewsForm = ({ createReview, closeModal}) => {
+const ReviewsForm = ({ createReview, closeModal, pet}) => {
     const [ state, setState ] = useState({
         body: '',
-        ranking: 0
+        ranking: 1,
+        pet_id: pet.id
     })
 
-    console.log(state.ranking)
-
-    const update = (field) => {
-
+    const updateNum = field => {
         return event => {
-            setState({ [field]: event.target.value })
+            setState(prevProps => ({
+                ...prevProps,
+                [field]: parseInt(event.target.value)
+            }));
         }
     }
 
-    const handleSubmit = () => {
-        console.log(state)
+    const update = field => {
+        return event => {
+            setState(prevProps => ({
+                ...prevProps,
+                [field]: event.target.value
+            }));
+        }
+    }
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
         createReview(state).then(closeModal())
 
     }
@@ -24,26 +34,27 @@ const ReviewsForm = ({ createReview, closeModal}) => {
 
     return (
 
-        <form onSubmit={handleSubmit} >
+        <div>
                 <h1>Rating</h1>
                 <br />
-                <input type="radio" name="ranking" value={.5} onClick={update("ranking")}/>
-                <input type="radio" name="ranking" value={1} onClick={update("ranking")}/>
-                <input type="radio" name="ranking" value={1.5} onClick={update("ranking")}/>
-                <input type="radio" name="ranking" value={2} onClick={update("ranking")}/>
-                <input type="radio" name="ranking" value={2.5} onClick={update("ranking")}/>
-                <input type="radio" name="ranking" value={3} onClick={update("ranking")}/>
-                <input type="radio" name="ranking" value={3.5} onClick={update("ranking")}/>
-                <input type="radio" name="ranking" value={4} onClick={update("ranking")}/>
-                <input type="radio" name="ranking" value={4.5} onClick={update("ranking")}/>
-                <input type="radio" name="ranking" value={5} onClick={update("ranking")}/>
+                <input type="radio" name="ranking" value={'1'} onChange={updateNum("ranking")}/>
+                <input type="radio" name="ranking" value={'2'} onChange={updateNum("ranking")}/>
+                <input type="radio" name="ranking" value={'3'} onChange={updateNum("ranking")}/>
+                <input type="radio" name="ranking" value={'4'} onChange={updateNum("ranking")}/>
+                <input type="radio" name="ranking" value={'5'} onChange={updateNum("ranking")}/>
+                <input type="radio" name="ranking" value={'6'} onChange={updateNum("ranking")}/>
+                <input type="radio" name="ranking" value={'7'} onChange={updateNum("ranking")}/>
+                <input type="radio" name="ranking" value={'8'} onChange={updateNum("ranking")}/>
+                <input type="radio" name="ranking" value={'9'} onChange={updateNum("ranking")}/>
+                <input type="radio" name="ranking" value={'10'} onChange={updateNum("ranking")}/>
+                <input type="radio" name="ranking" value={'11'} onChange={updateNum("ranking")}/>
                 <br />
                 <h1>Review</h1>
                 <br />
                 <input type="text" value={state.body} onChange={update("body")}/>
                 <br />
-                <button>Submit</button>
-        </form>
+                <button type="button" onClick={handleSubmit}>Submit</button>
+        </div>
     )
 }
 

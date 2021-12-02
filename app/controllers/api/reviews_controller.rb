@@ -3,9 +3,8 @@ class Api::ReviewsController < ApplicationController
     def create
         @review = Review.new(review_params)
         @review.author_id = current_user.id
-        @review.pet_id = Pet.find_by(id: params[:id]).id
         if @review.save
-            render :index
+            render :show
         else
             render json: @review.errors.full_messages, status: 422
         end
@@ -19,7 +18,7 @@ class Api::ReviewsController < ApplicationController
     private
 
     def review_params
-        params.require(:review).permit(:body, :ranking)
+        params.require(:review).permit(:body, :ranking, :pet_id)
     end
 
 end
