@@ -6,6 +6,7 @@ import SignupFormContainer from '../session_form/signup_form_container';
 import PetCreateFormContainer from '../pets/pet_create_form_container';
 import PetEditFormContainer from '../pets/pet_edit_form_container';
 import AreYouSureContainer from '../are_you_sure_adopt/are_you_sure_container'
+import ReviewFormContainer from '../reviews/reviews_form_container'
 
 
 
@@ -31,6 +32,9 @@ function Modal({modal, closeModal}) {
       break;
     case 'areYouSure':
       component = <AreYouSureContainer />;
+      break;
+    case 'review':
+      component = <ReviewFormContainer />;
       break;
     default:
       return null;

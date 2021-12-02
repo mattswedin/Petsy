@@ -11,6 +11,10 @@ require 'open-uri'
 User.delete_all
 Category.delete_all
 Pet.delete_all
+Review.delete_all
+
+
+
 
 # Demo User
 
@@ -430,6 +434,15 @@ maxine = Pet.create!(
   category: "Sheep",
   size: "Large",
   owner_id: camel.id
+)
+
+# Reviews
+
+review_one = Review.create!(
+  body: "Omg i absolutely LOVE Marco he is literally my best friend!",
+  ranking: 5,
+  author_id: julian.id,
+  pet_id: marco.id
 )
 
 

@@ -1,11 +1,16 @@
 .pet-profile-pic-show {
-    border-radius: 10px;
-    height: 700px;
-    width: 700px;
-    border: .1px solid rgb(0, 0, 0);
+    
+    img{
+        border-radius: 10px;
+        height: 700px;
+        width: 700px;
+        border: .1px solid rgb(0, 0, 0);
+    }
+    
 }
 
 .pet-show-entire-container {
+
     margin-left: 50px;
     margin-right: 50px;
     margin-top: 50px;
