@@ -6,7 +6,7 @@ Rails.application.routes.draw do
     resources :carts, only: [:create, :show]
     resources :pets, except: [:new]
     resources :reviews, only: [:create, :index, :show]
-    resources :categories, only: [:create, :index]
+    resources :categories, only: [:create, :index, :show]
     resource :session, only: [:create, :destroy, :show]
   end
 

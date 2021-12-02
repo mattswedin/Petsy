@@ -1,6 +1,7 @@
 import React, {useEffect} from "react";
 import { Link } from "react-router-dom";
 import ReviewsIndexContainer from "../reviews/reviews_index_container"
+import FooterContainer from '../footer/footer_container';
 
 const PetShowPage = ({ pet, fetchPet, match, users }) => {
     
@@ -28,12 +29,26 @@ const PetShowPage = ({ pet, fetchPet, match, users }) => {
                     </div>
                     <h1 className="title">{pet.name}, the { pet.category === "Sheep" || pet.category === "Fish" ? pet.category : pet.category.slice(0, -1)}</h1>
                     <h1 className="price" >{pet.adoptable ?  "Available to Adopt!" : "Not up for Adoption"}</h1>
-                    <h1>{pet.color}</h1>
-                    <h1>{pet.size}</h1>
+                    <br />
+                    <h6 className="precious">{pet.adoptable ? `*${pet.name} is a precious creature and should be treated as such. Please be kind to your pets and give them lots of love!` : `*${pet.name} is a precious creature and is loved very much by their owner, ${users[pet.owner_id].username}. Please be kind to your pets and give them lots of love!`}</h6>
+                    <br />
+                    <h1>Pet Color</h1>
+                    <select>
+                        <option value={pet.color}>{pet.color}</option>
+                    </select>
+                    <br />
+                    <br />
+                     <h1>Pet Size</h1>
+                    <select>
+                        <option value={pet.size}>{pet.size}</option>
+                    </select>
                 </div>
             
                 
             </div>
+
+            <FooterContainer />
+
         </div>
         ) : null
     )

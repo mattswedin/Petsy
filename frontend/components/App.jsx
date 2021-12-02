@@ -7,6 +7,9 @@ import { Switch } from "react-router";
 import ProfileShowContainer from "./profile/profile_show_container"
 import { Link } from "react-router-dom";
 import PetShowPageContainer from "./pets/pet_show_page_container"
+import CategoryNavContainer from "./categories/category_nav_container"
+import CategoriesShowContainer from "./categories/categories_show_container"
+import FooterContainer from "./footer/footer_container"
 
 
 class App extends React.Component{
@@ -26,22 +29,7 @@ class App extends React.Component{
 
                 </div>
                 <div className="top-nav-cats" >
-                    <h1 className="first" >Snakes</h1>
-                    <h1>Dogs</h1>
-                    <h1>Rats</h1>
-                    <h1>Rabbits</h1>
-                    <h1>Fish</h1>
-                    <h1>Birds</h1>
-                    <h1>Gerbils</h1>
-                    <h1>Hamsters</h1>
-                    <h1>Monkeys</h1>
-                    <h1>Ferrets</h1>
-                    <h1>Rocks</h1>
-                    <h1>Pigs</h1>
-                    <h1>Guinea Pigs</h1>
-                    <h1>Horses</h1>
-                    <h1>Plants</h1>
-                    <h1 className="last" >Deer</h1>
+                    <CategoryNavContainer />
                 </div>
                 <div className="line" ></div>
             </header>
@@ -49,6 +37,7 @@ class App extends React.Component{
             <Switch>
                 <Route exact path="/" component={CategoriesIndexContainer} />
                 <Route exact path="/pets/:petId" component={PetShowPageContainer} />
+                <Route exact path="/categories/:categoryId" component={CategoriesShowContainer} />
                 <Route exact path="/users/:userId" component={ProfileShowContainer} />
                 <Redirect to="/" />
             </Switch>

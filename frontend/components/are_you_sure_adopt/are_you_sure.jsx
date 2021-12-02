@@ -14,8 +14,6 @@ const AreYouSure = ({ pet, closeModal, updatePet}) => {
 
    
     const handleClick = (e) => {
-        console.log(state)
-        console.log(pet)
         e.preventDefault();
         
         updatePet(state).then(closeModal());

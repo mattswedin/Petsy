@@ -1,6 +1,7 @@
 import React from 'react';
 import { Redirect, Router } from 'react-router';
 import { Link } from 'react-router-dom';
+import FooterContainer from '../footer/footer_container';
 
 class PetIndex extends React.Component {
     constructor(props){
@@ -50,6 +51,7 @@ class PetIndex extends React.Component {
                             <Link className="pet-ele-list" to={`/users/${pet.owner_id}`}>{this.props.users[pet.owner_id].username}</Link>
                     </div>
                     )}
+                    <FooterContainer />
                 </div>
                 
         );

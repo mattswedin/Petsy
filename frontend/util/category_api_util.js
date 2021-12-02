@@ -5,6 +5,13 @@ export const fetchCategories = () => {
     });
 };
 
+export const fetchCategory = (categoryId) => {
+    return $.ajax({
+        url: `/api/categories/${categoryId}`,
+        method: "GET"
+    });
+};
+
 export const createCategory = (category) => {
     return $.ajax({
         url: "/api/categories",

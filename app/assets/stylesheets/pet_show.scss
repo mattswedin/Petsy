@@ -22,6 +22,8 @@
 
 .pet-show-info-container {
     margin-left: 50px;
+    height: 500px;
+    width: 375px;
 
     .title {
         font-family: Georgia, 'Times New Roman', Times, serif;
@@ -40,5 +42,10 @@
         margin-bottom: 40px;
         display: flex;
         flex-direction: row;
+    }
+
+    .precious {
+        font-family: "Graphik Webfont", Klarna Text, "Klarna Sans", "Helvetica Neue", Arial, Helvetica, sans-serif;
+        font-size: 13px;
     }
 }
