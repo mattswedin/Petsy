@@ -6,15 +6,15 @@ const OurPick = ({ pets }) => {
     
     const petsArr = Object.values(pets).filter(pet => pet.adoptable);
         
-    const shufflePets = (array) => {
-        for (let i = array.length - 1; i > 0; i--) {
-            let j = Math.floor(Math.random() * (i + 1));
-            let pet = array[i];
-            array[i] = array[j];
-            array[j] = pet;
-        }
-        return array
-    }
+    // const shufflePets = (array) => {
+    //     for (let i = array.length - 1; i > 0; i--) {
+    //         let j = Math.floor(Math.random() * (i + 1));
+    //         let pet = array[i];
+    //         array[i] = array[j];
+    //         array[j] = pet;
+    //     }
+    //     return array
+    // }
     
 
     return petsArr[0] ? (
@@ -29,7 +29,7 @@ const OurPick = ({ pets }) => {
                     <h1>your profile</h1>
                 </div>
                 {
-                    shufflePets(petsArr).map((pet, i) =>
+                    petsArr.map((pet, i) =>
                         (i > 3 ? null : (
                         <div className="userPet" key={i}>
                             <Link to={`/pets/${pet.id}`}><img className="pet-profile-pic-ourpicks" src={pet.photo} /></Link>

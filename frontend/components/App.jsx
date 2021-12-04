@@ -9,7 +9,8 @@ import { Link } from "react-router-dom";
 import PetShowPageContainer from "./pets/pet_show_page_container"
 import CategoryNavContainer from "./categories/category_nav_container"
 import CategoriesShowContainer from "./categories/categories_show_container"
-import FooterContainer from "./footer/footer_container"
+import SearchBarContainer from "./search_bar/search_bar_container"
+import SearchContainer from "./search_bar/search_container"
 
 
 class App extends React.Component{
@@ -23,7 +24,7 @@ class App extends React.Component{
                 
                 <div className="top-nav">
                  <Link to="/" className="logo" >Petsy</Link>
-                 <input className="search-bar" type="text" />
+                 <SearchBarContainer />
                  <GreetingContainer />
                         <i id="shopping-cart" className="fas fa-shopping-cart"></i>
 
@@ -35,9 +36,11 @@ class App extends React.Component{
             </header>
             
             <Switch>
+    
                 <Route exact path="/" component={CategoriesIndexContainer} />
                 <Route exact path="/pets/:petId" component={PetShowPageContainer} />
                 <Route exact path="/categories/:categoryId" component={CategoriesShowContainer} />
+                <Route exact path="/search/:query" component={SearchContainer} />
                 <Route exact path="/users/:userId" component={ProfileShowContainer} />
                 <Redirect to="/" />
             </Switch>

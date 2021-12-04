@@ -3,9 +3,10 @@ import { Link } from "react-router-dom";
 import ReviewsIndexContainer from "../reviews/reviews_index_container"
 import FooterContainer from '../footer/footer_container';
 
-const PetShowPage = ({ pet, fetchPet, match, users }) => {
+const PetShowPage = ({ pet, fetchPet, fetchUsers, match, users }) => {
     
     useEffect(() => {
+        fetchUsers()
         fetchPet(match.params.petId)
     }, [])
 
