@@ -17,6 +17,11 @@ export const fetchCategories = () => dispatch => {
         .then(categories => dispatch(receiveCategories(categories)))
 }
 
+export const fetchCategory = categoryId => dispatch => {
+    return CatApiUtil.fetchCategory(categoryId)
+        .then(categoryId => dispatch(receiveCategory(categoryId)))
+}
+
 export const createCategory = category => dispatch => {
     return CatApiUtil.createCategory(category)
         .then(category => dispatch(receiveCategory(category)))

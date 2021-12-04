@@ -11,6 +11,10 @@ require 'open-uri'
 User.delete_all
 Category.delete_all
 Pet.delete_all
+Review.delete_all
+
+
+
 
 # Demo User
 
@@ -432,6 +436,15 @@ maxine = Pet.create!(
   owner_id: camel.id
 )
 
+# Reviews
+
+review_one = Review.create!(
+  body: "Omg i absolutely LOVE Marco he is literally my best friend!",
+  ranking: 5,
+  author_id: julian.id,
+  pet_id: marco.id
+)
+
 
 
 
@@ -445,6 +458,17 @@ cows = Category.create!(title: 'Cows')
 cats = Category.create!(title: 'Cats')
 lizards = Category.create!(title: 'Lizards')
 turtles = Category.create!(title: 'Turtles')
+snakes = Category.create!(title: 'Snakes')
+rats = Category.create!(title: 'Rats')
+rabbits = Category.create!(title: 'Rabbits')
+fish = Category.create!(title: 'Fish')
+birds = Category.create!(title: 'Birds')
+hamsters = Category.create!(title: 'Hamsers')
+rocks = Category.create!(title: 'Rocks')
+pigs = Category.create!(title: 'Pigs')
+guinea_pigs = Category.create!(title: 'Guinea Pigs')
+horses = Category.create!(title: 'Horses')
+
 
 
 # Categories - Aws

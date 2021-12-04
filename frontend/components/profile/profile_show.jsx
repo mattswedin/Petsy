@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import FooterContainer from '../footer/footer_container';
 
 
 export default class ProfileShow extends React.Component{
@@ -15,7 +16,6 @@ export default class ProfileShow extends React.Component{
     }
 
     handleAdopt(pet) {
-        console.log(pet)
         this.props.openModal({type: 'areYouSure', pet: pet})
     }
 
@@ -30,7 +30,6 @@ export default class ProfileShow extends React.Component{
         const userAdoptablePets = Object.values(this.props.pets).filter(pet => pet.adoptable && 
             pet.owner_id === parseInt(this.props.match.params.userId))
 
-            console.log(userPets)
         
         return this.props.currentUserId === parseInt(this.props.match.params.userId) ?
             (
@@ -61,6 +60,8 @@ export default class ProfileShow extends React.Component{
                                 )
                         
                         }
+
+                        
                       
                     </div>
                     
@@ -85,6 +86,8 @@ export default class ProfileShow extends React.Component{
                             ) : <h1>No Pets up for Adoption!</h1>
                         }
 
+                        <FooterContainer />
+
                     </div>
                 
                 </div>
@@ -108,6 +111,8 @@ export default class ProfileShow extends React.Component{
                             )
                         }
                     </div>
+
+                    <FooterContainer />
 
                 </div>
                     

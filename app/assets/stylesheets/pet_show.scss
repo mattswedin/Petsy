@@ -1,11 +1,16 @@
 .pet-profile-pic-show {
-    border-radius: 10px;
-    height: 700px;
-    width: 700px;
-    border: .1px solid rgb(0, 0, 0);
+    
+    img{
+        border-radius: 10px;
+        height: 700px;
+        width: 700px;
+        border: .1px solid rgb(0, 0, 0);
+    }
+    
 }
 
 .pet-show-entire-container {
+
     margin-left: 50px;
     margin-right: 50px;
     margin-top: 50px;
@@ -17,6 +22,8 @@
 
 .pet-show-info-container {
     margin-left: 50px;
+    height: 500px;
+    width: 375px;
 
     .title {
         font-family: Georgia, 'Times New Roman', Times, serif;
@@ -29,5 +36,16 @@
         font-family: Georgia, 'Times New Roman', Times, serif;
         font-size: 30px;
         font-weight: bolder;
+    }
+
+    .owner {
+        margin-bottom: 40px;
+        display: flex;
+        flex-direction: row;
+    }
+
+    .precious {
+        font-family: "Graphik Webfont", Klarna Text, "Klarna Sans", "Helvetica Neue", Arial, Helvetica, sans-serif;
+        font-size: 13px;
     }
 }

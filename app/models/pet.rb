@@ -6,6 +6,11 @@ class Pet < ApplicationRecord
     belongs_to :user,
     foreign_key: :owner_id,
     class_name: :User
+
+    has_many :reviews,
+    foreign_key: :pet_id,
+    class_name: :Review
+    
 end
 
 

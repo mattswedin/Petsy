@@ -7,6 +7,7 @@ import petsReducer from "./pets_reducer";
 import categoriesReducer from "./category_reducer";
 import usersReducer from "./users_reducer";
 
+
 const rootReducer = (combineReducers)({
     session: sessionReducer,
     entities: entitiesReducer,
