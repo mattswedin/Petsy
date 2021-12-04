@@ -48,4 +48,34 @@
         font-family: "Graphik Webfont", Klarna Text, "Klarna Sans", "Helvetica Neue", Arial, Helvetica, sans-serif;
         font-size: 13px;
     }
+
+    .color-size-butts{
+        font-size: 15px;
+        font-kerning: 20px;
+        font-weight: bold;
+        width: 100%;
+        height: 50px;
+        border-radius: 5px;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+    }
+
+    .adopt-button{
+        width: 100%;
+        height: 50px;
+        border-radius: 50px;
+        background-color: black;
+        color: white;
+        font-family: "Graphik Webfont", Klarna Text, "Klarna Sans", "Helvetica Neue", Arial, Helvetica, sans-serif;
+        font-size: 20px;
+    }
+
+    .basket-button{
+        width: 100%;
+        height: 50px;
+        border-radius: 50px;
+        background-color: white;
+        color: black;
+        font-family: "Graphik Webfont", Klarna Text, "Klarna Sans", "Helvetica Neue", Arial, Helvetica, sans-serif;
+        font-size: 20px;
+    }
 }

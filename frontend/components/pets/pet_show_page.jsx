@@ -34,15 +34,23 @@ const PetShowPage = ({ pet, fetchPet, fetchUsers, match, users }) => {
                     <h6 className="precious">{pet.adoptable ? `*${pet.name} is a precious creature and should be treated as such. Please be kind to your pets and give them lots of love!` : `*${pet.name} is a precious creature and is loved very much by their owner, ${users[pet.owner_id].username}. Please be kind to your pets and give them lots of love!`}</h6>
                     <br />
                     <h1>Pet Color</h1>
-                    <select>
+                    <select className=" color-size-butts">
                         <option value={pet.color}>{pet.color}</option>
                     </select>
                     <br />
                     <br />
                      <h1>Pet Size</h1>
-                    <select>
+                    <select className=" color-size-butts" >
                         <option value={pet.size}>{pet.size}</option>
                     </select>
+                    <div>
+                        <br />
+                        <br />
+                            <button className="adopt-button">{pet.adoptable ? "Adopt Now!" : "Pet Now!"}</button>
+                        <br />
+                        <br />
+                            <button className="basket-button">{pet.adoptable ? "Add to Adoption Basket!" : `Give ${pet.name} a Treat`}</button>
+                    </div>
                 </div>
             
                 

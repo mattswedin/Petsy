@@ -16,7 +16,7 @@ const CategoriesShow = ({ fetchCategory, category, match, fetchPets, pets, users
 
     return category ? (
         <div>
-            <h1>It's the {category.title} Page Mother Fucker!</h1>
+            <h1 className="category-page-header">It's the {category.title} Page Mother Fucker!</h1>
             <div className="userPetindex-Pos">
                 {
                     catPets.map((pet, i) => 

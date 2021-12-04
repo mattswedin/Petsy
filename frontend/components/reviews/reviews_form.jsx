@@ -42,12 +42,6 @@ const ReviewsForm = ({ createReview, closeModal, pet}) => {
                 <input type="radio" name="ranking" value={'3'} onChange={updateNum("ranking")}/>
                 <input type="radio" name="ranking" value={'4'} onChange={updateNum("ranking")}/>
                 <input type="radio" name="ranking" value={'5'} onChange={updateNum("ranking")}/>
-                <input type="radio" name="ranking" value={'6'} onChange={updateNum("ranking")}/>
-                <input type="radio" name="ranking" value={'7'} onChange={updateNum("ranking")}/>
-                <input type="radio" name="ranking" value={'8'} onChange={updateNum("ranking")}/>
-                <input type="radio" name="ranking" value={'9'} onChange={updateNum("ranking")}/>
-                <input type="radio" name="ranking" value={'10'} onChange={updateNum("ranking")}/>
-                <input type="radio" name="ranking" value={'11'} onChange={updateNum("ranking")}/>
                 <br />
                 <h1>Review</h1>
                 <br />

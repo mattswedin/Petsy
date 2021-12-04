@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { fetchUsers } from "../../actions/session_actions";
 import { Link } from "react-router-dom";
+import { withRouter } from "react-router";
 
-const Search = ({fetchPets, match, pets, users}) => {
+const Search = ({fetchPets, match, pets, users, history}) => {
     
     const state = {query: match.url.slice(8)}
     
@@ -17,6 +18,10 @@ const Search = ({fetchPets, match, pets, users}) => {
     );
         setSearchResults(results)
     }, [state.query]);
+
+    if (searchResults.length === 1 ){
+        history.replace(`/pets/${searchResults[0].id}`)
+    }
 
     
     return searchResults[0] ? (
@@ -39,10 +44,10 @@ const Search = ({fetchPets, match, pets, users}) => {
     ) : (
 
 
-        <h1>No results found!</h1>
+        <h1 className="no-results">{`No results found for "${state.query}". Try searching for a Pet's name, color, or size!`}</h1>
 
     )
 
 }
 
-export default Search;
+export default withRouter(Search);

@@ -42,7 +42,7 @@ export default class ProfileShow extends React.Component{
                 
                 
                     
-                    <div className="userPet-Pos">
+                    <div className="userPetindex-Pos">
                         {
                             
                         userPets.map(pet =>
@@ -67,7 +67,7 @@ export default class ProfileShow extends React.Component{
                     
                     <h1 className="profile-name-adoptable" >{this.props.user.username}'s Adoptable Pets</h1>
 
-                    <div className="userPet-Pos">
+                    <div className="userPetindex-Pos">
 
                       {
                           
@@ -98,7 +98,7 @@ export default class ProfileShow extends React.Component{
                         <h1 className="profile-name">{this.props.user.username}</h1>
                     </div>
                 
-                    <div className="userPet-Pos">
+                    <div className="userPetindex-Pos">
                         {
                             userPets.map(pet =>
                                 <div className="userPet" key={pet.id}>
