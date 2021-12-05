@@ -11,6 +11,7 @@ import CategoryNavContainer from "./categories/category_nav_container"
 import CategoriesShowContainer from "./categories/categories_show_container"
 import SearchBarContainer from "./search_bar/search_bar_container"
 import SearchContainer from "./search_bar/search_container"
+import ScrollToTop from "./util/scrollToTop"
 
 
 class App extends React.Component{
@@ -20,6 +21,7 @@ class App extends React.Component{
         return(
         <div>
             <Modal />
+            <ScrollToTop />
             <header >
                 
                 <div className="top-nav">

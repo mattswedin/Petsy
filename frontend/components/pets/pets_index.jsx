@@ -22,11 +22,14 @@ class PetIndex extends React.Component {
                     <div className="userPet" key={i}>
                         <Link to={`/pets/${pet.id}`}><img className="pet-profile-pic" src={pet.photo} /></Link>
                         <ul className="pet-ele-list" >Name: {pet.name}</ul>
-                        <ul className="pet-ele-list" >Type: {pet.category}</ul>
+                        <ul className="pet-ele-list" >Category: {pet.category}</ul>
                         <ul className="pet-ele-list" >Color: {pet.color}</ul>
                         <ul className="pet-ele-list" >Size: {pet.size}</ul>
+                        <div className="owner-row">
                             <ul className="pet-ele-list" >Owner: </ul>
                             <Link className="pet-ele-list" to={`/users/${pet.owner_id}`}>{this.props.users[pet.owner_id].username}</Link>
+                        </div>
+                            
                     </div>
                     )}
                     <FooterContainer />

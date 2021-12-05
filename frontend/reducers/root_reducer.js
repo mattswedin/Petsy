@@ -15,6 +15,7 @@ const rootReducer = (combineReducers)({
     ui: ui_reducer,
     categories: categoriesReducer,
     users: usersReducer
+
 })
 
 export default rootReducer

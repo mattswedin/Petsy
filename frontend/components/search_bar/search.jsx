@@ -14,7 +14,7 @@ const Search = ({fetchPets, match, pets, users, history}) => {
     fetchUsers()
     const allPets = Object.values(pets)
     const results = allPets.filter(pet =>
-      pet.name.toLowerCase().includes(state.query) || pet.size.toLowerCase().includes(state.query) || pet.color.toLowerCase().includes(state.query) || pet.category.toLowerCase().includes(state.query)
+      pet.name.toLowerCase().includes(state.query.toLowerCase()) || pet.size.toLowerCase().includes(state.query.toLowerCase()) || pet.color.toLowerCase().includes(state.query.toLowerCase()) || pet.category.toLowerCase().includes(state.query.toLowerCase())
     );
         setSearchResults(results)
     }, [state.query]);
@@ -35,8 +35,10 @@ const Search = ({fetchPets, match, pets, users, history}) => {
                         <ul className="pet-ele-list" >Type: {pet.category}</ul>
                         <ul className="pet-ele-list" >Color: {pet.color}</ul>
                         <ul className="pet-ele-list" >Size: {pet.size}</ul>
+                        <div className="owner-row">
                             <ul className="pet-ele-list" >Owner: </ul>
                             <Link className="pet-ele-list" to={`/users/${pet.owner_id}`}>{users[pet.owner_id].username}</Link>
+                        </div>
                     </div>
                 )
             }

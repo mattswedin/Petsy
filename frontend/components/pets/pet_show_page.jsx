@@ -3,19 +3,44 @@ import { Link } from "react-router-dom";
 import ReviewsIndexContainer from "../reviews/reviews_index_container"
 import FooterContainer from '../footer/footer_container';
 
-const PetShowPage = ({ pet, fetchPet, fetchUsers, match, users }) => {
+const PetShowPage = ({ pet, fetchPet, fetchUsers, match, users, createPetpoint, fetchPetpoints, petpoints, currentUser}) => {
     
     useEffect(() => {
-        fetchUsers()
         fetchPet(match.params.petId)
+        fetchPetpoints()
+        fetchUsers()
     }, [])
 
+
+    const petPointArr = Object.values(petpoints).filter( petpoint => pet.id === petpoint.pet_id)
+    const userPetters = petPointArr.filter( petpoint => currentUser === petpoint.petter_id)
+
+
+    const handleClick = () => {
+        if (!pet.adoptable) {
+            createPetpoint({pet_id: pet.id})
+        } else {
+            console.log("adopted!")
+        }
+    }
+
+    console.log(users)
     
     return(
 
-        pet ? (
+        pet && users[pet.owner_id] ? (
         <div>
+            
             <div className="pet-show-entire-container">
+                <div className="petpoint-stats">
+                    <h6>Given Pets:</h6>
+                    <h1 className="petnum" >{userPetters.length}</h1>
+                    <br />
+                    <br />
+                    <h6>Overall Pets:</h6>
+                    <h1 className="petnum" >{petPointArr.length}</h1>
+                    <br />
+                </div>
                 <div className="picture-container">
                     <div className="pet-profile-pic-show" >
                         <img src={pet.photo} />
@@ -46,7 +71,7 @@ const PetShowPage = ({ pet, fetchPet, fetchUsers, match, users }) => {
                     <div>
                         <br />
                         <br />
-                            <button className="adopt-button">{pet.adoptable ? "Adopt Now!" : "Pet Now!"}</button>
+                            <button onClick={handleClick} className="adopt-button">{pet.adoptable ? "Adopt Now!" : "Pet Now!"}</button>
                         <br />
                         <br />
                             <button className="basket-button">{pet.adoptable ? "Add to Adoption Basket!" : `Give ${pet.name} a Treat`}</button>

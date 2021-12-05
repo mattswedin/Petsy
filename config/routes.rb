@@ -5,9 +5,11 @@ Rails.application.routes.draw do
     resources :users, only: [:create, :show, :index]
     resources :carts, only: [:create, :show]
     resources :pets, except: [:new]
+    resources :petpoints, only: [:create, :show, :index]
     resources :reviews, only: [:create, :index, :show]
     resources :categories, only: [:create, :index, :show]
     resource :session, only: [:create, :destroy, :show]
+    
   end
 
   root "static_pages#root"

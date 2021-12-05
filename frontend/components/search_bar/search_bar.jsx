@@ -18,15 +18,12 @@ const SearchBar = ({ history }) => {
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        console.log(history.location.pathname.slice(0, 8))
-        if (history.location.pathname.slice(0, 8) === "/search/"){
-            history.push(`${state.query}`)
-        } else {
-            history.replace(`/search/${state.query}`);
-        }
+        // console.log(history.location.pathname.slice(0, 8))
+        history.replace(`/search/${state.query}`);
+    }
         
 
-    }
+    
     
 
     return (

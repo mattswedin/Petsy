@@ -1,0 +1,1 @@
+json.extract! petpoint, :pet_id, :petter_id, :id
