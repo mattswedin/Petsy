@@ -31,7 +31,6 @@ class Api::PetsController < ApplicationController
 
     end
 
-
     def destroy
         @pet = Pet.find_by(id: params[:id])
         if @pet.destroy

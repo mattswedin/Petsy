@@ -26,6 +26,10 @@ const PetShowPage = ({ pet, fetchPet, fetchUsers, match, users, createPetpoint, 
         }
     }
 
+    const handleAdd = () => {
+        openModal({type: 'addToCart', pet: pet})
+    }
+
     console.log(users)
     
     return(
@@ -75,7 +79,7 @@ const PetShowPage = ({ pet, fetchPet, fetchUsers, match, users, createPetpoint, 
                             <button onClick={handleClick} className="adopt-button">{pet.adoptable ? "Adopt Now!" : "Pet Now!"}</button>
                         <br />
                         <br />
-                            <button className="basket-button">Add to Adoption Basket!</button>
+                            <button className="basket-button" onClick={handleAdd}>Add to Adoption Basket!</button>
                     </div>
                 </div>
             

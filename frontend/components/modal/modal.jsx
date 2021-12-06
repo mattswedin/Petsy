@@ -7,6 +7,7 @@ import PetCreateFormContainer from '../pets/pet_create_form_container';
 import PetEditFormContainer from '../pets/pet_edit_form_container';
 import AreYouSureContainer from '../are_you_sure_adopt/are_you_sure_container'
 import ReviewFormContainer from '../reviews/reviews_form_container'
+import AddToCartContainer from '../are_you_sure_adopt/add_to_cart_container';
 
 
 
@@ -36,10 +37,14 @@ function Modal({modal, closeModal}) {
     case 'review':
       component = <ReviewFormContainer />;
       break;
+    case 'addToCart':
+      component = <AddToCartContainer />;
+      break;
+
     default:
       return null;
   }
-  return modal.type === 'areYouSure' ?
+  return modal.type === 'areYouSure' || modal.type === 'addToCart' ?
    <div className="modelbg-areYouSure" onClick={closeModal}>
       <div className="modelc-areYouSure" onClick={e => e.stopPropagation()}>
         { component }

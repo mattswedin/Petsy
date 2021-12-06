@@ -12,6 +12,7 @@ import CategoriesShowContainer from "./categories/categories_show_container"
 import SearchBarContainer from "./search_bar/search_bar_container"
 import SearchContainer from "./search_bar/search_container"
 import ScrollToTop from "./util/scrollToTop"
+import CartContainer from "./cart/cart_container"
 
 
 class App extends React.Component{
@@ -40,6 +41,7 @@ class App extends React.Component{
             <Switch>
     
                 <Route exact path="/" component={CategoriesIndexContainer} />
+                <Route exact path="/cart/:userId" component={CartContainer} />
                 <Route exact path="/pets/:petId" component={PetShowPageContainer} />
                 <Route exact path="/categories/:categoryId" component={CategoriesShowContainer} />
                 <Route exact path="/search/:query" component={SearchContainer} />
