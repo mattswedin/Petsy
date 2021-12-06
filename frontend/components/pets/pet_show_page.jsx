@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import ReviewsIndexContainer from "../reviews/reviews_index_container"
 import FooterContainer from '../footer/footer_container';
 
-const PetShowPage = ({ pet, fetchPet, fetchUsers, match, users, createPetpoint, fetchPetpoints, petpoints, currentUser}) => {
+const PetShowPage = ({ pet, fetchPet, fetchUsers, match, users, createPetpoint, fetchPetpoints, petpoints, currentUser, openModal}) => {
     
     useEffect(() => {
         fetchPet(match.params.petId)
@@ -16,11 +16,13 @@ const PetShowPage = ({ pet, fetchPet, fetchUsers, match, users, createPetpoint, 
     const userPetters = petPointArr.filter( petpoint => currentUser === petpoint.petter_id)
 
 
+
+
     const handleClick = () => {
         if (!pet.adoptable) {
             createPetpoint({pet_id: pet.id})
         } else {
-            console.log("adopted!")
+            openModal({type: 'areYouSure', pet: pet})
         }
     }
 
@@ -39,7 +41,6 @@ const PetShowPage = ({ pet, fetchPet, fetchUsers, match, users, createPetpoint, 
                     <br />
                     <h6>Overall Pets:</h6>
                     <h1 className="petnum" >{petPointArr.length}</h1>
-                    <br />
                 </div>
                 <div className="picture-container">
                     <div className="pet-profile-pic-show" >
@@ -74,7 +75,7 @@ const PetShowPage = ({ pet, fetchPet, fetchUsers, match, users, createPetpoint, 
                             <button onClick={handleClick} className="adopt-button">{pet.adoptable ? "Adopt Now!" : "Pet Now!"}</button>
                         <br />
                         <br />
-                            <button className="basket-button">{pet.adoptable ? "Add to Adoption Basket!" : `Give ${pet.name} a Treat`}</button>
+                            <button className="basket-button">Add to Adoption Basket!</button>
                     </div>
                 </div>
             
