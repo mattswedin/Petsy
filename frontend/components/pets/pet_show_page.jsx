@@ -2,8 +2,9 @@ import React, {useEffect} from "react";
 import { Link } from "react-router-dom";
 import ReviewsIndexContainer from "../reviews/reviews_index_container"
 import FooterContainer from '../footer/footer_container';
+import { createCart } from "../../actions/cart_actions";
 
-const PetShowPage = ({ pet, fetchPet, fetchUsers, match, users, createPetpoint, fetchPetpoints, petpoints, currentUser, openModal}) => {
+const PetShowPage = ({ pet, fetchPet, fetchUsers, match, users, createPetpoint, fetchPetpoints, petpoints, currentUser, openModal }) => {
     
     useEffect(() => {
         fetchPet(match.params.petId)
@@ -27,6 +28,7 @@ const PetShowPage = ({ pet, fetchPet, fetchUsers, match, users, createPetpoint, 
     }
 
     const handleAdd = () => {
+        if (users[currentUser].current_order === 0){createCart()}
         openModal({type: 'addToCart', pet: pet})
     }
 

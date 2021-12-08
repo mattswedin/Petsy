@@ -12,7 +12,9 @@ User.delete_all
 Category.delete_all
 Pet.delete_all
 Review.delete_all
-
+Cart.delete_all
+Cart.destroy_all
+CartItem.delete_all
 
 
 
@@ -24,9 +26,13 @@ julian = User.create!(
   password: 'password'
 )
 
+#Demo Cart
+
+best_cart = Cart.create!(
+  user_id: julian.id
+)
+
 # Users
-
-
 
 charlie = User.create!(
   username: 'Charlie',

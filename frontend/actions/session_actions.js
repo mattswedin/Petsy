@@ -56,6 +56,13 @@ export const fetchUser = userId => dispatch => {
         .then(userId => dispatch(receiveUser(userId)))
 }
 
+export const updateUser = user => dispatch => {
+    return SessionApiUtil.updateUser(user)
+        .then(user => dispatch(receiveUser(user))
+        )
+}
+
+
 export const fetchUsers = () => dispatch => {
     return SessionApiUtil.fetchUsers()
         .then(users => dispatch(receiveUsers(users)))

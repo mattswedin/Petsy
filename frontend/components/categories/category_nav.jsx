@@ -1,7 +1,7 @@
 import React, { useEffect } from "react"
 import { Link } from "react-router-dom"
 
-const CategoryNav = ({ fetchCategories, categories }) => {
+const CategoryNav = ({ fetchCategories, fetchPets, categories }) => {
 
     useEffect(() => {
         fetchCategories()

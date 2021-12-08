@@ -1,11 +1,10 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import { withRouter } from "react-router";
 
 const SearchBar = ({ history }) => {
     const [state, setState] = useState({
         query: ""
     })
-
 
     const update = field => {
         return event => {
@@ -18,13 +17,9 @@ const SearchBar = ({ history }) => {
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        // console.log(history.location.pathname.slice(0, 8))
         history.replace(`/search/${state.query}`);
     }
         
-
-    
-    
 
     return (
             <form className="search-bar" onSubmit={handleSubmit} >

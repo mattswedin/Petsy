@@ -1,0 +1,55 @@
+.pet-profile-pic-cart {
+    
+    img{
+        border-radius: 10px;
+        height: 150px;
+        width: 150px;
+        border: .1px solid rgb(0, 0, 0);
+    }
+    
+}
+
+
+
+.outer-cart-div{
+
+    display: flex;
+    justify-content: space-around;
+
+    .cart-page{
+    width: 75vw;
+    display: flex;
+    flex-direction: column;
+    
+
+    .cart-title{
+    font-size: 32px;
+    font-family: "Guardian-EgypTT",Charter,"Charter Bitstream",Cambria,"Noto Serif Light","Droid Serif",Georgia,serif;
+    }
+
+    .cart-container{    
+    display: flex;
+    flex-direction: row;
+
+        .pet-cart{
+            height: 100vw;
+            width: 500px;
+            margin-right: 100px;
+
+            .cart-item {
+            display: flex;
+            flex-direction: row;
+            margin-bottom: 20px;
+            }
+        }
+
+        .order{
+            width: 400px;
+        }
+
+        }
+
+    }
+
+}
+

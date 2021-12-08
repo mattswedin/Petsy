@@ -1,23 +1,29 @@
 import React, {useEffect} from "react";
-import { withRouter } from "react-router";
 
 
-const AddToCart = ({ pet, closeModal, updatePet, currentuser, fetchUsers, history, users}) => {
+const AddToCart = ({ pet, closeModal, currentuser, fetchUsers, users, carts, fetchCarts, updateUser, createCartItem, fetchCartItems, cart_items }) => {
 
     useEffect(() => {
         fetchUsers()
+        fetchCarts()
+        fetchCartItems()
     }, [])
 
+    const userCart = carts.filter(cart => currentuser === cart.user_id)
+    
     const handleClick = () =>{
-        if (users[currentuser].current_order === 0){
-            // createCart()
-            // createCartItem({pet_id: pet.id})
-            history.replace(`/cart/${currentuser}`);
-            closeModal()
+        if (users[currentuser].current_order === null || users[currentuser].current_order === 0 ){
+            updateUser({id: currentuser, current_order: userCart[0].id })
+            .then(createCartItem({ pet_id: pet.id, cart_id: userCart[0].id, can_adopt: pet.adoptable }))
+            .then(closeModal())
         } else {
-            // createCartItem({pet_id: pet.id})
-            history.replace(`/cart/${currentuser}`);
-            closeModal()
+            const usersCartItems = cart_items.filter(item => item.cart_id === users[currentuser].current_order)
+            if (usersCartItems.some(item => item.pet_id === pet.id)) {
+                closeModal()
+            } else {
+            createCartItem({ pet_id: pet.id, cart_id: userCart[0].id, can_adopt: pet.adoptable })
+            .then(closeModal())
+            }
         }
     }
 
@@ -42,4 +48,4 @@ const AddToCart = ({ pet, closeModal, updatePet, currentuser, fetchUsers, histor
     )
 }
 
-export default withRouter(AddToCart)
+export default AddToCart

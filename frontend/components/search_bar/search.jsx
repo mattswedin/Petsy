@@ -1,30 +1,32 @@
 import React, { useState, useEffect } from "react";
-import { fetchUsers } from "../../actions/session_actions";
 import { Link } from "react-router-dom";
 import { withRouter } from "react-router";
 
-const Search = ({fetchPets, match, pets, users, history}) => {
+const Search = ({fetchPets, fetchUsers, match, pets, users, history}) => {
     
     const state = {query: match.url.slice(8)}
-    
     const [searchResults, setSearchResults] = useState([])
 
     useEffect(() => {
-    fetchPets()
-    fetchUsers()
-    const allPets = Object.values(pets)
-    const results = allPets.filter(pet =>
+        fetchPets()
+        fetchUsers()
+    }, [])
+
+
+    useEffect(() => {
+    const results = pets.filter(pet =>
       pet.name.toLowerCase().includes(state.query.toLowerCase()) || pet.size.toLowerCase().includes(state.query.toLowerCase()) || pet.color.toLowerCase().includes(state.query.toLowerCase()) || pet.category.toLowerCase().includes(state.query.toLowerCase())
     );
         setSearchResults(results)
     }, [state.query]);
+
 
     if (searchResults.length === 1 ){
         history.replace(`/pets/${searchResults[0].id}`)
     }
 
     
-    return searchResults[0] ? (
+    return searchResults[0] && users ? (
 
         <div className="userPetindex-Pos" >
             {
