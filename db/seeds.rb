@@ -118,6 +118,18 @@ maria = User.create!(
   password: 'password'
 )
 
+suz = User.create!(
+  username: "Suz",
+  email: "suz@aol.com",
+  password: 'password'
+)
+
+jon = User.create!(
+  username: "Jon",
+  email: "jon@aol.com",
+  password: "password"
+)
+
 
 
 
@@ -670,6 +682,83 @@ gray = Pet.create!(
   owner_id: charlie.id
 )
 
+boomer = Pet.create!(
+  name: "Boomer",
+  color: "Yellow",
+  category: "Dogs",
+  size: "Large",
+  owner_id: suz.id
+)
+
+agatha = Pet.create!(
+  name: "Agatha",
+  color: "Brown",
+  category: "Horses",
+  size: "Large",
+  owner_id: charlie.id,
+  adoptable: true
+)
+
+william = Pet.create!(
+  name: "William",
+  color: "Black",
+  category: "Horses",
+  size: "Large",
+  owner_id: kirsten.id
+)
+
+shadowfax = Pet.create!(
+  name: "Shadowfax",
+  color: "White",
+  category: "Horses",
+  size: "Large",
+  owner_id: jackie.id
+)
+
+piggins = Pet.create!(
+  name: "Piggins",
+  color: "Pink",
+  category: "Pigs",
+  size: "Small",
+  owner_id: maxwell.id
+)
+
+ferris = Pet.create!(
+  name: "Ferris",
+  color: "Black",
+  category: "Pigs",
+  size: "Large",
+  owner_id: maxwell.id
+)
+
+bulldozer = Pet.create!(
+  name: "Bulldozer",
+  color: "Grey",
+  category: "Pigs",
+  size: "Large",
+  owner_id: julian.id
+)
+
+banana = Pet.create!(
+  name: "Banana",
+  color: "Yellow",
+  category: "Lizards",
+  size: "Small",
+  owner_id: alberto.id
+)
+
+herald = Pet.create!(
+  name: "Herald",
+  color: "Orange",
+  category: "Cats",
+  size: "Medium",
+  owner_id: jon.id
+  
+)
+
+
+
+
 
 
 # Reviews
@@ -929,6 +1018,33 @@ chunky.photo.attach(io: chunky_photo, filename:'chunky.jpeg')
 
 gray_photo = open('https://petsy-seeds.s3.amazonaws.com/petsy-pets/gray.jpeg')
 gray.photo.attach(io: gray_photo, filename:'gray.jpeg')
+
+banana_photo = open('https://petsy-seeds.s3.amazonaws.com/petsy-pets/banana.jpeg')
+banana.photo.attach(io: banana_photo, filename:'banana.jpeg')
+
+herald_photo = open('https://petsy-seeds.s3.amazonaws.com/petsy-pets/herald.jpeg')
+herald.photo.attach(io: herald_photo, filename:'herald.jpeg')
+
+agatha_photo = open('https://petsy-seeds.s3.amazonaws.com/petsy-pets/agatha.jpeg')
+agatha.photo.attach(io: agatha_photo, filename:'agatha.jpeg')
+
+shadowfax_photo = open('https://petsy-seeds.s3.amazonaws.com/petsy-pets/shadowfax.jpeg')
+shadowfax.photo.attach(io: shadowfax_photo, filename:'shadowfax.jpeg')
+
+william_photo = open('https://petsy-seeds.s3.amazonaws.com/petsy-pets/william.jpeg')
+william.photo.attach(io: william_photo, filename:'william.jpeg')
+
+piggins_photo = open('https://petsy-seeds.s3.amazonaws.com/petsy-pets/piggins.jpeg')
+piggins.photo.attach(io: piggins_photo, filename:'piggins.jpeg')
+
+bulldozer_photo = open('https://petsy-seeds.s3.amazonaws.com/petsy-pets/bulldozer.jpeg')
+bulldozer.photo.attach(io: bulldozer_photo, filename:'bulldozer.jpeg')
+
+ferris_photo = open('https://petsy-seeds.s3.amazonaws.com/petsy-pets/ferris.jpg')
+ferris.photo.attach(io: ferris_photo, filename:'ferris.jpg')
+
+boomer_photo = open('https://petsy-seeds.s3.amazonaws.com/petsy-pets/boomer.jpeg')
+boomer.photo.attach(io: boomer_photo, filename:'boomer.jpeg')
 
 
 puts "I HAVE SEEDED"
