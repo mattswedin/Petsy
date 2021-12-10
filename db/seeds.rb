@@ -423,7 +423,8 @@ squire = Pet.create!(
   color: "Brown",
   category: "Rabbits",
   size: "Small",
-  owner_id: kirsten.id
+  owner_id: kirsten.id,
+  adoptable: true
 )
 
 woolie = Pet.create!(
@@ -463,7 +464,8 @@ pablo = Pet.create!(
   color: "White",
   category: "Birds",
   size: "Medium-Small",
-  owner_id: julian.id
+  owner_id: julian.id,
+  adoptable: true
 )
 
 inspecter = Pet.create!(
@@ -535,7 +537,8 @@ falcor = Pet.create!(
   color: "White",
   category: "Llamas",
   size: "Extra Large",
-  owner_id: julian.id
+  owner_id: julian.id,
+  adoptable: true
 )
 
 beth = Pet.create!(
@@ -607,7 +610,8 @@ trevor = Pet.create!(
   color: "Orange",
   category: "Guinea Pigs",
   size: "Small",
-  owner_id: julian.id
+  owner_id: maxwell.id,
+  adoptable: true
 )
 
 gwen = Pet.create!(

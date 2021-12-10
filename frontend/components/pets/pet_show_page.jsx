@@ -2,9 +2,8 @@ import React, {useEffect} from "react";
 import { Link } from "react-router-dom";
 import ReviewsIndexContainer from "../reviews/reviews_index_container"
 import FooterContainer from '../footer/footer_container';
-import { createCart } from "../../actions/cart_actions";
 
-const PetShowPage = ({ pet, fetchPet, fetchUsers, match, users, createPetpoint, fetchPetpoints, petpoints, currentUser, openModal }) => {
+const PetShowPage = ({ pet, fetchPet, fetchUsers, match, users, createPetpoint, fetchPetpoints, petpoints, currentUser, openModal, createCart }) => {
     
     useEffect(() => {
         fetchPet(match.params.petId)
@@ -58,7 +57,7 @@ const PetShowPage = ({ pet, fetchPet, fetchUsers, match, users, createPetpoint, 
                 </div>
                 <div className="pet-show-info-container">
                     <div className="owner" >
-                        <h1>{pet.adoptable ? "Previous Owner: " : "Owner: "}</h1><Link to={`/users/${pet.owner_id}`}> {users[pet.owner_id].username}</Link>
+                        <h1>{pet.adoptable ? "Previous Owner: " : "Owner: "}</h1><Link className="link" to={`/users/${pet.owner_id}`}> {users[pet.owner_id].username}</Link>
                     </div>
                     <h1 className="title">{pet.name}, the { pet.category === "Sheep" || pet.category === "Fish" ? pet.category : pet.category.slice(0, -1)}</h1>
                     <h1 className="price" >{pet.adoptable ?  "Available to Adopt!" : "Not up for Adoption"}</h1>

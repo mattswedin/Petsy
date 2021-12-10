@@ -39,7 +39,7 @@ const Search = ({fetchPets, fetchUsers, match, pets, users, history}) => {
                         <ul className="pet-ele-list" >Size: {pet.size}</ul>
                         <div className="owner-row">
                             <ul className="pet-ele-list" >Owner: </ul>
-                            <Link className="pet-ele-list" to={`/users/${pet.owner_id}`}>{users[pet.owner_id].username}</Link>
+                            <Link className="link" to={`/users/${pet.owner_id}`}>{users[pet.owner_id].username}</Link>
                         </div>
                     </div>
                 )

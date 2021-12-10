@@ -24,6 +24,7 @@ const SearchBar = ({ history }) => {
     return (
             <form className="search-bar" onSubmit={handleSubmit} >
                 <input  type="text" className="search-bar-input" placeholder="Search for anything" value={state.query} onChange={update('query')} />
+
             </form>    
     )
 }

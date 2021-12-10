@@ -93,7 +93,7 @@ export default class SessionForm extends React.Component {
                     
                         <div className="row">
                         <h2 className="signin-register-head">Sign in</h2>
-                        <button className="register-button-sigin" onClick={() => this.props.openModal({ type: 'signup' })}>Register</button>
+                        <button className="register-button-sigin" type="button"onClick={() => this.props.openModal({ type: 'signup' })}>Register</button>
                         </div>
 
                         

@@ -12,7 +12,8 @@ const mapS = (state, ownProps) => {
         currentUserId: state.session.id,
         cart_items: state.entities.cart_items,
         pets: state.entities.pets,
-        user: state.entities.users[state.session.id]
+        user: state.entities.users[state.session.id],
+        users: state.entities.users
     }
     
 }

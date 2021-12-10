@@ -14,7 +14,7 @@ const CategoryNav = ({ fetchCategories, fetchPets, categories }) => {
         <div className="top-nav-cats" >
             {
                 allCats.map( (cat , i) => 
-                    <Link key={i} to={`/categories/${cat.id}`}><h1>{cat.title}</h1></Link>
+                    <Link className="top-nav-cats-color"key={i} to={`/categories/${cat.id}`}><h1>{cat.title}</h1></Link>
                     )
             }
         </div>

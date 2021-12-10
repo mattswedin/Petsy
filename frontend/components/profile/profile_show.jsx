@@ -52,8 +52,8 @@ export default class ProfileShow extends React.Component{
                                 <ul className="pet-ele-list" >Type: {pet.category}</ul>
                                 <ul className="pet-ele-list" >Color: {pet.color}</ul>
                                 <ul className="pet-ele-list" >Size: {pet.size}</ul>
-                                <input className="profile-form-button-two" type="submit" onClick={() => this.props.openModal({type: 'updatePet', pet: pet })} value="Edit Pet" />
-                                <input className="profile-form-button-two" type="submit" onClick={() => this.handleAdopt(pet)} value="Put Up for Adoption" />
+                                <h1 className="profile-form-button-two" type="submit" onClick={() => this.props.openModal({type: 'updatePet', pet: pet })}>Edit Pet</h1>
+                                <h1 className="profile-form-button-two" onClick={() => this.handleAdopt(pet)} >Put Up for Adoption</h1>
                                 
                                 </div>
 
