@@ -1,0 +1,1 @@
+json.extract! cart_item, :cart_id, :id, :pet_id, :can_adopt

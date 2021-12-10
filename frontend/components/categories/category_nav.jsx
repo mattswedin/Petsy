@@ -1,7 +1,7 @@
 import React, { useEffect } from "react"
 import { Link } from "react-router-dom"
 
-const CategoryNav = ({ fetchCategories, categories }) => {
+const CategoryNav = ({ fetchCategories, fetchPets, categories }) => {
 
     useEffect(() => {
         fetchCategories()
@@ -14,7 +14,7 @@ const CategoryNav = ({ fetchCategories, categories }) => {
         <div className="top-nav-cats" >
             {
                 allCats.map( (cat , i) => 
-                    <Link key={i} to={`/categories/${cat.id}`}><h1>{cat.title}</h1></Link>
+                    <Link className="top-nav-cats-color"key={i} to={`/categories/${cat.id}`}><h1>{cat.title}</h1></Link>
                     )
             }
         </div>

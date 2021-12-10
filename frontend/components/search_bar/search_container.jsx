@@ -4,7 +4,7 @@ import { fetchPets } from "../../actions/pet_actions";
 import { fetchUsers } from "../../actions/session_actions";
 
 const mapS = state => ({
-    pets: state.entities.pets,
+    pets: Object.values(state.entities.pets),
     users: state.entities.users
 })
 

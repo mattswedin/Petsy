@@ -53,9 +53,9 @@
 
 .userPetindex-Pos {
     
-    min-height: 100vh;
-    margin-right: auto;
-    margin-left: auto;
+    min-height: auto;
+    margin-right: 20px;
+    margin-left: 20px;
     justify-content: center;
     display: flex;
     flex-direction: row;
@@ -92,6 +92,7 @@
     height: 600px;
 }
 
-.signin-register-head{
-
+.owner-row{
+ display: flex;
+ flex-direction: row;
 }

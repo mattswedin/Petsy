@@ -1,3 +1,93 @@
 // Place all the styles related to the Reviews controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.reviews{
+    margin-left: px;
+    width: 100%;
+}
+
+.reviews-title-div{
+    font-family: "Guardian-EgypTT",Charter,"Charter Bitstream",Cambria,"Noto Serif Light","Droid Serif",Georgia,serif;
+    font-size: 26px;
+    display: flex;
+    flex-direction: row;
+    margin-top: 50px;
+
+    .review-title{
+        margin-right: 5px;
+    }
+
+    .review-button{
+        margin-left: auto;
+        margin-right: 0;
+        width: 200px;
+        height: 25px;
+        border-radius: 50px;
+        border: solid black 1px;
+        background-color: rgb(255, 255, 255);
+        
+
+        .button-title{
+            margin-top: 5px;
+            text-align: center;
+            color: rgb(0, 0, 0);
+            font-family: "Graphik Webfont", Klarna Text, "Klarna Sans", "Helvetica Neue", Arial, Helvetica, sans-serif;
+            font-size: 14px;
+        }
+    }
+}
+
+.review-body-div{
+    width: 830px;
+    flex-wrap: wrap;
+
+    
+}
+
+.review-body{
+        overflow: auto;
+        overflow-wrap: break-word;
+        width: 100%;
+    }
+
+.pet-top-review-stars{
+    margin-bottom: 30px;
+}
+
+.reviewer-div{
+    margin-left: 10px;
+    margin-top: 9px;
+}
+
+.review-casing{
+    margin-top: 30px;
+    display: flex;
+    flex-direction: row;
+}
+
+.username-date{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 10px;
+    
+
+    .username{
+        color: black;
+    font-family: "Graphik Webfont", Klarna Text, "Klarna Sans", "Helvetica Neue", Arial, Helvetica, sans-serif;
+    text-decoration: underline;
+    }
+
+    .dayte{
+        margin-left: 7px;
+    }
+}
+
+pet-left-container{
+
+}
+
+.top-left{
+    display: flex;
+    flex-direction: row;
+}

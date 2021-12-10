@@ -1,0 +1,271 @@
+.pet-profile-pic-cart {
+    
+    img{
+        border-radius: 10px;
+        height: 150px;
+        width: 150px;
+        border: .1px solid rgb(0, 0, 0);
+    }
+    
+}
+
+
+
+.outer-cart-div{
+
+    display: flex;
+    justify-content: center;
+
+    .cart-page{
+    width: 95vw;
+    display: flex;
+    flex-direction: column;
+
+    .cart-title-div{
+        display: flex;
+        flex-direction: row;
+
+        .cart-title{
+        align-self: flex-start;
+        margin-top: 30px;
+        font-size: 32px;
+        margin-bottom: 40px;
+        font-family: "Guardian-EgypTT",Charter,"Charter Bitstream",Cambria,"Noto Serif Light","Droid Serif",Georgia,serif;
+        }
+
+        .cart-keep{
+        font-weight: bolder;
+        align-self: flex-end;
+        margin-left: auto; 
+        margin-right: 0;
+        margin-top: 30px;
+        font-size: 16px;
+        margin-bottom: 40px;
+        font-family: "Guardian-EgypTT",Charter,"Charter Bitstream",Cambria,"Noto Serif Light","Droid Serif",Georgia,serif;
+        }
+    }
+
+    .cart-both-sides{
+        display: flex;
+        flex-direction: row;
+        width: 50vw;
+
+        .cart-right{
+            margin-top: 7px;
+            margin-left: auto; 
+            margin-right: 0px;
+
+            .owner{
+                display: flex;
+                flex-direction: row;
+                
+                
+            }
+
+            .quanity{
+                margin-top: 20px;
+                margin-bottom: 20px;
+                width: 80px;
+                height: 41px;
+                font-size: 16px;
+                font-family: "Guardian-EgypTT",Charter,"Charter Bitstream",Cambria,"Noto Serif Light","Droid Serif",Georgia,serif;
+                
+            }
+
+            .only{
+                width: 250px;
+                font-family: "Guardian-EgypTT",Charter,"Charter Bitstream",Cambria,"Noto Serif Light","Droid Serif",Georgia,serif;
+                color: rgb(109, 0, 0);
+            }
+    
+        }
+    }
+
+    .cart-link{
+    margin-left: 5px;
+    color: black;
+    
+    }
+
+    
+    
+    
+
+    .cart-container{    
+    display: flex;
+    flex-direction: row;
+
+        .pet-cart{
+            height: 100vw;
+            width: auto;
+
+            .cart-item {
+            display: flex;
+            flex-direction: row;
+            margin-bottom: 50px;
+   
+                .pet-name-cart{
+                    font-weight: bolder;
+                    margin-left: 16px;
+                    margin-top: 2px;
+                    margin-bottom: 20px;
+                    font-size: 19px;
+                    font-family: "Graphik Webfont",-apple-system,"Helvetica Neue","Droid Sans",Arial,sans-serif;
+                }
+
+                .pet-info-cart{
+                    font-size: 16px;
+                    margin-left: 16px;
+                    margin-bottom: 10px;
+                    font-family: "Graphik Webfont",-apple-system,"Helvetica Neue","Droid Sans",Arial,sans-serif;
+                }
+
+                .pet-remove-cart{
+                    margin-top: 25px;
+                    font-size: 13px;
+                    margin-left: 16px;
+                    font-family: "Graphik Webfont",-apple-system,"Helvetica Neue","Droid Sans",Arial,sans-serif;
+                }
+            }
+        }
+
+        .order{
+            margin-left: auto;
+            margin-right: 0;        
+            flex-direction: right;
+            width: 400px;
+            height: 500px;
+            box-shadow: 0px 0px 14px 0px rgb(187, 187, 187);
+            border-radius: 20px;
+
+            .order-center{
+                padding: 20px;
+
+                .how-pay{
+                    margin-top: 10px;
+                    margin-bottom: 15px;
+                    font-size: 16px;
+                    font-weight: bold;
+                    font-family: "Graphik Webfont", Klarna Text, "Klarna Sans", "Helvetica Neue", Arial, Helvetica, sans-serif;
+                }
+                
+                input[type='radio'] {
+                margin-left: 5px; 
+                margin-right: 12px;
+                transform: scale(2.5); 
+                }
+
+                .order-num-free{
+                        display: flex;
+                        flex-direction: row;
+                        margin-bottom: 10px;
+                        font-family: "Graphik Webfont", Klarna Text, "Klarna Sans", "Helvetica Neue", Arial, Helvetica, sans-serif;
+                        font-size: 16px;
+
+                        .num{
+                        margin-right: 0;
+                        margin-left: auto;
+                        }
+
+                        .free{
+                        color: rgb(89, 163, 89);
+                        margin-right: 0;
+                        margin-left: auto;
+                        }
+                    }
+
+                .order-radio{
+                display: flex;
+                flex-direction: row;
+                margin-bottom: 25px;
+                font-family: "Graphik Webfont", Klarna Text, "Klarna Sans", "Helvetica Neue", Arial, Helvetica, sans-serif;
+                font-size: 16px;
+
+                    
+
+                    
+
+                    .order-radio-option{
+                        margin-left: 7px;
+                        font-size: 14px;
+                        font-family: "Graphik Webfont", Klarna Text, "Klarna Sans", "Helvetica Neue", Arial, Helvetica, sans-serif;
+                    }
+
+                }
+
+                .order-line{
+                    margin-top: 10px;
+                    height: 1px;
+                    width: 100%;
+                    background-color: rgb(223, 223, 223);
+
+                    
+                }
+
+                .total{
+                        margin-top: 10px;
+                        margin-bottom: 15px;
+                        font-size: 16px;
+                        font-weight: bold;
+                        font-family: "Graphik Webfont", Klarna Text, "Klarna Sans", "Helvetica Neue", Arial, Helvetica, sans-serif;
+                    }
+                
+
+
+                }
+
+                
+
+                
+
+                
+
+            }
+
+            
+
+            .adopt-button{
+                    width: 100%;
+                    height: 50px;
+                    border-radius: 50px;
+                    background-color: black;
+                    color: white;
+                    font-family: "Graphik Webfont", Klarna Text, "Klarna Sans", "Helvetica Neue", Arial, Helvetica, sans-serif;
+                    font-size: 20px;
+                }
+                
+
+        }
+
+                
+
+    }
+
+                
+
+}
+
+.duties-center{
+    display: flex;
+    justify-content: center;
+
+}
+
+.duties-div{
+    display: flex;
+    flex-direction: row;
+    font-family: "Graphik Webfont", Klarna Text, "Klarna Sans", "Helvetica Neue", Arial, Helvetica, sans-serif;
+    font-size: 10px;
+    color: gray;
+    margin-top: 40px;
+
+    .duties{
+        margin-top: 10px;
+    }
+    .duties2{
+        margin-left: 3px;
+        text-decoration: underline;
+        margin-top: 10px;
+    }
+}
+

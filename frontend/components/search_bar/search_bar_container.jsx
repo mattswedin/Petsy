@@ -1,6 +1,5 @@
 import { connect } from "react-redux";
 import SearchBar from "./search_bar"
-import { fetchPets } from '../../actions/pet_actions';
 
 const mapS = state => ({
 
@@ -8,7 +7,6 @@ const mapS = state => ({
 })
 
 const mapD = dispatch => ({
-    fetchPets: () => dispatch(fetchPets())
 })
 
 export default connect(mapS, mapD)(SearchBar)

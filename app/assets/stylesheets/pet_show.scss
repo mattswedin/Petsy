@@ -39,13 +39,98 @@
     }
 
     .owner {
-        margin-bottom: 40px;
         display: flex;
         flex-direction: row;
+
+        .pet-link{
+            margin-left: 5px;
+            color: black;
+        }
     }
 
     .precious {
         font-family: "Graphik Webfont", Klarna Text, "Klarna Sans", "Helvetica Neue", Arial, Helvetica, sans-serif;
         font-size: 13px;
     }
+
+    .color-size-butts{
+        font-size: 15px;
+        font-kerning: 20px;
+        font-weight: bold;
+        width: 100%;
+        height: 50px;
+        border-radius: 5px;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+    }
+
+    .adopt-button{
+        width: 100%;
+        height: 50px;
+        border-radius: 50px;
+        background-color: black;
+        color: white;
+        font-family: "Graphik Webfont", Klarna Text, "Klarna Sans", "Helvetica Neue", Arial, Helvetica, sans-serif;
+        font-size: 20px;
+    }
+
+    .basket-button{
+        width: 100%;
+        height: 50px;
+        border-radius: 50px;
+        background-color: white;
+        color: black;
+        font-family: "Graphik Webfont", Klarna Text, "Klarna Sans", "Helvetica Neue", Arial, Helvetica, sans-serif;
+        font-size: 20px;
+    }
+    
+    
+    
+}
+
+.petpoint-stats{
+        height: 700px;
+        width: 130px;
+        margin-right: 50px;
+        text-align: center;
+
+        .petnum {
+            font-size: 50px;
+        }
+
+    }
+
+.icons{
+    display: flex;
+    flex-direction: column;
+
+    .icon-div{
+        display: flex;
+        flex-direction: row;
+    }
+}
+
+.icon-big{
+    margin-right: 10px;
+}
+
+.icon-footer{
+
+    margin-left: 20px;
+    margin-top: 20px;
+
+}
+
+.icon-footer-name{
+    font-size: 20px;
+    font-family: "Graphik Webfont", Klarna Text, "Klarna Sans", "Helvetica Neue", Arial, Helvetica, sans-serif;
+    color: white;
+    margin-left: 20px;
+    margin-top: 30px;
+}
+
+.basket{
+    font-size: 15px;
+    font-family: "Graphik Webfont", Klarna Text, "Klarna Sans", "Helvetica Neue", Arial, Helvetica, sans-serif;
+
+    margin-top: 5px;
 }

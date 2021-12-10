@@ -1,24 +1,16 @@
 import React from "react"
 import PetIndexContainer from "../pets/pets_index_container"
-import pet_create_form_container from "../pets/pet_create_form_container"
 import OurPicksContainer from '../our_picks/our_picks_container'
 import { Link } from "react-router-dom"
 
 export default class CategoryIndex extends React.Component{
     constructor(props){
         super(props)
-        this.changeCat = this.changeCat.bind(this)
         this.state = { category: 'All'}
     }
 
     componentDidMount(){
         this.props.fetchCategories()
-    }
-
-    changeCat(cat){
-        
-        this.setState({category: cat})
-        
     }
 
     render(){

@@ -12,7 +12,9 @@ User.delete_all
 Category.delete_all
 Pet.delete_all
 Review.delete_all
-
+Cart.delete_all
+Cart.destroy_all
+CartItem.delete_all
 
 
 
@@ -24,9 +26,13 @@ julian = User.create!(
   password: 'password'
 )
 
+#Demo Cart
+
+best_cart = Cart.create!(
+  user_id: julian.id
+)
+
 # Users
-
-
 
 charlie = User.create!(
   username: 'Charlie',
@@ -417,7 +423,8 @@ squire = Pet.create!(
   color: "Brown",
   category: "Rabbits",
   size: "Small",
-  owner_id: kirsten.id
+  owner_id: kirsten.id,
+  adoptable: true
 )
 
 woolie = Pet.create!(
@@ -435,6 +442,235 @@ maxine = Pet.create!(
   size: "Large",
   owner_id: camel.id
 )
+
+lewis = Pet.create!(
+  name: "Lewis",
+  color: "Orange",
+  category: "Birds",
+  size: "Small",
+  owner_id: kirsten.id
+)
+
+jenkins = Pet.create!(
+  name: "Jenkins",
+  color: "Green",
+  category: "Birds",
+  size: "Small",
+  owner_id: charlie.id
+)
+
+pablo = Pet.create!(
+  name: "Pablo",
+  color: "White",
+  category: "Birds",
+  size: "Medium-Small",
+  owner_id: julian.id,
+  adoptable: true
+)
+
+inspecter = Pet.create!(
+  name: "Inspector",
+  color: "Grey",
+  category: "Birds",
+  size: "Medium-Small",
+  owner_id: julian.id
+)
+
+janie = Pet.create!(
+  name: "Janie",
+  color: "Green",
+  category: "Birds",
+  size: "Small",
+  owner_id: charlie.id
+)
+
+big_fellow = Pet.create!(
+  name: "Big Fellow",
+  color: "Yellow",
+  category: "Birds",
+  size: "Medium-Small",
+  owner_id: charlie.id
+)
+
+cloudly = Pet.create!(
+  name: "Cloudly",
+  color: "White",
+  category: "Birds",
+  size: "Medium-Small",
+  owner_id: maxwell.id
+)
+
+peterson = Pet.create!(
+  name: "Peterson",
+  color: "Green",
+  category: "Birds",
+  size: "Medium-Small",
+  owner_id: julian.id
+)
+
+quackster = Pet.create!(
+  name: "Quackster",
+  color: "Green",
+  category: "Birds",
+  size: "Medium-Small",
+  owner_id: jackie.id
+)
+
+danielle = Pet.create!(
+  name: "Danielle",
+  color: "Black",
+  category: "Llamas",
+  size: "Extra Large",
+  owner_id: jackie.id
+)
+
+dean = Pet.create!(
+  name: "Dean",
+  color: "Black",
+  category: "Llamas",
+  size: "Extra Large",
+  owner_id: jackie.id
+)
+
+falcor = Pet.create!(
+  name: "Falcor",
+  color: "White",
+  category: "Llamas",
+  size: "Extra Large",
+  owner_id: julian.id,
+  adoptable: true
+)
+
+beth = Pet.create!(
+  name: "Beth",
+  color: "Brown",
+  category: "Llamas",
+  size: "Extra Large",
+  owner_id: kirsten.id
+)
+
+sid = Pet.create!(
+  name: "Sid",
+  color: "White",
+  category: "Llamas",
+  size: "Extra Large",
+  owner_id: maxwell.id
+)
+
+morgan = Pet.create!(
+  name: "Morgan",
+  color: "White",
+  category: "Monkeys",
+  size: "Medium-Small",
+  owner_id: kirsten.id
+)
+
+christina = Pet.create!(
+  name: "Christina",
+  color: "Black",
+  category: "Monkeys",
+  size: "Medium-Small",
+  owner_id: charlie.id
+)
+
+spike = Pet.create!(
+  name: "Spike",
+  color: "Yellow",
+  category: "Monkeys",
+  size: "Medium-Small",
+  owner_id: camel.id
+)
+
+indigo = Pet.create!(
+  name: "Indigo",
+  color: "Brown",
+  category: "Monkeys",
+  size: "Medium-Small",
+  owner_id: jackie.id
+)
+
+ginger = Pet.create!(
+  name: "Ginger",
+  color: "Orange",
+  category: "Monkeys",
+  size: "Medium-Small",
+  owner_id: julian.id
+)
+
+darunia = Pet.create!(
+  name: "Darunia",
+  color: "Brown",
+  category: "Guinea Pigs",
+  size: "Small",
+  owner_id: julian.id
+)
+
+trevor = Pet.create!(
+  name: "Trevor",
+  color: "Orange",
+  category: "Guinea Pigs",
+  size: "Small",
+  owner_id: maxwell.id,
+  adoptable: true
+)
+
+gwen = Pet.create!(
+  name: "Gwen",
+  color: "White",
+  category: "Guinea Pigs",
+  size: "Small",
+  owner_id: julian.id
+)
+
+angie = Pet.create!(
+  name: "Angie",
+  color: "Black",
+  category: "Guinea Pigs",
+  size: "Small",
+  owner_id: julian.id
+)
+
+spanky = Pet.create!(
+  name: "Spanky",
+  color: "Brown",
+  category: "Guinea Pigs",
+  size: "Small",
+  owner_id: maxwell.id
+)
+
+whisp = Pet.create!(
+  name: "Whisp",
+  color: "Grey",
+  category: "Guinea Pigs",
+  size: "Small",
+  owner_id: charlie.id
+)
+
+felix = Pet.create!(
+  name: "Felix",
+  color: "Orange",
+  category: "Guinea Pigs",
+  size: "Small",
+  owner_id: jackie.id
+)
+
+chunky = Pet.create!(
+  name: "Chunky",
+  color: "Black",
+  category: "Guinea Pigs",
+  size: "Small",
+  owner_id: kirsten.id
+)
+
+gray = Pet.create!(
+  name: "Gray",
+  color: "Grey",
+  category: "Guinea Pigs",
+  size: "Small",
+  owner_id: charlie.id
+)
+
+
 
 # Reviews
 
@@ -463,8 +699,8 @@ rats = Category.create!(title: 'Rats')
 rabbits = Category.create!(title: 'Rabbits')
 fish = Category.create!(title: 'Fish')
 birds = Category.create!(title: 'Birds')
-hamsters = Category.create!(title: 'Hamsers')
-rocks = Category.create!(title: 'Rocks')
+monkeys = Category.create!(title: 'Monkeys')
+llamas = Category.create!(title: 'Llamas')
 pigs = Category.create!(title: 'Pigs')
 guinea_pigs = Category.create!(title: 'Guinea Pigs')
 horses = Category.create!(title: 'Horses')
@@ -609,5 +845,90 @@ orylie.photo.attach(io: orylie_photo, filename:'orylie.jpeg')
 
 kiwi_photo = open('https://petsy-seeds.s3.amazonaws.com/petsy-pets/kiwi.jpeg')
 kiwi.photo.attach(io: kiwi_photo, filename:'kiwi.jpeg')
+
+lewis_photo = open('https://petsy-seeds.s3.amazonaws.com/petsy-pets/lewis.jpeg')
+lewis.photo.attach(io: lewis_photo, filename:'lewis.jpeg')
+
+quackster_photo = open('https://petsy-seeds.s3.amazonaws.com/petsy-pets/quackster.jpeg')
+quackster.photo.attach(io: quackster_photo, filename:'quackster.jpeg')
+
+peterson_photo = open('https://petsy-seeds.s3.amazonaws.com/petsy-pets/peterson.jpeg')
+peterson.photo.attach(io: peterson_photo, filename:'peterson.jpeg')
+
+cloudly_photo = open('https://petsy-seeds.s3.amazonaws.com/petsy-pets/cloudly.jpeg')
+cloudly.photo.attach(io: cloudly_photo, filename:'cloudly.jpeg')
+
+big_fellow_photo = open('https://petsy-seeds.s3.amazonaws.com/petsy-pets/big_fellow.jpeg')
+big_fellow.photo.attach(io: big_fellow_photo, filename:'big_fellow.jpeg')
+
+janie_photo = open('https://petsy-seeds.s3.amazonaws.com/petsy-pets/janie.jpeg')
+janie.photo.attach(io: janie_photo, filename:'janie.jpeg')
+
+inspecter_photo = open('https://petsy-seeds.s3.amazonaws.com/petsy-pets/inspecter.jpeg')
+inspecter.photo.attach(io: inspecter_photo, filename:'inspecter.jpeg')
+
+pablo_photo = open('https://petsy-seeds.s3.amazonaws.com/petsy-pets/pablo.jpeg')
+pablo.photo.attach(io: pablo_photo, filename:'pablo.jpeg')
+
+jenkins_photo = open('https://petsy-seeds.s3.amazonaws.com/petsy-pets/jenkins.jpeg')
+jenkins.photo.attach(io: jenkins_photo, filename:'jenkins.jpeg')
+
+danielle_photo = open('https://petsy-seeds.s3.amazonaws.com/petsy-pets/danielle.jpeg')
+danielle.photo.attach(io: danielle_photo, filename:'danielle.jpeg')
+
+dean_photo = open('https://petsy-seeds.s3.amazonaws.com/petsy-pets/dean.jpeg')
+dean.photo.attach(io: dean_photo, filename:'dean.jpeg')
+
+falcor_photo = open('https://petsy-seeds.s3.amazonaws.com/petsy-pets/falcor.jpeg')
+falcor.photo.attach(io: falcor_photo, filename:'falcor.jpeg')
+
+beth_photo = open('https://petsy-seeds.s3.amazonaws.com/petsy-pets/beth.jpeg')
+beth.photo.attach(io: beth_photo, filename:'beth.jpeg')
+
+sid_photo = open('https://petsy-seeds.s3.amazonaws.com/petsy-pets/sid.jpeg')
+sid.photo.attach(io: sid_photo, filename:'sid.jpeg')
+
+morgan_photo = open('https://petsy-seeds.s3.amazonaws.com/petsy-pets/morgan.jpeg')
+morgan.photo.attach(io: morgan_photo, filename:'morgan.jpeg')
+
+christina_photo = open('https://petsy-seeds.s3.amazonaws.com/petsy-pets/christina.jpeg')
+christina.photo.attach(io: christina_photo, filename:'christina.jpeg')
+
+spike_photo = open('https://petsy-seeds.s3.amazonaws.com/petsy-pets/spike.jpeg')
+spike.photo.attach(io: spike_photo, filename:'spike.jpeg')
+
+indigo_photo = open('https://petsy-seeds.s3.amazonaws.com/petsy-pets/indigo.jpeg')
+indigo.photo.attach(io: indigo_photo, filename:'indigo.jpeg')
+
+ginger_photo = open('https://petsy-seeds.s3.amazonaws.com/petsy-pets/ginger.jpeg')
+ginger.photo.attach(io: ginger_photo, filename:'ginger.jpeg')
+
+darunia_photo = open('https://petsy-seeds.s3.amazonaws.com/petsy-pets/darunia.jpeg')
+darunia.photo.attach(io: darunia_photo, filename:'darunia.jpeg')
+
+trevor_photo = open('https://petsy-seeds.s3.amazonaws.com/petsy-pets/trevor.jpeg')
+trevor.photo.attach(io: trevor_photo, filename:'trevor.jpeg')
+
+gwen_photo = open('https://petsy-seeds.s3.amazonaws.com/petsy-pets/gwen.jpeg')
+gwen.photo.attach(io: gwen_photo, filename:'gwen.jpeg')
+
+angie_photo = open('https://petsy-seeds.s3.amazonaws.com/petsy-pets/angie.jpeg')
+angie.photo.attach(io: angie_photo, filename:'angie.jpeg')
+
+spanky_photo = open('https://petsy-seeds.s3.amazonaws.com/petsy-pets/spanky.jpeg')
+spanky.photo.attach(io: spanky_photo, filename:'spanky.jpeg')
+
+whisp_photo = open('https://petsy-seeds.s3.amazonaws.com/petsy-pets/whisp.jpeg')
+whisp.photo.attach(io: whisp_photo, filename:'whisp.jpeg')
+
+felix_photo = open('https://petsy-seeds.s3.amazonaws.com/petsy-pets/felix.jpeg')
+felix.photo.attach(io: felix_photo, filename:'felix.jpeg')
+
+chunky_photo = open('https://petsy-seeds.s3.amazonaws.com/petsy-pets/chunky.jpeg')
+chunky.photo.attach(io: chunky_photo, filename:'chunky.jpeg')
+
+gray_photo = open('https://petsy-seeds.s3.amazonaws.com/petsy-pets/gray.jpeg')
+gray.photo.attach(io: gray_photo, filename:'gray.jpeg')
+
 
 puts "I HAVE SEEDED"

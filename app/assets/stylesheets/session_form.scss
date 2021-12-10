@@ -320,6 +320,7 @@
    justify-content: center;
 }
 .top-nav-cats {
+    
     font-size: 14px;
     font-weight: 300;
     font-family: "Graphik Webfont",-apple-system,"Helvetica Neue","Droid Sans",Arial,sans-serif;
@@ -330,6 +331,10 @@
     margin-right: auto;
     width: 100vw;   
     margin-top: 18px;
+
+    .top-nav-cats-color{
+        color: gray
+    }
 }
 
 .first {
@@ -372,7 +377,29 @@
 .links-nav{
     display: flex;
     flex-direction: row;
+
+    .top-profile-icon{
+        color: black;
+    }
+
+    .top-cart{
+        color: black;
+    }
+
+    .top-sign-out{
+         border: 0px;
+        background-color: white;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        font-size: 13px;
+        font-weight: 400;
+        margin-top: 19px;
+        margin-left: 15px;
+        margin-right: 30px;
+        width: 50px;
+        color: black;
+    }
 }
+
 
 #profile-icon{
     font-size: 25px;
@@ -380,6 +407,8 @@
     margin-left: 20px;
     margin-right: 15px;
 }
+
+
 
 
 .search-bar {
@@ -430,3 +459,69 @@
     text-align: center;
     line-height: -20px;
 }
+
+//search bar
+
+.no-results{
+    margin-top: 30px;
+    color: rgb(172, 172, 172);
+    display: flex;
+    justify-content: center;
+    font-family: "Graphik Webfont",-apple-system,"Helvetica Neue","Droid Sans",Arial,sans-serif;
+}
+
+//rating
+
+.review-container{
+    display: flex;
+    justify-content: center;
+    
+
+    .review-form{
+        height: 400px;
+        width: 300px;
+        align-self: center;
+
+        .title{
+        font-family: "Graphik Webfont",-apple-system,"Helvetica Neue","Droid Sans",Arial,sans-serif;
+        font-size: 14px;
+        font-weight: bold;
+        }
+
+
+        .rating-div{
+        input[type="radio"]{display: none;}
+        color: black;
+        display: flex;
+        justify-content: center;
+        }
+
+        .text-window{
+            width: 100%;
+            height: 225px;
+            text-align:start;
+            
+        }
+
+        .adopt-button{
+        width: 100%;
+        height: 50px;
+        border-radius: 50px;
+        background-color: black;
+        color: white;
+        font-family: "Graphik Webfont", Klarna Text, "Klarna Sans", "Helvetica Neue", Arial, Helvetica, sans-serif;
+        font-size: 20px;
+        }
+
+    }
+
+
+
+    
+
+}
+
+
+
+    
+

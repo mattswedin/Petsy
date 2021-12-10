@@ -11,23 +11,25 @@ import CategoryNavContainer from "./categories/category_nav_container"
 import CategoriesShowContainer from "./categories/categories_show_container"
 import SearchBarContainer from "./search_bar/search_bar_container"
 import SearchContainer from "./search_bar/search_container"
+import ScrollToTop from "./util/scrollToTop"
+import CartContainer from "./cart/cart_container"
+import NoCart from "./cart/no_cart";
 
 
 class App extends React.Component{
+
 
 
     render(){
         return(
         <div>
             <Modal />
+            <ScrollToTop />
             <header >
-                
                 <div className="top-nav">
                  <Link to="/" className="logo" >Petsy</Link>
                  <SearchBarContainer />
                  <GreetingContainer />
-                        <i id="shopping-cart" className="fas fa-shopping-cart"></i>
-
                 </div>
                 <div className="top-nav-cats" >
                     <CategoryNavContainer />
@@ -36,11 +38,12 @@ class App extends React.Component{
             </header>
             
             <Switch>
-    
                 <Route exact path="/" component={CategoriesIndexContainer} />
+                <Route exact path="/cart/0" component={NoCart} />
+                <Route exact path="/search/:query" component={SearchContainer} />
+                <Route exact path="/cart/:cartId" component={CartContainer} />
                 <Route exact path="/pets/:petId" component={PetShowPageContainer} />
                 <Route exact path="/categories/:categoryId" component={CategoriesShowContainer} />
-                <Route exact path="/search/:query" component={SearchContainer} />
                 <Route exact path="/users/:userId" component={ProfileShowContainer} />
                 <Redirect to="/" />
             </Switch>
