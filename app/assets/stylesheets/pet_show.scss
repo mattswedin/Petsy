@@ -39,11 +39,10 @@
     }
 
     .owner {
-        margin-bottom: 40px;
         display: flex;
         flex-direction: row;
 
-        .link{
+        .pet-link{
             margin-left: 5px;
             color: black;
         }
@@ -99,3 +98,39 @@
         }
 
     }
+
+.icons{
+    display: flex;
+    flex-direction: column;
+
+    .icon-div{
+        display: flex;
+        flex-direction: row;
+    }
+}
+
+.icon-big{
+    margin-right: 10px;
+}
+
+.icon-footer{
+
+    margin-left: 20px;
+    margin-top: 20px;
+
+}
+
+.icon-footer-name{
+    font-size: 20px;
+    font-family: "Graphik Webfont", Klarna Text, "Klarna Sans", "Helvetica Neue", Arial, Helvetica, sans-serif;
+    color: white;
+    margin-left: 20px;
+    margin-top: 30px;
+}
+
+.basket{
+    font-size: 15px;
+    font-family: "Graphik Webfont", Klarna Text, "Klarna Sans", "Helvetica Neue", Arial, Helvetica, sans-serif;
+
+    margin-top: 5px;
+}

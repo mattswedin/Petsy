@@ -5,15 +5,22 @@ import { fetchUsers } from "../../actions/session_actions";
 import { createPetpoint, fetchPetpoints } from "../../actions/petpoint_action";
 import { openModal } from "../../actions/modal_actions";
 import { createCart } from "../../actions/cart_actions";
+import { fetchReviews } from "../../actions/review_actions";
+import { fetchCartItems } from "../../actions/cart_items_actions";
 
 const mapS = (state, ownProps) => ({
      pet: state.entities.pets[ownProps.match.params.petId],
      users: state.entities.users,
      petpoints: state.entities.petpoints,
-     currentUser: state.session.id
+     currentUser: state.session.id,
+     reviews: state.entities.reviews,
+     cart_items: state.entities.cart_items
 })
 
 const mapD = dispatch => ({
+
+    fetchCartItems: () => dispatch(fetchCartItems()),
+    fetchReviews: () => dispatch(fetchReviews()),
     createCart: () => dispatch(createCart()),
     openModal: (modal) => dispatch(openModal(modal)),
     updatePet: (pet) => dispatch(updatePet(pet)),
