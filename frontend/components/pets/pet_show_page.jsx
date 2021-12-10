@@ -37,6 +37,7 @@ const PetShowPage = ({ fetchCartItems, reviews, fetchReviews, pet, fetchPet, fet
 
 
     const handleClick = () => {
+        if (!currentUser) {openModal({ type: 'login'})}
         if (!pet.adoptable) {
             createPetpoint({pet_id: pet.id})
         } else {
@@ -45,6 +46,7 @@ const PetShowPage = ({ fetchCartItems, reviews, fetchReviews, pet, fetchPet, fet
     }
 
     const handleAdd = () => {
+        if (!currentUser) {openModal({ type: 'login'})}
         if (users[currentUser].current_order === 0){createCart()}
         openModal({type: 'addToCart', pet: pet})
     }
