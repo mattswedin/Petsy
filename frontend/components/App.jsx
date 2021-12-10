@@ -39,7 +39,7 @@ class App extends React.Component{
             
             <Switch>
                 <Route exact path="/" component={CategoriesIndexContainer} />
-                <Route exact path="/cart/0" component={NoCart} />
+                <Route exact path="/nocart/0" component={NoCart} />
                 <Route exact path="/search/:query" component={SearchContainer} />
                 <Route exact path="/cart/:cartId" component={CartContainer} />
                 <Route exact path="/pets/:petId" component={PetShowPageContainer} />

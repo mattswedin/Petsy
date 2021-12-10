@@ -1017,7 +1017,7 @@ chunky_photo = open('https://petsy-seeds.s3.amazonaws.com/petsy-pets/chunky.jpeg
 chunky.photo.attach(io: chunky_photo, filename:'chunky.jpeg')
 
 gray_photo = open('https://petsy-seeds.s3.amazonaws.com/petsy-pets/gray.jpeg')
-gray.photo.attach(io: gray_photo, filename:'gray.jpeg')
+heroku logingray.photo.attach(io: gray_photo, filename:'gray.jpeg')
 
 banana_photo = open('https://petsy-seeds.s3.amazonaws.com/petsy-pets/banana.jpeg')
 banana.photo.attach(io: banana_photo, filename:'banana.jpeg')
