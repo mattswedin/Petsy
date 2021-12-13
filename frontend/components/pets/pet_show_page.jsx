@@ -51,7 +51,6 @@ const PetShowPage = ({ fetchCartItems, reviews, fetchReviews, pet, fetchPet, fet
         openModal({type: 'addToCart', pet: pet})
     }
 
-    console.log(users)
     
     return(
 

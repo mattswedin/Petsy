@@ -29,7 +29,6 @@ const AreYouSure = ({ pet, closeModal, updatePet, currentuser}) => {
         e.preventDefault();
         updatePet(state).then(closeModal());
         } else {
-        console.log(pet.owner_id)
         updatePet(adopted).then(closeModal());
         }
     }

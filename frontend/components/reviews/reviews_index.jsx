@@ -22,8 +22,6 @@ const ReviewsIndex = ({ reviews, pet, fetchReviews, fetchUsers, users, openModal
     let halfStar = false
     if (reviewScore % 1 === 0) { halfStar = false } else { halfStar = true}
 
-    console.log(reviewSum)
-    console.log(reviewScore)
 
 
     if (pet.owner_id !== session.id) {
