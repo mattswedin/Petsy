@@ -74,3 +74,6 @@ Petsy is a social media/shop site for pets and their owners. You can "pet" other
                                 )}
                             )
                        }```
+
+# Future Features
+- Users can upload their own pet photos
