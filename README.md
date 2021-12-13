@@ -50,15 +50,15 @@ Petsy is a social media/shop site for pets and their owners. You can "pet" other
                                         </div>
                                         <div className="cart-both-sides">
                                             <div >
-                                                <h1 className="pet-name-cart" >{pets[item.pet_id].name}, the { pets[item.pet_id].category === "Sheep" || pets[item.pet_id].category                                                  === "Fish" ? pets[item.pet_id].category : pets[item.pet_id].category.slice(0, -1)}</h1>
+                                                <h1 className="pet-name-cart" >{pets[item.pet_id].name}, the { pets[item.pet_id].category === "Sheep" || pets[item.pet_id].category === "Fish" ? pets[item.pet_id].category : pets[item.pet_id].category.slice(0, -1)}</h1>
                                                 <h1 className="pet-info-cart" >Pet Size: {pets[item.pet_id].size}</h1>
                                                 <h1 className="pet-info-cart" >Pet Color: {pets[item.pet_id].color}</h1>
-                                                <h1 className="pet-info-cart" >{pets[item.pet_id].adoptable === "true" || pets[item.pet_id].adoptable === true ? "Adoptable" : "Has                                                 owner, cannot Adopt now"}</h1>
+                                                <h1 className="pet-info-cart" >{pets[item.pet_id].adoptable === "true" || pets[item.pet_id].adoptable === true ? "Adoptable" : "Has owner, cannot Adopt now"}</h1>
                                                 <h1 className="pet-remove-cart" onClick={() => deleteCartItem(item.id)}>Remove Pet from Basket</h1>
                                             </div>
                                             <div className="cart-right" >
                                                 <div className="owner" >
-                                                    <h1>{pets[item.pet_id].adoptable ? "Previous Owner: " : "Owner: "}</h1><Link  className="cart-link" to=                                                                             {`/users/${pets[item.pet_id].owner_id}`}> {users[pets[item.pet_id].owner_id].username}</Link>
+                                                    <h1>{pets[item.pet_id].adoptable ? "Previous Owner: " : "Owner: "}</h1><Link  className="cart-link" to=                     {`/users/${pets[item.pet_id].owner_id}`}> {users[pets[item.pet_id].owner_id].username}</Link>
                                                 </div>
                                                 <select  className="quanity" >
                                                     <option  value="1">Only 1</option>
