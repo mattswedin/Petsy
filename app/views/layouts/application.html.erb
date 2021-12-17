@@ -3,8 +3,15 @@
   <head>
     <title>Petsy</title>
     <script src="https://kit.fontawesome.com/cf0f0254b5.js" crossorigin="anonymous"></script>
-    <meta property='og:image' content="<%= image_url('app/assets/images/pic02_copy.jpg') %>"/>
-    <meta name="text" property="og:description" content="Petsy is a social media/shop site for pets and their owners. You can pet other peoples pets virtually, put your pet up for adoption, review your own pets, and adopt other peoples pets to then have on your profile!">
+
+       <meta property="og:title" content="Petsy" />
+     <meta property='og:image' content="<%= image_url('pic02_copy.jpg') %>"/>
+     <meta property="og:description"
+       content="Petsy is a social media/shop site for pets and their owners. You can pet other peoples pets virtually, put your pet up for adoption, review your own pets, and adopt other peoples pets to then have on your profile!"
+     />
+     <meta property="og:url"
+       content="http://petsy2.herokuapp.com/"
+     />
 
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
