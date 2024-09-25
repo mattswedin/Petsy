@@ -5,6 +5,8 @@
 
 # About Site
 
+Due to changes in Heroku's services, the live site is no longer available.
+
 Petsy is a social media/shop site for pets and their owners. You can "pet" other peoples pets virtually, put your pet up for adoption, review your own pets, and adopt other peoples pets to then have on your profile!
 
 <img width="1306" alt="Screen Shot 2021-12-13 at 11 30 23 AM" src="https://user-images.githubusercontent.com/88504868/145850812-c7f94498-fa28-41ab-b76f-57883ee5a9f4.png">
